@@ -1,0 +1,25 @@
+body{
+    background-color: #1E90FF;
+}
+header{
+    display: flex;
+    background-color: #124F80;
+    width: 85.4rem;
+    height: 3.3rem;
+    margin-left: -8px;
+    margin-top: -8px;
+}
+#menuHamburguesa{
+    cursor: pointer;
+}
+.menu {
+    display: none; 
+    
+}
+.open {
+    display: flex;
+    position: absolute;
+    margin-top: 51px;
+    width: 200px;
+    background-color: #124F80;
+}
