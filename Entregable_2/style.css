@@ -1,5 +1,6 @@
 body{
-    background-color: #1E90FF;
+    background-color: #A9D9FF;
+    
 }
 header{
     display: flex;
@@ -22,4 +23,35 @@ header{
     margin-top: 51px;
     width: 200px;
     background-color: #124F80;
+}
+.card_game{
+    background-color: #124F80;
+    display:flex;
+    justify-content: center;
+    border-radius: 16%;
+    width: 25%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+image.card_game{
+    width: auto;
+}
+.boton_jugar{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #1E90FF;
+    border-radius: 30%;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 30%;
+    align-self: center;
+
+}
+.h1.card_game{
+align-self: start;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.h2{
+    font-family: 'Courier New', Courier, monospace;
 }
