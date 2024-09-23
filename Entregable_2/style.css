@@ -3,6 +3,7 @@ body{
     font-family: sans-serif;
     
 }
+/*HEADER*/
 header{
     display: flex;
     background-color: #124F80;
@@ -60,4 +61,23 @@ li, .nuestrasRedes{
     margin-right: 15px;
    display:  flex;
    justify-content: space-between;
+}
+.searchBar{
+    display: flex;
+    background-color:#1E90FF;
+    width: 35rem;
+    height: 2.2rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    margin-left: 5.5rem;
+}
+
+#inputSearchBar{
+    background-color: #1E90FF;
+    border: none;
+    outline: none;
+    width: 25rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
 }
