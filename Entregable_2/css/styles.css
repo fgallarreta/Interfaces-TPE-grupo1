@@ -7,7 +7,7 @@
 	outline: none;
 }
 body{
-    background-color: #1E90FF;
+    background-color: #7AC1FF;
     font-family: sans-serif;
     
 }
@@ -37,6 +37,7 @@ header{
 }
 a {
     color: #A9D9FF;
+    
   }
 
 ul{
@@ -45,11 +46,15 @@ ul{
 }
     
 li, .nuestrasRedes{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 2px;
     padding-left: 10px;
     width: 11.78rem;
     height: 2rem;
     background-color: #1E90FF;
+    
 }
 .nuestrasRedes{
     height: 4rem;
