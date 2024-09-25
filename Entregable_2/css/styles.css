@@ -6,18 +6,20 @@
 	border: none;
 	outline: none;
 }
-body{
+html, body {
+    height: 100%; /* Asegura que el cuerpo y html ocupen el 100% de la altura */
+    margin: 0;    /* Elimina el margen por defecto */
     background-color: #7AC1FF;
     font-family: sans-serif;
-    
 }
+
 /*HEADER*/
 header{
     display: flex;
     justify-content: space-between;
     background-color: #124F80;
-    width: 85.4rem;
-    height: 3.5rem;
+    width: auto;
+    height: auto;
     
 }
 .btnHeader{
@@ -36,17 +38,17 @@ header{
     background-color: #124F80;
     border-bottom-right-radius: 10px;
 }
-a {
+.aMenu {
     color: #A9D9FF;
     
   }
 
-ul{
+.ulMenu{
     
     height: 384px;
 }
     
-li, .nuestrasRedes{
+.liMenu, .nuestrasRedes{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -103,10 +105,90 @@ li, .nuestrasRedes{
       
 }
 .botonesUsuario{
-    margin-right: -120px;
+    margin-left: auto;
 }
 .container{
     display: flex;
     justify-content: flex-end;
     
+    
+}
+
+/*FOOTER*/
+footer {
+    margin-top: auto;
+    background-color: #124f80;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente las secciones */
+
+}
+
+.pageContainer {
+    display: flex; /* Aplica flexbox al contenedor */
+    flex-direction: column; /* Organiza los elementos en columnas */
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+}
+
+
+
+.footer-list {
+    display: flex;
+    justify-content: space-between; /* Espacia uniformemente las columnas */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si el espacio es limitado */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Limita el ancho máximo del footer */
+}
+
+.footer-list li {
+    flex: 1; /* Cada columna ocupa el mismo ancho */
+    min-width: 150px; /* Ancho mínimo de cada columna */
+    margin-bottom: 20px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.footer-list ul {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #A9D9FF;
+    padding: 0;
+    list-style: none;
+}
+
+.tituloFooter {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #A9D9FF;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Alinea el título al inicio */
+}
+
+.containerRedes {
+    display: flex; /* Mantiene la disposición de las imágenes en fila */
+    justify-content: flex-start; /* Alinea las imágenes al inicio horizontalmente */
+    gap: 10px; /* Añade espacio entre las imágenes */
+}
+
+.containerRedes li {
+    list-style: none;                /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.containerRedes img {
+    width: 32px;                     /* Ajusta el tamaño de las imágenes */
+    height: 32px;   
+}
+
+#copyright {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px; /* Espacio entre el contenido y el copyright */
+    text-align: center;
+    font-size: 14px;
+    color: #A9D9FF;
+    width: 100%;
 }
