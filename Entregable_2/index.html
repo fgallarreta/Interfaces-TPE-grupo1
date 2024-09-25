@@ -8,8 +8,11 @@
 </head>
 <body>
     <header>
-        <div id="menuHamburguesa"><img src="images/menu.png" alt="menu" onclick="desplegarMenu()"></div>
-        <nav class="menu" id="menu">
+        <div>
+            <img class="btnHeader" src="images/menu.png" alt="menu" onclick="desplegarMenu()">
+            <img src="images/Logo.png" alt="logo">
+        </div>
+        <nav class="ocultarEnHeader" id="menu">
            <ul> 
             <li><a href=>  Accion</a></li>
             <li><a href=>Aventura</a></li>
@@ -30,12 +33,29 @@
             </div>
            </ul>
         </nav>
-        <div><img src="images/Logo.png" alt="logo"></div>
         
         <div class="searchBar"><img src="images/lupa.png" alt="buscar">
             <input type="text" placeholder="Buscar" class="inputSearchBar">
         </div>
+        <div class="botonesUsuario">
+            <img class="btnHeader" src="images/notificacion.png" alt="notificacion">
+            <img class="btnHeader" src="images/Cart.png" alt="carrito">
+            <img class="btnHeader" src="images/amigos.png" alt="amigos">
+            <img class="btnHeader" src="images/user.png" alt="usuario" onclick="desplegarOpcionesUsuario()">
+        </div>
+        <div class="container">
+        <div class="mostrarOpciones">
+            <img src="images/user.png" alt="usuario">
+            <h3>USER</h3>
+            <p>Editar perfil</p>
+            <p>Configurar cuenta</p>
+            <p>Cerrar sesión</p>
+        </div>
+        </div>
+
     </header>
+
+    
 <script src="main.js"></script>
 </body>
 </html>

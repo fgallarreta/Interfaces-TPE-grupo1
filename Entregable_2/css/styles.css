@@ -14,16 +14,17 @@ body{
 /*HEADER*/
 header{
     display: flex;
+    justify-content: space-between;
     background-color: #124F80;
     width: 85.4rem;
-    height: 3.3rem;
+    height: 3.5rem;
     
 }
-#menuHamburguesa{
+.btnHeader{
     cursor: pointer;
     margin-top: 5px;
 }
-.menu {
+.ocultarEnHeader {
     display: none; 
     
 }
@@ -86,4 +87,26 @@ li, .nuestrasRedes{
     height: 1rem;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
+}
+.mostrarOpciones{
+    background-color: #124F80;
+    width: 173px;
+    height: 173px;
+    margin-top: 3.5rem;
+    color: #A9D9FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute; 
+    align-items: center;
+
+      
+}
+.botonesUsuario{
+    margin-right: -120px;
+}
+.container{
+    display: flex;
+    justify-content: flex-end;
+    
 }
