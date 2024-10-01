@@ -3,23 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>GOC GAMES</title>
 </head>
 <body>
-
     <header>
-        <div id="menuHamburguesa"><img src="images/menu.png" alt="menu" onclick="desplegarMenu()"></div>
-        <nav class="menu" id="menu">
-           <ul> 
-            <li><a href=>Inicio</a></li>
-            <li><a href=>Acerca</a></li>
-            <li><a href=>Servicios</a></li>
-            <li><a href=>Contacto</a></li>
+        <div>
+            <img class="btnHeader" src="images/menu.png" alt="menu" onclick="desplegarMenu()">
+            <img src="images/Logo.png" alt="logo">
+        </div>
+        <nav class="ocultarEnHeader" id="menu">
+           <ul class="ulMenu"> 
+            <li class="liMenu"><a class="aMenu" href=>Accion</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Aventura</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Carreras</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Cartas</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Clasicos</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Deportes</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Juegos de mesa</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Multijugador</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Terror</a></li>
+            <div class="nuestrasRedes">
+                <p>Nuestras redes</p>
+                <div class="imgRedes">
+                    <a class="aMenu" href=""><img src="images/face_oscuro.png" alt="Facebook"></a>
+                    <a class="aMenu" href=""><img src="images/ig_oscuro.png" alt="Instagram"></a>
+                    <a class="aMenu" href=""><img src="images/x_oscuro.png" alt="X"></a>
+                </div> 
+            </div>
            </ul>
         </nav>
-        <div><img src="images/Logo.png" alt="logo"></div>
+        
+        <div class="searchBar"><img src="images/lupa.png" alt="buscar">
+            <input type="text" placeholder="Buscar" class="inputSearchBar">
+        </div>
+        <div class="botonesUsuario">
+            <img class="btnHeader" src="images/notificacion.png" alt="notificacion">
+            <img class="btnHeader" src="images/Cart.png" alt="carrito">
+            <img class="btnHeader" src="images/amigos.png" alt="amigos">
+            <img class="btnHeader" src="images/user.png" alt="usuario" onclick="desplegarOpcionesUsuario()">
+        </div>
+        <div class="containerOpciones">
+            <div class="ocultarEnHeader" id="userOptions">
+                <div class="infoUsuario">
+                    <img src="images/user.png" alt="usuario">
+                        <div>
+                            <h3>USER</h3>
+                            <p>user@gmail.com</p>
+                        </div>
+                </div>
+                    <div class="opcionesUsuario">
+                        <p>Editar perfil</p>
+                        <p>Configurar cuenta</p>
+                        <p>Cerrar sesión</p>
+                    </div>
+            </div>
+        </div>
+
     </header>
+    <main>
         <div class="padre-login">
         <div class="registro">
             <h1><span>Login</span></h1>
@@ -48,6 +90,59 @@
             </form>
             </div>
         </div>
+    </main>
+        <footer>
+            <ul class="footer-list">
+                <li>
+                    <ul>
+                        <li class="tituloFooter">Categorias mas relevantes</li>
+                        <li>Multijugador</li>
+                        <li>Futbol</li>
+                        <li>Juegos.io</li>
+                        <li>Arcade</li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <ul>
+                        <li class="tituloFooter">Sobre nosotros</li>
+                        <li>Contactanos</li>
+                        <li>Equipo</li>
+                        <li>Historia</li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <ul>
+                        <li class="tituloFooter">Terminos y condiciones</li>
+                        <li>Politica de privacidad</li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <ul>
+                        <li class="tituloFooter">Nuestros sponsors</li>
+                        <li>Unicen</li>
+                        <li>YPF</li>
+                        <li>Toyota</li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <ul>
+                        <li class="tituloFooter">Nuestras redes</li>
+                        <li>
+                            <div class="containerRedes">
+                                <a href=""><img src="images/Facebook.png" alt="Facebook"></a>
+                                <a href=""><img src="images/Instagram.png" alt="Instagram"></a>
+                                <a href=""><img src="images/X.png" alt="X"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p id="copyright">© 2024 GOC Games. Todos los derechos reservados.</p>
+        </footer>
     <script src="main.js"></script>
 </body>
 </html>
