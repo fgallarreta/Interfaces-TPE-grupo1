@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>GOC GAMES</title>
 </head>
-<body>
+<body class="pageContainer">
     <header>
         <div>
             <img class="btnHeader" src="images/menu.png" alt="menu" onclick="desplegarMenu()">
@@ -26,9 +26,9 @@
             <div class="nuestrasRedes">
                 <p>Nuestras redes</p>
                 <div class="imgRedes">
-                <a class="aMenu" href=""><img src="images/Facebook.png" alt="Facebook"></a>
-                <a class="aMenu" href=""><img src="images/Instagram.png" alt="Instagram"></a>
-                <a class="aMenu" href=""><img src="images/X.png" alt="X"></a>
+                    <a class="aMenu" href=""><img src="images/face_oscuro.png" alt="Facebook"></a>
+                    <a class="aMenu" href=""><img src="images/ig_oscuro.png" alt="Instagram"></a>
+                    <a class="aMenu" href=""><img src="images/x_oscuro.png" alt="X"></a>
                 </div> 
             </div>
            </ul>
@@ -43,21 +43,26 @@
             <img class="btnHeader" src="images/amigos.png" alt="amigos">
             <img class="btnHeader" src="images/user.png" alt="usuario" onclick="desplegarOpcionesUsuario()">
         </div>
-        <div class="container">
-        <div class="mostrarOpciones">
-            <img src="images/user.png" alt="usuario">
-            <h3>USER</h3>
-            <p>Editar perfil</p>
-            <p>Configurar cuenta</p>
-            <p>Cerrar sesión</p>
-        </div>
+        <div class="containerOpciones">
+            <div class="ocultarEnHeader" id="userOptions">
+                <div class="infoUsuario">
+                    <img src="images/user.png" alt="usuario">
+                        <div>
+                            <h3>USER</h3>
+                            <p>user@gmail.com</p>
+                        </div>
+                </div>
+                    <div class="opcionesUsuario">
+                        <p>Editar perfil</p>
+                        <p>Configurar cuenta</p>
+                        <p>Cerrar sesión</p>
+                    </div>
+            </div>
         </div>
 
     </header>
-<h1>Hola</h1>
-<h2>Hola</h2>
-<h3>Hola</h3>
-    <footer>
+<h1>Espacio</h1>    
+<footer>
         <ul class="footer-list">
             <li>
                 <ul>

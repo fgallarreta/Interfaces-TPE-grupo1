@@ -5,6 +5,6 @@ function desplegarMenu() {
     menu.classList.toggle('open');
 }
 function desplegarOpcionesUsuario() {
-    let opciones = document.getElementById('opcionesUsuario');
+    let opciones = document.getElementById('userOptions');
     opciones.classList.toggle('mostrarOpciones');
 }
