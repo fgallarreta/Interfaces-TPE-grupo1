@@ -10,42 +10,43 @@
 
     <header>
         <div>
-            <img class="btnHeader" src="images/menu.png" alt="menu" onclick="desplegarMenu()">
+            <img class="btn" src="images/menu.png" alt="menu" onclick="desplegarMenu()">
             <img src="images/Logo.png" alt="logo">
         </div>
-        <nav class="ocultarEnHeader" id="menu">
-           <ul class="ulMenu"> 
-            <li class="liMenu"><a class="aMenu" href=>Accion</a></li>
-            <li class="liMenu"><a class="aMenu" href=>Aventura</a></li>
-            <li class="liMenu"><a class="aMenu" href=>Carreras</a></li>
-            <li class="liMenu"><a class="aMenu" href=>Cartas</a></li>
-            <li class="liMenu"><a class="aMenu" href=>Clasicos</a></li>
-            <li class="liMenu"><a class="aMenu" href=>Deportes</a></li>
-            <li class="liMenu"><a class="aMenu" href=>Juegos de mesa</a></li>
-            <li class="liMenu"><a class="aMenu" href=>Multijugador</a></li>
-            <li class="liMenu"><a class="aMenu" href=>Terror</a></li>
+        <nav class="ocultar" id="menu">
+           <ul> 
+            <li><a href=>Accion</a></li>
+            <li><a href=>Aventura</a></li>
+            <li><a href=>Carreras</a></li>
+            <li><a href=>Cartas</a></li>
+            <li><a href=>Clasicos</a></li>
+            <li><a href=>Deportes</a></li>
+            <li><a href=>Juegos de mesa</a></li>
+            <li><a href=>Multijugador</a></li>
+            <li><a href=>Terror</a></li>
             <div class="nuestrasRedes">
                 <p>Nuestras redes</p>
                 <div class="imgRedes">
-                    <a class="aMenu" href=""><img src="images/face_oscuro.png" alt="Facebook"></a>
-                    <a class="aMenu" href=""><img src="images/ig_oscuro.png" alt="Instagram"></a>
-                    <a class="aMenu" href=""><img src="images/x_oscuro.png" alt="X"></a>
+                    <a href=""><img src="images/face_oscuro.png" alt="Facebook"></a>
+                    <a href=""><img src="images/ig_oscuro.png" alt="Instagram"></a>
+                    <a href=""><img src="images/x_oscuro.png" alt="X"></a>
                 </div> 
             </div>
            </ul>
         </nav>
         
-        <div class="searchBar"><img src="images/lupa.png" alt="buscar">
+        <div class="searchBar">
+            <img src="images/lupa.png" alt="buscar">
             <input type="text" placeholder="Buscar" class="inputSearchBar">
         </div>
         <div class="botonesUsuario">
-            <img class="btnHeader" src="images/notificacion.png" alt="notificacion">
-            <img class="btnHeader" src="images/Cart.png" alt="carrito">
-            <img class="btnHeader" src="images/amigos.png" alt="amigos">
-            <img class="btnHeader" src="images/user.png" alt="usuario" onclick="desplegarOpcionesUsuario()">
+            <img class="btn" src="images/notificacion.png" alt="notificacion">
+            <img class="btn" src="images/Cart.png" alt="carrito">
+            <img class="btn" src="images/amigos.png" alt="amigos">
+            <img class="btn" src="images/user.png" alt="usuario" onclick="desplegarOpcionesUsuario()">
         </div>
-        <div class="containerOpciones">
-            <div class="ocultarEnHeader" id="userOptions">
+        <div class="opcionesPerfil">
+            <div class="ocultar" id="userOptions">
                 <div class="infoUsuario">
                     <img src="images/user.png" alt="usuario">
                         <div>
@@ -53,13 +54,14 @@
                             <p>user@gmail.com</p>
                         </div>
                 </div>
-                    <div class="opcionesUsuario">
-                        <p>Editar perfil</p>
-                        <p>Configurar cuenta</p>
-                        <p>Cerrar sesión</p>
-                    </div>
+                <div class="opcionesUsuario">
+                    <p>Editar perfil</p>
+                    <p>Configurar cuenta</p>
+                    <a href="login.html">Cerrar sesión</a>
+                </div>
             </div>
         </div>
+
     </header>
     <main>
         <div class="padre-registro">

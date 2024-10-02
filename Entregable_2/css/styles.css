@@ -8,7 +8,6 @@
 }
 html, body {
     height: 100%; /* Asegura que el cuerpo y html ocupen el 100% de la altura */
-    margin: 0;    /* Elimina el margen por defecto */
     background-color: #FFEF99;
     font-family: sans-serif;
 }
@@ -22,11 +21,15 @@ header{
     height: auto;
     
 }
-.btnHeader{
+a{
+    text-decoration: none;
+    color: #A9D9FF;
+}
+header .btn{
     cursor: pointer;
     margin-top: 5px;
 }
-.ocultarEnHeader {
+.ocultar {
     display: none; 
     
 }
@@ -38,17 +41,16 @@ header{
     background-color: #124F80;
     border-bottom-right-radius: 10px;
 }
-.aMenu {
+nav a  {
     color: #124F80;
     
   }
 
-.ulMenu{
-    
+header ul { 
     height: 384px;
 }
     
-.liMenu, .nuestrasRedes{
+header li, .nuestrasRedes{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -80,7 +82,7 @@ header{
     margin-left: 5.5rem;
 }
 
-.inputSearchBar{
+.searchBar input{
     background-color: #A9D9FF;
     border: none;
     outline: none;
@@ -108,10 +110,9 @@ header{
 .botonesUsuario{
     margin-left: auto;
 }
-.containerOpciones, .infoUsuario{
+.opcionesPerfil, .infoUsuario{
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;  
     
 }
 .opcionesUsuario{
@@ -122,6 +123,7 @@ header{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 
 /*Main*/
 .carrusel{
