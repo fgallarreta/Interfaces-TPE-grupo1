@@ -11,6 +11,52 @@ html, body {
     background-color: #FFEF99;
     font-family: sans-serif;
 }
+.contenedorLoader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #124F80;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+/* Estilo del spinner */
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid #FFEF99;
+    border-radius: 50%;
+    animation: spin 1s ease-out infinite;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px #FFEF99;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Texto de porcentaje */
+.progreso {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #FFEF99, 0 0 20px #FFEF99;
+}
+
+/* Estilos del contenido de la página */
+.paginaGral {
+    text-align: center;
+    color: #FFEF99;
+    display: none;
+}
+
 
 /*HEADER*/
 header{
@@ -162,8 +208,8 @@ header li, .nuestrasRedes{
     background-color: #124F80;
     display:flex;
     border-radius: 16px;
-    width: 316px;
-    height: 354px;
+    width: 273px;
+    height: 306px;
     margin-left: 12px;
     margin-right: 12px;
     flex-direction: column;
@@ -173,22 +219,20 @@ header li, .nuestrasRedes{
     align-items: center;
     
 }
-.image_card_game{
-    width: 294px;
-    height: 204px;
+.card_game img{
+    width: 255px;
+    height: 172px;
     margin-top: 15px;
     border-radius: 10px;
 
 
 }
-.boton_jugar{
+.card_game button {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #1E90FF;
     border-radius: 16px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    width: 297px;
-    height: 40px;
+    width: 240px;
+    height: 62px;
     color: #A9D9FF;
     align-self: center;
     display: flex;
@@ -437,4 +481,10 @@ footer {
     color: #A9D9FF;
     width: 100%;
 }
+/* Estilos generales */
+
+
+
+/* Fuentes personalizadas para darle un estilo más de videojuegos */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 

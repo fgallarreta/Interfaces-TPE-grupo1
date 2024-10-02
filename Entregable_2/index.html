@@ -7,10 +7,16 @@
     <title>GOC GAMES</title>
 </head>
 <body class="pageContainer">
+    
+    <div class="contenedorLoader" id="contLoader">
+        <div class="spinner"></div>
+        <div class="progreso" id="progreso">0%</div>
+    </div>
+    <div class="paginaGral" id="paginaGral">
     <header>
         <div>
             <img class="btn" src="images/menu.png" alt="menu" onclick="desplegarMenu()">
-            <img src="images/Logo.png" alt="logo">
+            <a href="index.html"><img src="images/Logo.png" alt="logo"></a>
         </div>
         <nav class="ocultar" id="menu">
            <ul> 
@@ -63,47 +69,25 @@
 
     </header>
     <main>
-        <h3>Recientemente agregados</h3>
+        <h3>Juegos mas jugados de la semana</h3>
         <div class="carrusel"> <!--principio de div "carrusel"-->
-           
+  
            <div class="card_game">
-            <img class="image_card_game" src="images/4EnLinea.jpeg">
-           <h1 > 
-                4 en linea
-               </h1>
-    
-                  </h1>
-           <h2 > juego de mesa</h2>
-    
-           <div class="boton_jugar" >
-               jugar
-          </div>
+                <img src="images/4EnLinea.jpeg">
+                <h1>4 en linea </h1>    
+                <button>Jugar</button>
            </div>
-          <div class="card_game">
-            <img class="image_card_game" src="images/4EnLinea.jpeg">
-           <h1 > 
-                4 en linea
-               </h1>
-    
-                  </h1>
-           <h2 > juego de mesa</h2>
-    
-           <div class="boton_jugar" >
-               jugar
-          </div>
+
+           <div class="card_game">
+                <img class="image_card_game" src="images/4EnLinea.jpeg">
+                <h1>4 en linea </h1>    
+                <button>Jugar</button>
         </div>
-        <div class="card_game">
+
+         <div class="card_game">
             <img class="image_card_game" src="images/4EnLinea.jpeg">
-           <h1 > 
-                4 en linea
-               </h1>
-    
-                  </h1>
-           <h2 > juego de mesa</h2>
-    
-           <div class="boton_jugar" >
-               jugar
-          </div>
+            <h1>4 en linea </h1>    
+            <button>Jugar</button>
         </div>
           
     
@@ -213,7 +197,7 @@
         </ul>
         <p id="copyright">© 2024 GOC Games. Todos los derechos reservados.</p>
     </footer>
-
+</div>
     
    
 
