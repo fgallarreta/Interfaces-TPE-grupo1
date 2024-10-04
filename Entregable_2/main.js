@@ -37,5 +37,31 @@ function cargarLoader() {
     }, intervalo);
 };
 
+//Carrusel
+const prevBtn = document.querySelector('.prev');
+const sigBtn = document.querySelector('.sig');
+const cards = document.querySelector('.cards');
 
+let pos = 0; // Posición inicial
+const cardWidth = 273; // Ancho de cada tarjeta
+const gap = 10; // Margen entre tarjetas
+const totalVisibleCards = 4; // Número de tarjetas visibles
+const totalCards = document.querySelectorAll('.bigCard').length; // Número total de tarjetas
+const maxPosition = -(totalCards - totalVisibleCards) * (cardWidth + gap); // Posición máxima permitida
+
+// Función para mover el carrusel a la izquierda
+prevBtn.addEventListener('click', () => {
+    if (pos < 0) {
+        pos += cardWidth + gap;
+        cards.style.transform = `translateX(${pos}px)`;
+    }
+});
+
+// Función para mover el carrusel a la derecha
+sigBtn.addEventListener('click', () => {
+    if (pos > maxPosition) {
+        pos -= cardWidth + gap;
+        cards.style.transform = `translateX(${pos}px)`;
+    }
+});
 

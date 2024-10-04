@@ -86,6 +86,7 @@ header .btn{
     width: 200px;
     background-color: #124F80;
     border-bottom-right-radius: 10px;
+    z-index: 2;
 }
 nav a  {
     color: #124F80;
@@ -149,7 +150,7 @@ header li, .nuestrasRedes{
     position: absolute; 
     align-items: center;
     border-bottom-left-radius: 20px;
-
+    z-index: 2;
 
       
 }
@@ -171,19 +172,45 @@ header li, .nuestrasRedes{
 }
 
 
+/*BOTONES*/
+
+button{
+    font-family: 'Baloo 2';
+    font-weight: bold; 
+      }
+.btn-comprar{
+        background-color: #FFEF99;
+        color: #421C15;
+            }
+.btn-jugar{
+    background-color: #A9D9FF;
+    color: #124F80;
+          }
+.btn-carrito{
+    background-color: #FFB3AD;
+    color: #421C15;
+            }
+
 /*Main*/
-.carruselBig{
+.carrusel{
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    overflow: hidden; /* Ocultar las cartas que están fuera del área visible */
+    position: relative;
 }
-.carruselBig h1{
+.carrusel h1{
     color: #124F80;
+    margin-bottom: 25px;
+    align-self: flex-start;
 }
 .cards{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 49px;
+    justify-content: flex-start;
+    transition: transform 0.5s ease-in-out; /* Animación al mover las cartas */
+
 }
 
 .bigCard{
@@ -192,17 +219,19 @@ header li, .nuestrasRedes{
     flex-direction: column;
     width: 273px;
     height: 306px;
+    margin-left: 10px;
     border-radius: 10px;
     position: relative;
-    
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
 }
-.ribbon{
-    top: -80px;
-    left: -45px;
+.ribbonBig{
+    top: -14px;
+    left: -20px;
     position: absolute;
    
 }
-.bigCard img{
+.imgBig{
     width: 255px;
     height: 172px;
     margin: 9px;
@@ -210,21 +239,14 @@ header li, .nuestrasRedes{
 
 
 }
-button{
-font-family: 'Baloo 2';
-font-weight: bold;
-font-size: 18px;
-}
-.bigCard button {
-    
+
+.bigCard button {  
     width: 240px;
     height: 62px;
-    background-color: #A9D9FF;
     border-radius: 16px;    
-    color: #124F80;
     align-self: center;
     margin-top: 10px;
-   
+    font-size: 18px;
 }
 .bigCard h1{
     color: #A9D9FF;
@@ -232,186 +254,38 @@ font-size: 18px;
     margin-left: 10px;
     font-family: 'Baloo 2';
     font-size: 24px;
-    
-}
-
-.card_game button {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #1E90FF;
-    border-radius: 16px;
-    width: 240px;
-    height: 62px;
-    color: #A9D9FF;
-    align-self: center;
-    display: flex;
-    justify-content: center ;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.boton_comprar_mini{  
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #FFDF33   ;
-    border-radius: 16px;
-    margin-bottom: 5px;
-    width: 140px;
-    height: 30px;
-    color: #806F00  ;
-    align-self: center;
-    display: flex;
-    margin-top: 8px;
-    justify-content: center ;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.boton_carrito_mini{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #B34A34   ;
-    border-radius: 16px;
-    margin-bottom: 5px;
-    width: 140px;
-    height: 30px;
-    color: #FF998B  ;
-    align-self: center;
-    display: flex;
-    margin-top: 8px;
-    justify-content: center ;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
-}
-h1,h2{
     align-self: flex-start;
-    margin-top: 1px;
-    margin-bottom: 1px; 
-    margin-left: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-
+}   
+.bigCard:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
 }
 
-h4,h5{
-    align-self: flex-start;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: -1px;
-    margin-top: 1px;
-    margin-left: 12px;
-}
-
-
-.circulito{
-    background-color: #1E90FF;
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    margin: 5px;
-
-}
-
-/* cosas del form registro*/
-
-.padre-registro{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 38%;
-    flex-direction: column;
-    border-radius: 8px;
-    width: 362px;
-    height: 1122px;
-    margin-top: 81px;
-    background-color: #1668B3;
-}
-.padre-login{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 38%;
-    flex-direction: column;
-    border-radius: 8px;
-    width: 362px;
-    height: 525px;
-    margin-top: 81px;
-    background-color: #1668B3;
-}
-.registro{
-    display: block;
-    color: #A9D9FF;
-    padding: 3%;
-    margin: 3%;
-}
-.contenedor-usuarios-padre{
-    display: flex;
-    justify-content: center;
-    flex-direction: column  ;
-    justify-items: center;
-}
-.btn_azul_oscuro{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+/* Botones de navegación */
+.prev, .sig {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #124F80;
-    width: 318px;
-    height: 33px;
-    border-radius: 16px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
 }
 
-.form{
-    margin-top: 20px;
-}
-.form input[type=password]{
-    width: 272px;
-    height: 40px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #124F80;
-    border-radius: 8px;
-    box-sizing: border-box;
-    background-color: #1E90FF;
+.prev {
+    left: 10px;
 }
 
-.form input[type=text]{
-    width: 272px;
-    height: 40px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-border: 1px solid #124F80;
-    border-radius: 8px;
-    box-sizing: border-box;
-    background-color: #1E90FF;
-    
+.sig {
+    right: 10px;
 }
-span{
-    
-    border-bottom: solid 2px #A9D9FF ;
+
+.prev:hover, .sig:hover {
+    background-color: #A9D9FF;
 }
-.btn_ingresar{
 
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #1E90FF   ;
-    border-radius: 16px;
-    margin-bottom: 5px;
-    width: 318px;
-    height: 42px;
-    color: #A9D9FF  ;
-    align-self: center;
-    display: flex;
-    margin-top: 8px;
-    justify-content: center ;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
-
-
-}
 
 /*FOOTER*/
 .pageContainer {
