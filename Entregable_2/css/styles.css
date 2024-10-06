@@ -103,12 +103,12 @@ header li{
     transition: ease-out .7s;
    }
  header li:hover{
-    box-shadow: inset 400px 0 0 0  #421C15;
+    box-shadow: inset 400px 0 0 0  black;
   
    
 }
 header li>a:hover{
-    color: #FFEF99;
+    color: white;
 }
 
 
@@ -201,6 +201,7 @@ header li, .nuestrasRedes{
     margin-top: 16px;
     justify-content: center ;
     align-items: center;
+    transition: 0.5s;
       }
 .btn-comprar{
         background-color: #FFEF99;
@@ -241,6 +242,19 @@ header li, .nuestrasRedes{
     background-color: #FFB3AD;
     color: #421C15;
 }
+.btn-jugar:hover,.btn-comprar:hover,.btn-carrito:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0px 0px 30px 0px white inset;
+}
+
+.botonMini_carrito:hover, .botonMini_comprar:hover,.botonMini_jugar:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px white inset;
+}
 
 /*Main*/
 .carrusel{
@@ -275,6 +289,7 @@ header li, .nuestrasRedes{
     margin-left: 10px;
     border-radius: 10px;
     position: relative;
+    box-shadow: 0 5px 10px black;
     margin: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -356,8 +371,18 @@ header li, .nuestrasRedes{
     border-radius: 50%;
     z-index: 1;
     transition: transform 0.3s ease-in-out;
-}
 
+}
+@keyframes mover{
+    from {
+      transform: translateY(0px);
+      transform: translate(0px);
+    }
+    to{
+      transform: translateY(-10px);
+      transform: translateX(10px);
+    }
+  }
 .prev {
     left: 10px;
     margin-left: 1%;
@@ -373,6 +398,11 @@ header li, .nuestrasRedes{
     background-color: #A9D9FF;
     box-shadow: 0 0 70px 15px black;
     color: #124F80;
+    animation: mover;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
     
 }
 
