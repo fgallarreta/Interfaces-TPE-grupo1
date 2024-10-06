@@ -96,7 +96,22 @@ nav a  {
 header ul { 
     height: 384px;
 }
-    
+header li{
+
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0  #A9D9FF;
+    transition: ease-out .7s;
+   }
+ header li:hover{
+    box-shadow: inset 400px 0 0 0  #421C15;
+  
+   
+}
+header li>a:hover{
+    color: #FFEF99;
+}
+
+
 header li, .nuestrasRedes{
     display: flex;
     justify-content: flex-start;
@@ -174,9 +189,18 @@ header li, .nuestrasRedes{
 
 /*BOTONES*/
 
-button{
+.bigCard div{
     font-family: 'Baloo 2';
     font-weight: bold; 
+    border-radius: 16px;
+    margin-bottom: 5px;
+    width: 240px;
+    height: 62px; 
+    align-self: center;
+    display: flex;
+    margin-top: 16px;
+    justify-content: center ;
+    align-items: center;
       }
 .btn-comprar{
         background-color: #FFEF99;
@@ -190,6 +214,33 @@ button{
     background-color: #FFB3AD;
     color: #421C15;
             }
+.card_chiquita div{
+    font-family: 'Baloo 2';
+    font-weight: bold; 
+        border-radius: 16px;
+        margin-bottom: 5px;
+        width: 120px;
+        height: 30px;
+       
+        align-self: center;
+        display: flex;
+        margin-top: 8px;
+        justify-content: center ;
+        align-items: center;
+}
+
+.botonMini_comprar{
+    color: #806F00  ;
+    background-color: #FFEF99   ;
+}
+.botonMini_jugar{
+    background-color: #A9D9FF;
+        color: #124F80;
+}
+.botonMini_carrito{
+    background-color: #FFB3AD;
+    color: #421C15;
+}
 
 /*Main*/
 .carrusel{
@@ -201,6 +252,8 @@ button{
 .carrusel h1{
     color: #124F80;
     margin-bottom: 25px;
+    margin-left: 2%;
+    margin-top: 1%;
     align-self: flex-start;
 }
 .cards{
@@ -256,34 +309,71 @@ button{
     font-size: 24px;
     align-self: flex-start;
 }   
-.bigCard:hover {
+.bigCard:hover  {
     transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+.card_chiquita:hover{
+    transform: scale(1.05);
+}
+.card_chiquita{ 
+    background-color: #124F80;
+    display:flex;
+    border-radius: 16px;
+    width: 160px;
+    height: 189px;
+    margin-left: 12px;
+    margin-right: 12px;
+    flex-direction: column;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    align-items: center;
+    box-shadow: 0 3px 5px black;
+
+}
+.card_chiquita img{
+
+    width: 140px;
+    height: 97px;
+    margin-top: 15px;
+    border-radius: 10px;
+
 }
 
 /* Botones de navegación */
 .prev, .sig {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+   
     background-color: #124F80;
     color: white;
+    border:1px solid white ;
     font-size: 24px;
-    padding: 10px;
+    padding: 20px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 1;
+    transition: transform 0.3s ease-in-out;
 }
 
 .prev {
     left: 10px;
+    margin-left: 1%;
 }
 
 .sig {
     right: 10px;
+    margin-right: 1%;
 }
 
 .prev:hover, .sig:hover {
+    transform: scale(1.5);
     background-color: #A9D9FF;
+    box-shadow: 0 0 70px 15px black;
+    color: #124F80;
+    
 }
 
 
