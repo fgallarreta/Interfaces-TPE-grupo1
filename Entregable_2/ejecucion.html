@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ejecucion.css">
+    <title>Jugar 4 en linea</title>
+</head>
+<body class="pageContainer">
+    <header>
+        <div>
+            <img class="btnHeader" src="images/menu.png" alt="menu" onclick="desplegarMenu()">
+            <img src="images/Logo.png" alt="logo">
+        </div>
+        <nav class="ocultarEnHeader" id="menu">
+           <ul class="ulMenu"> 
+            <li class="liMenu"><a class="aMenu" href=>Accion</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Aventura</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Carreras</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Cartas</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Clasicos</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Deportes</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Juegos de mesa</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Multijugador</a></li>
+            <li class="liMenu"><a class="aMenu" href=>Terror</a></li>
+            <div class="nuestrasRedes">
+                <p>Nuestras redes</p>
+                <div class="imgRedes">
+                    <a class="aMenu" href=""><img src="images/face_oscuro.png" alt="Facebook"></a>
+                    <a class="aMenu" href=""><img src="images/ig_oscuro.png" alt="Instagram"></a>
+                    <a class="aMenu" href=""><img src="images/x_oscuro.png" alt="X"></a>
+                </div> 
+            </div>
+           </ul>
+        </nav>
+        
+        <div class="searchBar"><img src="images/lupa.png" alt="buscar">
+            <input type="text" placeholder="Buscar" class="inputSearchBar">
+        </div>
+        <div class="botonesUsuario">
+            <img class="btnHeader" src="images/notificacion.png" alt="notificacion">
+            <img class="btnHeader" src="images/Cart.png" alt="carrito">
+            <img class="btnHeader" src="images/amigos.png" alt="amigos">
+            <img class="btnHeader" src="images/user.png" alt="usuario" onclick="desplegarOpcionesUsuario()">
+        </div>
+        <div class="containerOpciones">
+            <div class="ocultarEnHeader" id="userOptions">
+                <div class="infoUsuario">
+                    <img src="images/user.png" alt="usuario">
+                        <div>
+                            <h3>USER</h3>
+                            <p>user@gmail.com</p>
+                        </div>
+                </div>
+                    <div class="opcionesUsuario">
+                        <p>Editar perfil</p>
+                        <p>Configurar cuenta</p>
+                        <p>Cerrar sesión</p>
+                    </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <h3 id="breadcrumbs">Home > Multijugador > 4 en linea: Batalla Pokémon</h3>
+
+    <h1 id="titulo_juego">4 en linea: Batalla Pokémon</h1>
+
+    <div class="preview">
+        <img src="images/preview.png" alt="Preview del juego">
+        <button class="boton_jugar">Jugar</button>
+    </div>
+
+    <div class="botones_redes">
+        <img src="images/Fav button.png" alt="Boton favorito">
+        <img src="images/Email button.png" alt="Boton email">
+        <img src="images/Ws button.png" alt="Boton Whatsapp">
+        <img src="images/X button.png" alt="Boton X">
+        <img src="images/Ig button.png" alt="Boton Instagram">
+        <img src="images/Facebook button.png" alt="Boton Facebook">
+        <img src="images/Copiar enlace.png" alt="Boton copiar enlace">
+    </div>
+
+    <div id="descripcion_del_juego">
+        <p>¡Bienvenido a 4 en Línea: Batalla Pokémon, un juego de estrategia en el que pondrás a prueba tus habilidades tácticas con tus Pokémon favoritos! Elige entre una amplia variedad de Pokémon icónicos, cada uno con su propio estilo y apariencia, y planifica tu estrategia para adelantarte a tu rival.</p>
+    </div>
+
+    <div class="container_instrucciones">
+
+        <h3>Instrucciones</h3>
+        
+        <div class="contenido_instrucciones">
+            <div class="instrucciones_mouse">
+                <img src="images/clic izquierdo.png" alt="Mouse click izquierdo">
+                <p>Presione el boton izquierdo del mouse sobre las piezas para moverlas y ubicarlas en la zona deseada.</p>
+            </div>
+            <div class="instrucciones_columnas">
+                <img src="images/columnas.png" alt="Columnas">
+                <p>El jugador ganador sera aquel que logre acomodar 4 fichas consecutivas, ya sea de forma horizontal, vertical o en diagonal</p>
+            </div>
+        </div>
+
+    </div>
+
+    <h3 id="titulo_carrousel">Mas sobre este juego</h3>
+
+    <div>
+        <div class="container_carrousel">
+            <img class="boton_carrousel" src="images/boton carrousel grande izq.png" alt="Boton izquierda">
+            <div class="preview_video">
+                <img src="images/preview 1.png" alt="Carrousel 1">
+                <img id="boton_reproducir_video" src="images/boton play video.png" alt="Play video">
+            </div>
+            <img src="images/preview 2.png" alt="Carrousel 2">
+            <img src="images/preview 3.png" alt="Carrousel 3">
+            <img class="boton_carrousel" src="images/boton carrousel grande der.png" alt="Boton derecha">
+        </div>
+
+        <div class="slide_carrousel"> 
+            <div class="componente_slide"></div>
+            <div class="componente_slide"></div>
+            <div class="componente_slide"></div>
+        </div>
+    </div>
+    
+    <div class="divisor_horizontal">123</div>
+
+    <div class="titulo_seccion_comentarios">
+        <img src="images/burbuja comentario.png" alt="Icono comentario">
+        <h2>Comentarios</h2>
+    </div>
+
+    <div class="box_insertar_comentario">
+        <div class="autor_comentario">
+            <img src="images/user.png" alt="Avatar">
+                <div>
+                    <h3 class="username">User</h3>
+                </div>
+        </div>
+
+        <div class="box_contenido_comentario">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut magni dignissimos illo laudantium suscipit nihil commodi, natus quasi quas quos, ratione beatae ad nemo nulla quisquam voluptatum soluta totam.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eligendi omnis enim ex natus aliquid debitis nobis quia vel a odit quidem obcaecati ducimus maxime doloribus dolore, tempora corrupti? Similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta culpa consequuntur itaque iste deleniti quisquam repellendus ex fugit repellat enim laboriosam delectus sapiente qui expedita, ducimus quo illo dolorum. Ab.</p>
+        </div>
+
+        <button class="boton_enviar_comentario">Enviar</button>
+    </div>
+
+    <div class="divisor_horizontal">123</div>
+
+    <div class="titulo_seccion_comentarios">
+        <div class="titulo_seccion_comentarios">
+            <img src="images/burbuja comentario reciente.png" alt="Icono comentario reciente">
+            <h2>Comentarios mas recientes</h2>
+        </div>
+
+        <div class="titulo_seccion_comentarios">
+            <img src="images/burbuja comentario favorito.png" alt="Icono comentarios destacados">
+            <h2>Comentarios destacados</h2>
+        </div>
+    </div>
+
+    <div class="container_comentario">
+        <div class="box_comentario">
+            <div class="autor_comentario">
+                <img src="images/user.png" alt="Avatar">
+                <div>
+                    <h3>User</h3>
+                </div>
+                <p>Hace 5 minutos</p>
+
+                <div class="like_dislike">
+                    <img src="images/boton like.png" alt="Boton like">
+                    <img src="images/boton dislike.png" alt="Boton dislike">
+                </div>
+                
+            </div>
+
+            
+
+            <div class="box_contenido_comentario">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae natus, ratione fuga, est illum ipsa aliquid doloremque cumque sapiente quaerat odio exercitationem totam ut facilis mollitia, quia eos aspernatur possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum odit quibusdam quas eligendi magnam ratione nobis reiciendis numquam placeat tenetur? Dicta dolor consectetur voluptate obcaecati. Amet vel quisquam accusamus corporis!</p>
+            </div>
+
+            <div class="contador_like_dislike">
+                <div class="contador_like_dislike">
+                    <img src="images/pulgar arriba.png" alt="Like icon">
+                    <p id="contador_likes">14k</p>
+                </div>
+
+                <div class="contador_like_dislike">
+                    <img src="images/pulgar abajo.png" alt="Dislike icon">
+                    <p id="contador_dislikes">14k</p>
+                </div>
+            </div>
+            
+        </div>  
+        
+    </div>
+
+    <footer>
+        <ul class="footer-list">
+            <li>
+                <ul>
+                    <li class="tituloFooter">Categorias mas relevantes</li>
+                    <li>Multijugador</li>
+                    <li>Futbol</li>
+                    <li>Juegos.io</li>
+                    <li>Arcade</li>
+                </ul>
+            </li>
+
+            <li>
+                <ul>
+                    <li class="tituloFooter">Sobre nosotros</li>
+                    <li>Contactanos</li>
+                    <li>Equipo</li>
+                    <li>Historia</li>
+                </ul>
+            </li>
+
+            <li>
+                <ul>
+                    <li class="tituloFooter">Terminos y condiciones</li>
+                    <li>Politica de privacidad</li>
+                </ul>
+            </li>
+
+            <li>
+                <ul>
+                    <li class="tituloFooter">Nuestros sponsors</li>
+                    <li>Unicen</li>
+                    <li>YPF</li>
+                    <li>Toyota</li>
+                </ul>
+            </li>
+
+            <li>
+                <ul>
+                    <li class="tituloFooter">Nuestras redes</li>
+                    <li>
+                        <div class="containerRedes">
+                            <a href=""><img src="images/Facebook.png" alt="Facebook"></a>
+                            <a href=""><img src="images/Instagram.png" alt="Instagram"></a>
+                            <a href=""><img src="images/X.png" alt="X"></a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p id="copyright">© 2024 GOC Games. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+</html>
