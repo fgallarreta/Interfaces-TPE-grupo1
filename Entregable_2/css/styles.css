@@ -70,6 +70,7 @@ header{
 a{
     text-decoration: none;
     color: #A9D9FF;
+    
 }
 header .btn{
     cursor: pointer;
@@ -104,11 +105,13 @@ header li{
    }
  header li:hover{
     box-shadow: inset 400px 0 0 0  black;
-  
+
    
 }
 header li>a:hover{
+
     color: white;
+
 }
 
 
@@ -203,6 +206,9 @@ header li, .nuestrasRedes{
     align-items: center;
     transition: 0.5s;
       }
+.bigCard a{
+    color: #124F80;
+}
 .btn-comprar{
         background-color: #FFEF99;
         color: #421C15;
@@ -244,6 +250,7 @@ header li, .nuestrasRedes{
 .carrusel{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     position: relative;
 }
 .carrusel h1{
