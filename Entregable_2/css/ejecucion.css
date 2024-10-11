@@ -429,24 +429,11 @@ h1, h2, h3{
     margin-top: 7%;
     cursor: pointer;
 }
-.slide_carrousel{
-    display:flex;
-    justify-content: center;
-    margin-bottom: 3%;
-}
 
 .boton_carrousel{
     width: 42px;
     height: 42px;
     cursor: pointer;
-}
-
-.componente_slide{
-    background-color: #1E90FF;
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    margin: 5px;
 }
 
 .titulo_seccion_comentarios{
