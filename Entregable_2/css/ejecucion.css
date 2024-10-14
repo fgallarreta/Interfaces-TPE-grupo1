@@ -295,44 +295,43 @@ h1, h2, h3{
     margin-left: 5%;
 }
 
-.preview{
+.preview {
     position: relative;
     display: inline-block;
-    align-items: center;
-    justify-content: center;
     margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.preview img{
+.preview img {
     width: 100%;
     height: auto;
     display: block;
-    border: 0.1px  #124F80;
+    
 }
+
+.boton_jugar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #A9D9FF;
+    border-radius: 16px;
+    width: 20vw;
+    height: 8vw; 
+    color: #124F80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    font-size: 1.2vw; /* Tamaño de fuente relativo */
+}
+
 
 .botones_redes {
     margin-left: 5%;
     margin-top: 1%;
-    cursor: pointer;
-}
-
-
-.boton_jugar{
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #A9D9FF   ;
-    border-radius: 16px;
-    width: 240px;
-    height: 62px;
-    color: #124F80  ;
-    display: flex;
-    justify-content: center ;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
 }
 
@@ -416,11 +415,8 @@ h1, h2, h3{
 .preview_video{
     display: flex;
     margin-right: 1%;
-}
-
-.preview_video{
-    display: flex;
-    margin-right: 1%;
+    justify-content: center;
+    
 }
 
 #boton_reproducir_video {
@@ -430,7 +426,7 @@ h1, h2, h3{
     cursor: pointer;
 }
 
-.boton_carrousel{
+#boton_carrousel_izq, #boton_carrousel_der{
     width: 42px;
     height: 42px;
     cursor: pointer;
@@ -525,6 +521,10 @@ h1, h2, h3{
     margin-left: 1%;
 }
 
+#botones_like_dislike{
+    margin-left: auto;
+}
+
 
 
 .box_contenido_comentario{
@@ -557,4 +557,155 @@ h1, h2, h3{
 #contador_likes, #contador_dislikes{
     align-items: center;
     color: #A9D9FF;
+}
+
+
+/*---------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .botonesUsuario {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .opcionesPerfil {
+        justify-content: center;
+    }
+
+    /* Ajustar tamaño de las imágenes de las redes sociales */
+    .imgRedes img {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Ajustes en la vista de comentarios */
+    .box_contenido_comentario {
+        font-size: 14px;
+    }
+
+    .boton_jugar {
+        width: 50vw; /* Ancho mayor en pantallas pequeñas */
+        height: 14vw; /* Alto mayor en pantallas pequeñas */
+        font-size: 3.5vw; /* Ajustar el tamaño de la fuente */
+    }
+
+    #boton_carrousel_izq, #boton_carrousel_der {
+        width: 8%; /* Reduce el tamaño de los botones del carrusel */
+    }
+
+    #boton_reproducir_video {
+        width: 8%; /* Reduce el tamaño del botón de reproducir */
+    }
+
+    /* Ajustar márgenes de las secciones principales */
+    .preview, #descripcion_del_juego, .container_instrucciones {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    
+    /* El footer será más compacto */
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .footer-list {
+        flex-direction: column;
+    }
+
+    .footer-list li {
+        min-width: 100%;
+    }
+
+    /* Ajustes para los títulos */
+    h1, h2, h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .instrucciones_mouse, .instrucciones_columnas img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;  
+    }
+
+    .container_carrousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_carrousel img {
+        width: 80%;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+
+
+@media screen and (max-width: 480px) {
+    .searchBar {
+        width: 90%;
+    }
+
+    .boton_jugar {
+        width: 120px;
+        height: 42px;
+        left: 50%; /* Centrado horizontal */
+        top: 50%;  /* Centrado vertical */
+        transform: translate(-50%, -50%); /* Centrado exacto en ambos ejes */
+    }
+
+    .preview img {
+        width: 100%;
+    }
+
+    /* Ajustar tamaño de los textos y botones para pantallas muy pequeñas */
+    h1, h2, h3 {
+        font-size: 16px;
+    }
+
+    .instrucciones_mouse, .instrucciones_columnas img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;  
+    }
+
+    .container_carrousel img, .boton_carrousel {
+        width: 60%;
+    }
+
+    
+
+    .box_contenido_comentario {
+        font-size: 12px;
+    }
+
+    /* Botones de redes sociales más pequeños */
+    .botones_redes img {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Ajustes para el footer */
+    footer {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
 }
