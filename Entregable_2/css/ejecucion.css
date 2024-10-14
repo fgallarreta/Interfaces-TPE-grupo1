@@ -671,6 +671,7 @@ h1, h2, h3{
 
 
 @media screen and (max-width: 480px) {
+
     .searchBar {
         width: 90%;
     }
