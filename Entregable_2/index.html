@@ -17,10 +17,14 @@
     <header>
         <div>
             <img class="btn" src="images/menu.png" alt="menu" onclick="desplegarMenu()">
-            <a href="index.html"><img src="images/Logo.png" alt="logo"></a>
+            <a href="index.html"><img class="logo" src="images/Logo.png" alt="logo" ></a>
         </div>
         <nav class="ocultar" id="menu">
            <ul> 
+            <li><a href="#">perfil</a></li>
+            <li><a href="#">carrito</a></li>
+            <li><a href="#">notificaciones</a></li>
+            <li><a href="#">Amigos</a></li>
             <li><a href="#">Accion</a></li>
             <li><a href="#">Aventura</a></li>
             <li><a href="#">Carreras</a></li>
@@ -45,40 +49,42 @@
             <img src="images/lupa.png" alt="buscar">
             <input type="text" placeholder="Buscar" class="inputSearchBar">
         </div>
-        <div class="botonesUsuario">
-            <img class="btn" src="images/notificacion.png" alt="notificacion">
-            <img class="btn" src="images/Cart.png" alt="carrito">
-            <img class="btn" src="images/amigos.png" alt="amigos">
-            <img class="btn" src="images/user.png" alt="usuario" onclick="desplegarOpcionesUsuario()">
-        </div>
-        <div class="opcionesPerfil">
-            <div class="ocultar" id="userOptions">
-                <div class="infoUsuario">
-                    <img src="images/user.png" alt="usuario">
-                        <div>
-                            <h3>USER</h3>
-                            <p>user@gmail.com</p>
-                        </div>
-                </div>
-                <div class="opcionesUsuario">
-                    <p>Editar perfil</p>
-                    <p>Configurar cuenta</p>
-                    <a href="login.html">Cerrar sesión</a>
+        
+            <div class="botonesUsuario">
+                <img class="btn" src="images/notificacion.png" alt="notificacion">
+                <img class="btn" src="images/Cart.png" alt="carrito">
+                <img class="btn" src="images/amigos.png" alt="amigos">
+                <img class="btn" src="images/user.png" alt="usuario" onclick="desplegarOpcionesUsuario()">
+            </div>
+            <div class="opcionesPerfil">
+                <div class="ocultar" id="userOptions">
+                    <div class="infoUsuario">
+                        <img src="images/user.png" alt="usuario">
+                            <div>
+                                <h3>USER</h3>
+                                <p>user@gmail.com</p>
+                            </div>
+                    </div>
+                    <div class="opcionesUsuario">
+                        <p>Editar perfil</p>
+                        <p>Configurar cuenta</p>
+                        <a href="login.html">Cerrar sesión</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
+     
     </header>
     <main>
         
         <div class="carrouselContainer">
             <div class="carrusel">
-                <h1>Juegos más jugados de la semana</h1>
+                <h1>Juegos mas jugados de la semana </h1>
                 <div class="cards">
                 <div class="bigCard">
                      <img class="ribbonBig" src="images/ribbonJuegosDeMesa.png" alt="categoria">
                      <img class="imgBig" src="images/4EnLinea.jpeg">
                      <h1>4 en linea </h1>    
+                     <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                     <div class="btn-jugar"><a href="ejecucion.html">Jugar</a></div>
                 </div>
      
@@ -86,6 +92,7 @@
                  <img class="ribbonBig" src="images/ribbonCartas.png" alt="">
                  <img class="imgBig" src="images/governorOfPoker.png">
                  <h1>Governor Of Poker </h1>    
+                 <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                  <div class="btn-carrito">Carrito</div>
                 </div>
      
@@ -93,6 +100,7 @@
                  <img class="ribbonBig" src="images/ribbonArcade.png" alt="">
                  <img class="imgBig" src="images/lightCrusader.png">
                  <h1>Light Crusader</h1>    
+                 <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                  <div class="btn-jugar">Jugar</div>
                 </div>
                 
@@ -100,12 +108,14 @@
                     <img class="ribbonBig" src="images/ribbonAccion.png" alt="">
                     <img class="imgBig" src="images/roadRush.png">
                     <h1>Road Rush</h1>    
+                    <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                     <div class="btn-comprar">Comprar</div>
                    </div>
                    <div class="bigCard">
                     <img class="ribbonBig" src="images/ribbonJuegosDeMesa.png" alt="categoria">
                     <img class="imgBig" src="images/4EnLinea.jpeg">
                     <h1>4 en linea </h1>    
+                    <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                     <div class="btn-carrito">Carrito</div>
                </div>
     
@@ -113,6 +123,7 @@
                 <img class="ribbonBig" src="images/ribbonCartas.png" alt="">
                 <img class="imgBig" src="images/governorOfPoker.png">
                 <h1>Governor Of Poker </h1>    
+                <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                 <div class="btn-comprar">Comprar</div>
                </div>
     
@@ -120,6 +131,7 @@
                 <img class="ribbonBig" src="images/ribbonArcade.png" alt="">
                 <img class="imgBig" src="images/lightCrusader.png">
                 <h1>Light Crusader</h1>    
+                <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                 <div class="btn-jugar">Jugar</div>
                </div>
                
@@ -127,12 +139,14 @@
                    <img class="ribbonBig" src="images/ribbonAccion.png" alt="">
                    <img class="imgBig" src="images/roadRush.png">
                    <h1>Road Rush</h1>    
+                   <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                    <div class="btn-jugar">Jugar</div>
                   </div>
                   <div class="bigCard">
                     <img class="ribbonBig" src="images/ribbonJuegosDeMesa.png" alt="categoria">
                     <img class="imgBig" src="images/4EnLinea.jpeg">
                     <h1>4 en linea </h1>    
+                    <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                     <div class="btn-comprar">Comprar</div>
                </div>
     
@@ -140,6 +154,7 @@
                 <img class="ribbonBig" src="images/ribbonCartas.png" alt="">
                 <img class="imgBig" src="images/governorOfPoker.png">
                 <h1>Governor Of Poker </h1>    
+                <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                 <div class="btn-jugar">Jugar</div>
                </div>
     
@@ -147,6 +162,7 @@
                 <img class="ribbonBig" src="images/ribbonArcade.png" alt="">
                 <img class="imgBig" src="images/lightCrusader.png">
                 <h1>Light Crusader</h1>    
+                <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                 <div class="btn-comprar">Comprar</div>
                </div>
                
@@ -154,112 +170,464 @@
                    <img class="ribbonBig" src="images/ribbonAccion.png" alt="">
                    <img class="imgBig" src="images/roadRush.png">
                    <h1>Road Rush</h1>    
+                   <img class="priceTagBig" src="images/priceTagBig.png" alt="precio">
                    <div class="btn-carrito">Carrito</div>
                   </div>
             </div>
+         </div>
+         <div class="displayBotonesCarrusel">
             <div class="prev"><img src="images/leftButton.png" alt="botonizq"></div>
             <div class="sig"><img src="images/rightButton.png" alt="botonder"></div>
-         </div>
+        </div>
         </div>  
         
-        <div class="carruselContainer">
-            <div class="carrusel">  <!-- inicio de carrusel chiqquito-->
-                <h1>Juegos recomendados</h1>
-                <div class="cards">
+        <div class="carruselContainerMini">
+            <div class="carruselMini">  <!-- inicio de carrusel chiqquito-->
+                <h1>Recientemente Agregados</h1>
+                <div class="cards_mini">
                     <div class="card_chiquita">
-                        <img class="image_card_chiquita" src="images/head-soccer-2022_xl.jpg" alt="head head-soccer-2022_xl">
-                        <h4 >head soccer</h4>
-                        <h5 >futbol</h5>
-                        <div class="botonMini_comprar"> COMPRAR</div>
+                        <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                        <img class="imgMini " src="images/head-soccer-2022_xl.jpg" alt="head head-soccer-2022_xl">
+                        <h4>Head Soccer</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
         
                     </div>
         
                     <div class="card_chiquita">
-                    
-                        <img class="image_card_chiquita" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
-                        <h4 >splater house</h4>
-                        <h5 >accion</h5>
-                        <div class="btn-jugar"> COMPRAR</div>
+                        <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
+                        <h4>Splater House</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-jugar"> Jugar</div>
         
                     </div>
         
                     <div class="card_chiquita">
-                        <img class="image_card_chiquita" src="images/head-soccer-2022_xl.jpg" alt="head head-soccer-2022_xl">
-                        <h4 >head soccer</h4>
-                        <h5 >futbol</h5>
-                        <div class="botonMini_comprar"> COMPRAR</div>
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniPacman.png" alt="head head-soccer-2022_xl">
+                        <h4>Pacman</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
         
                     </div>
         
                     <div class="card_chiquita">
-                        <img class="image_card_chiquita" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
-                        <h4 >splater house</h4>
-                        <h5 >accion</h5>
-                        <div class="botonMini_carrito"> COMPRAR</div>
+                        <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniFriday 13.png" alt="head head-soccer-2022_xl">
+                        <h4 >Friday 13</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-carrito"> Carrito</div>
 
                      </div>   
                         <div class="card_chiquita">
-                    
-                            <img class="image_card_chiquita" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
-                            <h4 >splater house</h4>
-                            <h5 >accion</h5>
-                            <div class="botonMini_jugar"> COMPRAR</div>
+                            <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniFreedyFastBear.png" alt="head head-soccer-2022_xl">
+                            <h4>Freedy fast bear</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-comprar"> Comprar</div>
             
                         </div>
             
                         <div class="card_chiquita">
-                            <img class="image_card_chiquita" src="images/head-soccer-2022_xl.jpg" alt="head head-soccer-2022_xl">
-                            <h4 >head soccer</h4>
-                            <h5 >futbol</h5>
-                            <div class="botonMini_comprar"> COMPRAR</div>
+                            <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniCuphead.png" alt="head head-soccer-2022_xl">
+                            <h4 >Cuphead</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-jugar"> Jugar</div>
             
                         </div>
             
                         <div class="card_chiquita">
-                            <img class="image_card_chiquita" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
-                            <h4 >splater house</h4>
-                            <h5 >accion</h5>
-                            <div class="botonMini_carrito"> COMPRAR</div>
+                            <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniPong.png" alt="head head-soccer-2022_xl">
+                            <h4 >Pong</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-carrito"> Carrito</div>
 
                         </div>    
                             <div class="card_chiquita">
-                    
-                                <img class="image_card_chiquita" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
-                                <h4 >splater house</h4>
-                                <h5 >accion</h5>
-                                <div class="botonMini_jugar"> COMPRAR</div>
+                                <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniPvsZ.png" alt="head head-soccer-2022_xl">
+                                <h4 >Plantas VS Zombie</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-comprar"> Comprar</div>
                 
                             </div>
                 
                             <div class="card_chiquita">
-                                <img class="image_card_chiquita" src="images/head-soccer-2022_xl.jpg" alt="head head-soccer-2022_xl">
-                                <h4 >head soccer</h4>
-                                <h5 >futbol</h5>
-                                <div class="botonMini_comprar"> COMPRAR</div>
+                                <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniBasketStras.png" alt="head head-soccer-2022_xl">
+                                <h4 >Basket Stras</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-jugar"> Jugar</div>
                 
                             </div>
                 
                             <div class="card_chiquita">
-                                <img class="image_card_chiquita" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
-                                <h4 >splater house</h4>
-                                <h5 >accion</h5>
-                                <div class="botonMini_carrito"> COMPRAR</div>
+                                <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
+                                <h4 >Splater House</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-carrito"> Carrito</div>
         
                     </div>
         
                     <div class="card_chiquita">
-                        <img class="image_card_chiquita" src="images/head-soccer-2022_xl.jpg" alt="head head-soccer-2022_xl">
-                        <h4 >head soccer</h4>
-                        <h5 >futbol</h5>
-                        <div class="botonMini_comprar"> COMPRAR</div>
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniDonkeykong.png" alt="head head-soccer-2022_xl">
+                        <h4>DonkeyKong</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
         
                     </div>
         
-                    <div class="prev">&lt;</div>
-                    <div class="sig">&gt;</div>
+                   
+                </div>
+            </div> 
+            <div class="displayBotonesCarrusel">
+            <div class="prev-mini"><img src="images/leftButton.png" alt="botonizq"></div>
+            <div class="sig-mini"><img src="images/rightButton.png" alt="botonder"></div>
+        </div>
+        </div> <!-- fin de carrusel chiquito-->
+
+        <div class="carruselContainerMini">
+            <div class="carruselMini">  <!-- inicio de carrusel chiqquito-->
+                <h1>Clasicos</h1>
+                <div class="cards_mini">
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniDonkeykong.png" alt="head head-soccer-2022_xl">
+                        <h4>Head Soccer</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniSupermario.png" alt="head head-soccer-2022_xl">
+                        <h4>Splater House</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-jugar"> Jugar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniTetris.png" alt="head head-soccer-2022_xl">
+                        <h4>Head Soccer</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniCircus.png" alt="head head-soccer-2022_xl">
+                        <h4 >Splater House</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-carrito"> Carrito</div>
+
+                     </div>   
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniSilentHill.png" alt="head head-soccer-2022_xl">
+                            <h4>SilentHill</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-comprar"> Comprar</div>
+            
+                        </div>
+            
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniFireBoy.png" alt="head head-soccer-2022_xl">
+                            <h4 >fireboy watergirl</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-jugar"> Jugar</div>
+            
+                        </div>
+            
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniCommander Keen.png" alt="head head-soccer-2022_xl">
+                            <h4 >Commander keen</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-carrito"> Carrito</div>
+
+                        </div>    
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniSplatterhouse3.png" alt="head head-soccer-2022_xl">
+                                <h4 >Splater House 3</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-comprar"> Comprar</div>
+                
+                            </div>
+                
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniBasketStras.png" alt="head head-soccer-2022_xl">
+                                <h4 >BasketStras</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-jugar"> Jugar</div>
+                
+                            </div>
+                
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniSplaterhouse2.png" alt="head head-soccer-2022_xl">
+                                <h4 >Splater House2</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-carrito"> Carrito</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniStreetFighter2.png" alt="head head-soccer-2022_xl">
+                        <h4>Head Soccer</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                   
+                </div>
+                
+            </div> 
+            <div class="displayBotonesCarrusel">
+                <div class="prev-mini"><img src="images/leftButton.png" alt="botonizq"></div>
+                <div class="sig-mini"><img src="images/rightButton.png" alt="botonder"></div>
+            </div>
+        </div> <!-- fin de carrusel chiquito-->
+
+
+        <div class="carruselContainerMini">
+            <div class="carruselMini">  <!-- inicio de carrusel chiqquito-->
+                <h1>Arcade</h1>
+                <div class="cards_mini">
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                        <img class="imgMini " src="images/MiniSupermario.png" alt="head head-soccer-2022_xl">
+                        <h4>SuperMario</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniPacman.png" alt="head head-soccer-2022_xl">
+                        <h4>Pacman</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-jugar"> Jugar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniZelda.png" alt="head head-soccer-2022_xl">
+                        <h4>zelda</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniTetris.png" alt="head head-soccer-2022_xl">
+                        <h4 >Tetris</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-carrito"> Carrito</div>
+
+                     </div>   
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniFreedyFastBear.png" alt="head head-soccer-2022_xl">
+                            <h4>Freedy fast bear</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-comprar"> Comprar</div>
+            
+                        </div>
+            
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniCuphead.png" alt="head head-soccer-2022_xl">
+                            <h4 >Cuphead</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-jugar"> Jugar</div>
+            
+                        </div>
+            
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniPong.png" alt="head head-soccer-2022_xl">
+                            <h4 >Pong</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-carrito"> Carrito</div>
+
+                        </div>    
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniPvsZ.png" alt="head head-soccer-2022_xl">
+                                <h4 >Plantas VS Zombie</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-comprar"> Comprar</div>
+                
+                            </div>
+                
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniBasketStras.png" alt="head head-soccer-2022_xl">
+                                <h4 >Basket Stras</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-jugar"> Jugar</div>
+                
+                            </div>
+                
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/Splatterhouse_arcadeflyer.png" alt="head head-soccer-2022_xl">
+                                <h4 >Splater House</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-carrito"> Carrito</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniDonkeykong.png" alt="head head-soccer-2022_xl">
+                        <h4>DonkeyKong</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                   
+                </div>
+                <div class="displayBotonesCarrusel">
+                    <div class="prev-mini"><img src="images/leftButton.png" alt="botonizq"></div>
+                    <div class="sig-mini"><img src="images/rightButton.png" alt="botonder"></div>
                 </div>
             </div> 
         </div> <!-- fin de carrusel chiquito-->
+
+        <div class="carruselContainerMini">
+            
+            <div class="carruselMini">  <!-- inicio de carrusel chiqquito-->
+                <h1>Terror</h1>
+                <div class="cards_mini">
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniPvsZ.png" alt="head head-soccer-2022_xl">
+                        <h4>Plantas VS Zombie</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniPong.png" alt="head head-soccer-2022_xl">
+                        <h4>Pong</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-jugar"> Jugar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonArcadeTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniTetris.png" alt="head head-soccer-2022_xl">
+                        <h4>Head Soccer</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniCircus.png" alt="head head-soccer-2022_xl">
+                        <h4 >Splater House</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-carrito"> Carrito</div>
+
+                     </div>   
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniSilentHill.png" alt="head head-soccer-2022_xl">
+                            <h4>SilentHill</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-comprar"> Comprar</div>
+            
+                        </div>
+            
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniFireBoy.png" alt="head head-soccer-2022_xl">
+                            <h4 >fireboy watergirl</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-jugar"> Jugar</div>
+            
+                        </div>
+            
+                        <div class="card_chiquita">
+                            <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                            <img class="imgMini" src="images/MiniCommander Keen.png" alt="head head-soccer-2022_xl">
+                            <h4 >Commander keen</h4>
+                            <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                            <div class="btn-carrito"> Carrito</div>
+
+                        </div>    
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniSplatterhouse3.png" alt="head head-soccer-2022_xl">
+                                <h4 >Splater House 3</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-comprar"> Comprar</div>
+                
+                            </div>
+                
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniBasketStras.png" alt="head head-soccer-2022_xl">
+                                <h4 >BasketStras</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-jugar"> Jugar</div>
+                
+                            </div>
+                
+                            <div class="card_chiquita">
+                                <img class="ribbonMini" src="images/ribbonTerrorTagMini.png" alt="categoria">
+                                <img class="imgMini" src="images/MiniSplaterhouse2.png" alt="head head-soccer-2022_xl">
+                                <h4 >Splater House2</h4>
+                                <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                                <div class="btn-carrito"> Carrito</div>
+        
+                    </div>
+        
+                    <div class="card_chiquita">
+                        <img class="ribbonMini" src="images/ribbonDeportesTagMini.png" alt="categoria">
+                        <img class="imgMini" src="images/MiniStreetFighter2.png" alt="head head-soccer-2022_xl">
+                        <h4>Head Soccer</h4>
+                        <img class="priceTagMini" src="images/priceTagMini.png" alt="precio">
+                        <div class="btn-comprar"> Comprar</div>
+        
+                    </div>
+        
+                   
+                </div>
+               
+            </div> 
+            <div class="displayBotonesCarrusel">
+                <div class="prev-mini"><img src="images/leftButton.png" alt="botonizq"></div>
+                <div class="sig-mini"><img src="images/rightButton.png" alt="botonder"></div>
+            </div>
+                
+        </div> <!-- fin de carrusel chiquito-->
+
+
+       
     </main>
 <footer>
         <ul class="footer-list">

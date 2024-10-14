@@ -43,15 +43,14 @@ let sigBtn = document.querySelector('.sig');
 let cards = document.querySelector('.cards');
 
 let pos = 0; // Posición inicial
-let cardsWidth = 1180; // Ancho de cada tarjeta
-let totalVisibleCards = 4; // Número de tarjetas visibles
-let totalCards = document.querySelectorAll('.bigCard').length; // Número total de tarjetas
-let maxPosition = -(totalCards - totalVisibleCards) * cardsWidth; // Posición máxima permitida
+let anchoTotal = 1236; // ancho total cuanto quiero mover
+let rotaciones = 2; // cuantas veces quiero que cambie
+let maxPosition = -(anchoTotal * rotaciones); // Posición máxima permitida
 
 // Función para mover el carrusel a la izquierda
 prevBtn.addEventListener('click', () => {
     if (pos < 0) {
-        pos += cardsWidth;
+        pos += anchoTotal;
         cards.style.transform = `translateX(${pos}px)`;
     }
 });
@@ -59,8 +58,36 @@ prevBtn.addEventListener('click', () => {
 // Función para mover el carrusel a la derecha
 sigBtn.addEventListener('click', () => {
     if (pos > maxPosition) {
-        pos -= cardsWidth;
+        pos -= anchoTotal;
         cards.style.transform = `translateX(${pos}px)`;
     }
+});
+
+// Selecciona todos los carruseles
+document.querySelectorAll('.carruselContainerMini').forEach(carousel => {
+    let prevBtnMini = carousel.querySelector('.prev-mini');
+    let sigBtnMini = carousel.querySelector('.sig-mini');
+    let cards_mini = carousel.querySelector('.cards_mini');
+
+    let posMini = 0; // Posición inicial
+    let anchoTotalMini = 1145; // ancho total que quiero mover
+    let rotacionesMini = 1; // cuántas veces quiero que cambie
+    let maxPositionMini = -(anchoTotalMini * rotacionesMini); // Posición máxima permitida
+
+    // Función para mover el carrusel a la izquierda
+    prevBtnMini.addEventListener('click', () => {
+        if (posMini < 0) {
+            posMini += anchoTotalMini;
+            cards_mini.style.transform = `translateX(${posMini}px)`;
+        }
+    });
+
+    // Función para mover el carrusel a la derecha
+    sigBtnMini.addEventListener('click', () => {
+        if (posMini > maxPositionMini) {
+            posMini -= anchoTotalMini;
+            cards_mini.style.transform = `translateX(${posMini}px)`;
+        }
+    });
 });
 
