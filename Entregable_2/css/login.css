@@ -99,6 +99,7 @@ header li, .nuestrasRedes{
 .searchBar{
     display: flex;
     background-color:#A9D9FF;
+    color: #124F80;
     width: 35rem;
     height: 2.2rem;
     border-radius: 10px;
@@ -298,9 +299,8 @@ h1{
     flex-direction: column;
     border-radius: 8px;
     width: 362px;
-    height: 1122px;
     margin-top: 81px;
-    background-color: #1668B3;
+    background-color: #124F80;
     margin-bottom: 10%;
 }
 
@@ -312,9 +312,8 @@ h1{
     flex-direction: column;
     border-radius: 8px;
     width: 362px;
-    height: 525px;
     margin-top: 81px;
-    background-color: #1668B3;
+    background-color: #124F80;
     margin-bottom: 10%;
 }
 .registro{
@@ -329,6 +328,10 @@ h1{
     flex-direction: column  ;
     justify-items: center;
 }
+
+.contenedor-usuarios-padre h2{
+    font-size: small;
+}
 .btn_a_registro{
     display: flex;
     align-items: center;
@@ -338,8 +341,8 @@ h1{
     width: 318px;
     height: 33px;
     border-radius: 16px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 5%;
+    margin-bottom: 3%;
     color: #421C15;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 10);
 }
@@ -376,13 +379,11 @@ input[type=text]{
     
 }
 
-span{
-    
+span{   
     border-bottom: solid 2px #A9D9FF ;
 }
 
 .btn_ingresar{
-
     font-family: Arial, Helvetica, sans-serif;
     background-color:#A9D9FF   ;
     border-radius: 16px;
@@ -401,6 +402,16 @@ span{
 
 .btn_and_check{
     display: flex;
+}
+
+.captcha{
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.captcha img{
+    width: 182;
+    height: 42;
 }
 
 @media screen and (max-width: 768px) {
