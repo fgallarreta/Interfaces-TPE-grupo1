@@ -407,11 +407,10 @@ span{
 .captcha{
     margin-top: 5%;
     justify-content: center;
-}
-
-.captcha img{
     width: 182;
     height: 42;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 @media screen and (max-width: 768px) {
