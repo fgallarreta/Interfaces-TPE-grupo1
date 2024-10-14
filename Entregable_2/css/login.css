@@ -118,8 +118,9 @@ header li, .nuestrasRedes{
     margin-left: 0.5rem;
 }
 
-#serchBar_input::placeholder{
+#searchBar_input::placeholder{
     color: #124F80;
+    font-weight: bold;
 }
 
 .mostrarOpciones{
