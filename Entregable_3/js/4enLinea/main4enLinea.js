@@ -8,7 +8,7 @@ let lineaTipo = document.getElementById("lineaTipo");
 
 // Variables del temporizador
 let timer;
-let seconds = 0;
+let segundos = 120;
 
 // Crear la imagen de fondo
 let imagenFondo = new Image();
@@ -20,10 +20,10 @@ imagenFondo.onload = () => {
 
 // Función para actualizar el temporizador
 function updateTimer() {
-  seconds--;
-  const minutes = String(Math.floor(seconds / 60)).padStart(2, "0");
-  const secs = String(seconds % 60).padStart(2, "0");
-  timerElement.textContent = `${minutes}:${secs}`;
+  segundos--;
+  const min = String(Math.floor(segundos / 60)).padStart(2, "0");
+  const seg = String(segundos % 60).padStart(2, "0");
+  timerElement.textContent = `${min}:${seg}`;
 }
 
 // Inicialización del juego
@@ -34,16 +34,40 @@ function iniciarJuego() {
   const tipoFichaJ1 = fichaTipoJ1.value;
   const tipoFichaJ2 = fichaTipoJ2.value;
   const tipoLinea = parseInt(lineaTipo.value, 10);
-
-  tablero = new Tablero(
-    418,
-    98,
-    ctx,
-    6,
-    7,
-    tipoLinea,
-    "images/Casillero 72x72.png"
-  );
+  if (tipoLinea == 4) {
+    tablero = new Tablero(
+      418,
+      98,
+      ctx,
+      6,
+      7,
+      tipoLinea,
+      "images/Casillero 72x72.png"
+    );
+  }
+  else if (tipoLinea ==5) {
+    tablero = new Tablero(
+      366,
+      68,
+      ctx,
+      7,
+      9,
+      tipoLinea,
+      "images/Casillero 72x72.png"
+    );}
+    else if (tipoLinea== 6) {
+      tablero = new Tablero(
+        342,
+        62,
+        ctx,
+        7,
+        10,
+        tipoLinea,
+        "images/Casillero 72x72.png"
+      );
+    }
+  
+ 
   jugador1 = new Jugador("Jugador 1", tipoFichaJ1, ctx);
   jugador2 = new Jugador("Jugador 2", tipoFichaJ2, ctx);
 
@@ -129,6 +153,7 @@ canvas.addEventListener("mouseup", (e) => {
 // Iniciar el juego al hacer clic en el botón de inicio
 document.getElementById("startGame").addEventListener("click", () => {
   // Ocultar el panel de configuración
+  
   document.getElementById("configPanel").style.display = "none";
   // Mostrar el canvas
   document.getElementById("miCanvas").style.display = "block";

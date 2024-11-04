@@ -15,7 +15,7 @@ class Juego {
   }
 
   realizarMovimiento(columna) {
-    let ganador;
+    
     let filaConFicha = this.turnoActual.colocarFicha(this.tablero, columna);
     if (filaConFicha != null) {
       if (

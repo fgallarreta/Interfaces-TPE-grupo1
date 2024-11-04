@@ -24,7 +24,11 @@ class Tablero extends ElementoDeJuego {
         this.matriz[fila][columna] = ficha;
         ficha.x = this.x + columna * this.celda + 26;
         ficha.y = this.y + fila * this.celda + 26;
-        return fila; // Retornar la fila donde se colocó la ficha o null si esta llena
+        if (fila != null) {
+          ficha.gravedad(fila ,this);
+          return fila; // Retornar la fila donde se colocó la ficha o null si esta llena
+        }
+        
       }
     }
     return null;

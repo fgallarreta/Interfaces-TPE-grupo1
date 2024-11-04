@@ -5,12 +5,12 @@ class Ficha extends ElementoDeJuego {
     this.ctx = ctx;
     this.seMueve = false;
     this.imagenString = imagen;
-    // Crear y cargar la imagen
     this.imagen = new Image();
     this.imagen.src = this.imagenString;
-    // Configurar el evento onload para dibujar la imagen cuando esté cargada
+
+    // Dibujar la imagen cuando esté cargada
     this.imagen.onload = () => {
-      this.draw(); // Llamar al método draw() cuando la imagen esté cargada
+      this.draw();
     };
   }
 
@@ -18,9 +18,9 @@ class Ficha extends ElementoDeJuego {
     this.ctx.save();
     this.ctx.beginPath();
     this.ctx.arc(this.x, this.y, this.radio, 0, Math.PI * 2);
-    this.ctx.clip(); // Clipa el contexto para que lo que se dibuje después quede dentro del círculo
+    this.ctx.clip();
 
-    // Dibujar la imagen de llenado
+    // Dibujar la imagen dentro del círculo
     this.ctx.drawImage(
       this.imagen,
       this.x - this.radio,
@@ -29,7 +29,6 @@ class Ficha extends ElementoDeJuego {
       this.radio * 2
     );
 
-    // Restablecer el contexto para poder dibujar fuera del círculo si es necesario
     this.ctx.restore();
   }
 
@@ -51,7 +50,28 @@ class Ficha extends ElementoDeJuego {
   seEstaMoviendo() {
     return this.seMueve;
   }
+
   getImagenFicha() {
     return this.imagenString;
+  }
+
+  // Método de gravedad para hacer que la ficha caiga desde la fila 0 hasta su posición en el tablero
+  gravedad(filaFinal, Tablero) {
+    const targetY = (filaFinal * Tablero.celda + Tablero.y) + Tablero.celda / 2;
+
+    // Posición inicial en la fila 0 (justo por encima de la zona de lanzamiento)
+    this.y = Tablero.y - Tablero.celda; // Un poco por encima de la fila de lanzamiento
+
+    const intervaloCaida = setInterval(() => {
+      this.y += 10; // Ajusta la velocidad de caída
+
+      // Comprueba si ha llegado a su destino
+      if (this.y >= targetY) {
+        this.y = targetY; // Alinea la ficha en la posición final
+        clearInterval(intervaloCaida); // Detiene la animación
+      }
+
+     
+    }, 20);
   }
 }
