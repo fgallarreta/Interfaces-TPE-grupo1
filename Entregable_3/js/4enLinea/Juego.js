@@ -15,7 +15,6 @@ class Juego {
   }
 
   realizarMovimiento(columna) {
-    
     let filaConFicha = this.turnoActual.colocarFicha(this.tablero, columna);
     if (filaConFicha != null) {
       if (
@@ -105,16 +104,9 @@ class Juego {
       columna < this.tablero.columnas
     );
   }
- mostrarGanador(jugador) {
-    const popup = document.getElementById('popup');
-    const ganadorMensaje = document.getElementById('ganadorMensaje');
-    
+  mostrarGanador(jugador) {
     // Establecer el mensaje del ganador
-    ganadorMensaje.textContent = `¡Felicidades, ${jugador}! Has ganado!`;
-    
-    // Mostrar el popup
-    popup.classList.remove('hidden');
-}
-
-
+    mostrarPopup("¡Felicidades, " + jugador + "! Has ganado!");
+    clearInterval(timerInterval);
+  }
 }

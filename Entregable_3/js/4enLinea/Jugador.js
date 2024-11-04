@@ -28,9 +28,9 @@ class Jugador {
     return this.turno;
   }
   mostrarFichas() {
-    const pilonX = this.nombre === "Jugador 1" ? 180 : 1100; // Posición X del pilón según el jugador
+    const pilonX = this.nombre == "Jugador 1" ? 180 : 1000; // Posición X del pilón según el jugador
     const pilonY = 80; // Posición Y inicial
-    const espacioEntreFichas = 22; // Espaciado entre las fichas
+    const espacioEntreFichas = 20; // Espaciado entre las fichas
 
     this.fichasDisponibles.forEach((ficha, index) => {
       // Solo actualiza la posición si la ficha no está en movimiento o en el tablero
