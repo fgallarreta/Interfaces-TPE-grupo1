@@ -1,8 +1,9 @@
 class Tablero extends ElementoDeJuego {
-  constructor(x, y, ctx, filas, columnas, imagenCasilleroSrc) {
+  constructor(x, y, ctx, filas, columnas, n, imagenCasilleroSrc) {
     super(x, y, ctx);
     this.filas = filas + 1; // Agregar una fila extra para la "zona de lanzamiento"
     this.columnas = columnas;
+    this.n = n;
     this.celda = 52;
     this.matriz = Array.from({ length: this.filas }, () =>
       Array(this.columnas).fill(null)
@@ -80,6 +81,6 @@ class Tablero extends ElementoDeJuego {
     this.columnaFlecha = (this.columnaFlecha + 1) % this.columnas; // Mover la flecha a la siguiente columna
   }
   getNlineas() {
-    return 4;
+    return this.n;
   }
 }

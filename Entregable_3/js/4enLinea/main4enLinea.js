@@ -1,33 +1,74 @@
 const canvas = document.getElementById("miCanvas");
 const ctx = canvas.getContext("2d");
+const timerElement = document.getElementById("timerValue");
+const startGameButton = document.getElementById("startGame");
+let fichaTipoJ1 = document.getElementById("fichaTipoJ1");
+let fichaTipoJ2 = document.getElementById("fichaTipoJ2");
+let lineaTipo = document.getElementById("lineaTipo");
+
+// Variables del temporizador
+let timer;
+let seconds = 0;
+
 // Crear la imagen de fondo
 let imagenFondo = new Image();
-imagenFondo.src = "images/Fondo.png"; // Asegúrate de que la ruta sea correcta
+imagenFondo.src = "images/Fondo.png";
 
-// Cargar la imagen y dibujarla en el canvas
 imagenFondo.onload = () => {
-  ctx.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height); // Dibuja el fondo
+  ctx.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
 };
-const tablero = new Tablero(418, 98, ctx, 6, 7, "images/Casillero 72x72.png");
-const jugador1 = new Jugador("Jugador 1", "images/FichaPikachu.png", ctx);
-const jugador2 = new Jugador("Jugador 2", "images/FichaSquirtle.png", ctx);
 
-jugador1.inicializarFichas(21);
-jugador2.inicializarFichas(21);
-const juego = new Juego(jugador1, jugador2, tablero);
-
-function render() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height); // Dibuja el fondo
-  tablero.draw();
-  // Dibuja las fichas disponibles de cada jugador
-  jugador1.mostrarFichas(); // Dibuja las fichas del jugador 1
-  jugador2.mostrarFichas(); // Dibuja las fichas del jugador 2
-  tablero.actualizarFlecha(); // Mover la flecha en cada fotograma
-  requestAnimationFrame(render);
+// Función para actualizar el temporizador
+function updateTimer() {
+  seconds--;
+  const minutes = String(Math.floor(seconds / 60)).padStart(2, "0");
+  const secs = String(seconds % 60).padStart(2, "0");
+  timerElement.textContent = `${minutes}:${secs}`;
 }
 
-render();
+// Inicialización del juego
+let tablero, jugador1, jugador2, juego;
+
+function iniciarJuego() {
+  // Configuración de fichas y tipo de juego
+  const tipoFichaJ1 = fichaTipoJ1.value;
+  const tipoFichaJ2 = fichaTipoJ2.value;
+  const tipoLinea = parseInt(lineaTipo.value, 10);
+
+  tablero = new Tablero(
+    418,
+    98,
+    ctx,
+    6,
+    7,
+    tipoLinea,
+    "images/Casillero 72x72.png"
+  );
+  jugador1 = new Jugador("Jugador 1", tipoFichaJ1, ctx);
+  jugador2 = new Jugador("Jugador 2", tipoFichaJ2, ctx);
+
+  jugador1.inicializarFichas(21);
+  jugador2.inicializarFichas(21);
+  juego = new Juego(jugador1, jugador2, tablero);
+
+  // Inicia el temporizador
+  seconds = 0;
+  clearInterval(timer);
+  timer = setInterval(updateTimer, 1000);
+
+  render();
+}
+
+// Función de renderizado
+function render() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
+  tablero.draw();
+  jugador1.mostrarFichas();
+  jugador2.mostrarFichas();
+  tablero.actualizarFlecha();
+  requestAnimationFrame(render);
+}
 
 // Lógica de arrastrar y soltar
 let fichaSeleccionada = null;
@@ -38,9 +79,8 @@ canvas.addEventListener("mousedown", (e) => {
   let rect = canvas.getBoundingClientRect();
   let mouseX = e.clientX - rect.left;
   let mouseY = e.clientY - rect.top;
-
-  // Verifica quién tiene el turno y busca la ficha
   const jugadorActual = jugador1.getTurno() ? jugador1 : jugador2;
+
   jugadorActual.fichasDisponibles.forEach((ficha) => {
     if (ficha.estaClickeado(mouseX, mouseY)) {
       fichaSeleccionada = ficha;
@@ -57,38 +97,41 @@ canvas.addEventListener("mousemove", (e) => {
     let mouseX = e.clientX - rect.left;
     let mouseY = e.clientY - rect.top;
     fichaSeleccionada.mover(mouseX - offsetX, mouseY - offsetY);
-    render(); // Redibuja el canvas para mostrar la ficha en movimiento
+    render();
   }
 });
 
 canvas.addEventListener("mouseup", (e) => {
   if (fichaSeleccionada) {
-    // Verificar si la ficha está en la fila 0 (primer fila del tablero)
     if (fichaSeleccionada.y < tablero.y + tablero.celda) {
-      // Calcular la columna correspondiente en el tablero
       let columna = Math.floor(
         (fichaSeleccionada.x - tablero.x) / tablero.celda
       );
 
-      // Verificar si la columna es válida
       if (columna >= 0 && columna < tablero.columnas) {
         let fila = juego.realizarMovimiento(columna);
         if (fila === null) {
-          // Si no se pudo colocar, devolver la ficha a su posición original
-          fichaSeleccionada.x = 180; // Posición inicial de las fichas
-          fichaSeleccionada.y = 90; // Ajusta según sea necesario
+          fichaSeleccionada.x = 180;
+          fichaSeleccionada.y = 90;
         }
       } else {
-        // Si la columna no es válida, devolver la ficha
-        fichaSeleccionada.x = 180; // Posición inicial de las fichas
-        fichaSeleccionada.y = 90; // Ajusta según sea necesario
+        fichaSeleccionada.x = 180;
+        fichaSeleccionada.y = 90;
       }
     }
-    // Limpiar la ficha seleccionada
+
     fichaSeleccionada.setSeMueve(false);
     fichaSeleccionada = null;
-
-    // Redibujar todo el canvas para reflejar el cambio
     render();
   }
+});
+
+// Iniciar el juego al hacer clic en el botón de inicio
+document.getElementById("startGame").addEventListener("click", () => {
+  // Ocultar el panel de configuración
+  document.getElementById("configPanel").style.display = "none";
+  // Mostrar el canvas
+  document.getElementById("miCanvas").style.display = "block";
+  // Iniciar el juego
+  iniciarJuego();
 });
