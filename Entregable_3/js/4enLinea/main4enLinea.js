@@ -24,6 +24,23 @@ function updateTimer() {
   const min = String(Math.floor(segundos / 60)).padStart(2, "0");
   const seg = String(segundos % 60).padStart(2, "0");
   timerElement.textContent = `${min}:${seg}`;
+  if(min ==0 && seg==0){
+    empate();
+    timerElement.textContent=  `${0}:${0}`
+  }
+
+
+}
+
+function empate() {
+  const popup = document.getElementById('popup-empate');
+  const Mensaje = document.getElementById('Mensaje');
+  
+  // Establecer el mensaje del ganador
+  Mensaje.textContent = `¡Empate!`;
+  
+  // Mostrar el popup
+  popup.classList.remove('hidden');
 }
 
 // Inicialización del juego
@@ -159,4 +176,10 @@ document.getElementById("startGame").addEventListener("click", () => {
   document.getElementById("miCanvas").style.display = "block";
   // Iniciar el juego
   iniciarJuego();
+});
+
+// Agregar evento para cerrar el popup
+document.getElementById('close').addEventListener('click', function() {
+  const popup = document.getElementById('popup');
+  popup.classList.add('hidden');
 });

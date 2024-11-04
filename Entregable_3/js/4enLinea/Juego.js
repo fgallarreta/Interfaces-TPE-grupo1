@@ -105,8 +105,16 @@ class Juego {
       columna < this.tablero.columnas
     );
   }
+ mostrarGanador(jugador) {
+    const popup = document.getElementById('popup');
+    const ganadorMensaje = document.getElementById('ganadorMensaje');
+    
+    // Establecer el mensaje del ganador
+    ganadorMensaje.textContent = `¡Felicidades, ${jugador}! Has ganado!`;
+    
+    // Mostrar el popup
+    popup.classList.remove('hidden');
+}
 
-  mostrarGanador(ganador) {
-    console.log(ganador);
-  }
+
 }
