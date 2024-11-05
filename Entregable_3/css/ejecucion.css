@@ -36,9 +36,6 @@ header .btn {
   cursor: pointer;
   margin-top: 5px;
 }
-.ocultar {
-  display: none;
-}
 
 .open {
   display: flex;
@@ -313,9 +310,7 @@ h3 {
   height: 5vw;
   margin-top: 10px;
   color: #a9d9ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   cursor: pointer;
   font-size: 1.2vw;
@@ -434,7 +429,8 @@ h3 {
 }
 
 .divisor_horizontal {
-  width: 100%;
+  width: 80%;
+
   height: 0;
   position: relative;
   margin-left: 5%;
@@ -446,7 +442,8 @@ h3 {
 .divisor_horizontal::before {
   content: "";
   display: block;
-  width: 100%;
+  margin-left: 10%;
+  width: 90%;
   height: 1px;
   background-color: #124f80;
   position: absolute;
@@ -559,32 +556,31 @@ h3 {
 }
 
 #game-container {
-  text-align: center;
-  display: grid;
-  justify-content: center;
-  margin-top: 20px;
-
-  background-image:url("/images/preview.png");
-  background-size: 70%;
-background-position: 50%;
-  background-repeat: no-repeat;
-}
-#timer {
-  font-size: 1.5em;
-  margin: 20px;
-}
-#configPanel {
-  border: 2px solid #124f80;
-  padding: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  width: 300px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffef99;
-  border-radius: 16px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url("/images/preview.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#configPanel {
+  background-color: #a9d9ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-size: 30px;
+  margin-bottom: 10px; /* Espacio debajo del temporizador */
 }
 #miCanvas {
   border: 2px solid #333;
@@ -602,12 +598,6 @@ background-position: 50%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-
-  
-}
-.popup .boton_jugar{
-  align-self: center;
-  justify-self: center;
 }
 
 .popup-content {
@@ -617,17 +607,9 @@ background-position: 50%;
   text-align: center;
 }
 
-.hidden {
+.ocultar {
   display: none;
 }
-
-.close {
-  cursor: pointer;
-  float: right;
-  font-size: 28px;
-}
-
-
 /*---------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 768px) {
