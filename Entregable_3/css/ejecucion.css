@@ -429,7 +429,7 @@ h3 {
 }
 
 .divisor_horizontal {
-  width: 100%;
+  width: 95%;
   height: 0;
   position: relative;
   margin-left: 5%;
@@ -441,7 +441,7 @@ h3 {
 .divisor_horizontal::before {
   content: "";
   display: block;
-  width: 100%;
+  width: 95%;
   height: 1px;
   background-color: #124f80;
   position: absolute;
