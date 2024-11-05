@@ -429,12 +429,8 @@ h3 {
 }
 
 .divisor_horizontal {
-<<<<<<< HEAD
   width: 80%;
 
-=======
-  width: 95%;
->>>>>>> ace311d8d1da549cf9460cf17490a7089860b765
   height: 0;
   position: relative;
   margin-left: 5%;
@@ -446,12 +442,8 @@ h3 {
 .divisor_horizontal::before {
   content: "";
   display: block;
-<<<<<<< HEAD
   margin-left: 10%;
   width: 90%;
-=======
-  width: 95%;
->>>>>>> ace311d8d1da549cf9460cf17490a7089860b765
   height: 1px;
   background-color: #124f80;
   position: absolute;
@@ -568,11 +560,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-<<<<<<< HEAD
   background-image: url("/images/preview.png");
-=======
-  background-image: url("images/preview.png");
->>>>>>> ace311d8d1da549cf9460cf17490a7089860b765
   background-size: cover;
   background-position: center;
 }
