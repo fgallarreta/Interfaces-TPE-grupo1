@@ -130,7 +130,7 @@ canvas.addEventListener("mousemove", (e) => {
     let mouseX = e.clientX - rect.left;
     let mouseY = e.clientY - rect.top;
     fichaSeleccionada.mover(mouseX - offsetX, mouseY - offsetY);
-    render(); // Redibuja el canvas
+    
   }
 });
 
@@ -155,7 +155,7 @@ canvas.addEventListener("mouseup", (e) => {
 
     fichaSeleccionada.setSeMueve(false);
     fichaSeleccionada = null;
-    render(); // Redibuja el canvas
+   
   }
 });
 

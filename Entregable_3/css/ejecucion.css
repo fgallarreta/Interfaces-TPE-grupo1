@@ -560,13 +560,14 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("/images/preview.png");
+  background-image: url(../images/preview.png);
   background-size: cover;
   background-position: center;
 }
 
 #configPanel {
-  background-color: #a9d9ff;
+  background-color: #B34A34;
+  color: #a9d9ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -576,6 +577,9 @@ h3 {
   width: 90%;
   max-width: 600px;
   margin-bottom: 20px;
+}
+#configPanel h2 {
+  color: #a9d9ff;
 }
 
 #timer {
