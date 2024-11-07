@@ -37,57 +37,84 @@ function cargarLoader() {
     }, intervalo);
 };
 
-//Carrusel
-let prevBtn = document.querySelector('.prev');
-let sigBtn = document.querySelector('.sig');
-let cards = document.querySelector('.cards');
+//----------------------------------------------------------------------------------------------------------
+//Carrusel Grande
+const carrusel = document.querySelector('.cards');
+const cards = document.querySelectorAll('.bigCard');
 
-let pos = 0; // Posición inicial
-let anchoTotal = 1236; // ancho total cuanto quiero mover
-let rotaciones = 2; // cuantas veces quiero que cambie
-let maxPosition = -(anchoTotal * rotaciones); // Posición máxima permitida
+// Número de cartas
+let cantCards = cards.length;
+
 
 // Función para mover el carrusel a la izquierda
-prevBtn.addEventListener('click', () => {
-    if (pos < 0) {
-        pos += anchoTotal;
-        cards.style.transform = `translateX(${pos}px)`;
-    }
-});
+function moverCarruselIzquierda() {
+    const primerCard = carrusel.firstElementChild;
+    
+    carrusel.appendChild(primerCard); // Mueve la primera imagen al final
+    primerCard = carrusel.firstElementChild;
+    carrusel.style.transition = 'none'; // Desactivar la transición para un cambio instantáneo
+    carrusel.style.transform = `translateX(-${100 / cantCards}%)`; // Mover carrusel
+    setTimeout(() => {
+        carrusel.style.transition = 'transform 0.5s ease-in-out'; // Reactivar la transición
+    }, 50);
+}
 
 // Función para mover el carrusel a la derecha
-sigBtn.addEventListener('click', () => {
-    if (pos > maxPosition) {
-        pos -= anchoTotal;
-        cards.style.transform = `translateX(${pos}px)`;
-    }
-});
+function moverCarruselDerecha() {
+    const ultimaCard = carrusel.lastElementChild;
+    carrusel.insertBefore(ultimaCard, carrusel.firstElementChild); // Mueve la última imagen al principio
+    carrusel.style.transition = 'none'; // Desactivar la transición para un cambio instantáneo
+    carrusel.style.transform = `translateX(0%)`; // Mover carrusel
+    setTimeout(() => {
+        carrusel.style.transition = 'transform 0.5s ease-in-out'; // Reactivar la transición
+    }, 50);
+}
+
+// Asignar los eventos a las flechas
+const flechaIzquierda = document.querySelector('.izquierda');
+const flechaDerecha = document.querySelector('.derecha');
+
+flechaIzquierda.addEventListener('click', moverCarruselIzquierda);
+flechaDerecha.addEventListener('click', moverCarruselDerecha);
+//Carrusel Comun-------------------------------------------------------------------------------------------
 
 // Selecciona todos los carruseles
-document.querySelectorAll('.carruselContainerMini').forEach(carousel => {
-    let prevBtnMini = carousel.querySelector('.prev-mini');
-    let sigBtnMini = carousel.querySelector('.sig-mini');
-    let cards_mini = carousel.querySelector('.cards_mini');
+document.querySelectorAll('.carruselComun').forEach(carruselContainer => {
+    const carrusel = carruselContainer.querySelector('.cards_mini');
+    const prevBtnMini = carruselContainer.querySelector('.prev-mini');
+    const sigBtnMini = carruselContainer.querySelector('.sig-mini');
 
-    let posMini = 0; // Posición inicial
-    let anchoTotalMini = 1145; // ancho total que quiero mover
-    let rotacionesMini = 1; // cuántas veces quiero que cambie
-    let maxPositionMini = -(anchoTotalMini * rotacionesMini); // Posición máxima permitida
-
+    // Establece la posición inicial del carrusel
+    carrusel.style.display = "flex";
+    carrusel.style.transition = 'transform 0.5s ease';
+    
     // Función para mover el carrusel a la izquierda
     prevBtnMini.addEventListener('click', () => {
-        if (posMini < 0) {
-            posMini += anchoTotalMini;
-            cards_mini.style.transform = `translateX(${posMini}px)`;
-        }
+        // Desactiva la transición temporalmente para evitar el salto
+        carrusel.style.transition = 'none';
+        // Mueve la primera tarjeta al final del carrusel
+        carrusel.appendChild(carrusel.firstElementChild);
+       
+        // Mueve el carrusel instantáneamente para que la última tarjeta esté en la posición correcta
+        carrusel.style.transform = 'translateX(-100%)';
+
+  // Activa la transición para hacer el desplazamiento suave
+            carrusel.style.transition = 'transform 0.5s ease';
+            carrusel.style.transform = 'translateX(0)';
+        
     });
 
     // Función para mover el carrusel a la derecha
     sigBtnMini.addEventListener('click', () => {
-        if (posMini > maxPositionMini) {
-            posMini -= anchoTotalMini;
-            cards_mini.style.transform = `translateX(${posMini}px)`;
-        }
+        // Activa la transición para hacer el desplazamiento suave hacia la izquierda
+        carrusel.style.transition = 'transform 0.5s ease';
+        carrusel.style.transform = 'translateX(-100%)';
+            // Desactiva la transición temporalmente para evitar el salto
+            carrusel.style.transition = 'none';
+             // Coloca la última tarjeta al principio
+        carrusel.insertBefore(carrusel.lastElementChild, carrusel.firstElementChild);
+            // Resetea la posición del carrusel a la posición inicial sin transición
+            carrusel.style.transform = 'translateX(0)';
     });
 });
 

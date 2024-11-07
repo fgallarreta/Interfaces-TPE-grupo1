@@ -603,6 +603,23 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+  /*Flechas mover carrusel-----------------------------------------------------------*/
+  .flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.izquierda {
+    left: 10px;
+}
+
+.derecha {
+    right: 10px;
+}
   /*cards*/
 
   .bigCard div {
