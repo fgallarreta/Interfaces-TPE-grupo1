@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+.contenedor-padre {
+    width: 1280px;
+    min-height:4300px;
+    height:fit-content;
+    background-color: #3effa2;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+#sec1{
+    height: 959px;
+    background-image: url('../svg/numberblocks/background1.svg');
+}
+
+
+header {
+    width: 1280px;
+    z-index: 10;
+    position: fixed;
+    background: linear-gradient(180deg, #00d1d5, rgba(0, 209, 213, 0.12) 87.91%, rgba(1, 208, 213, 0));
+    height: 103px;
+}
+
+#btn-comprar {
+    position: absolute;
+    right: 92px;
+    top: 20px;
+    width: 216px;
+    box-shadow: 6px 6px 0px #02187e;
+    border-radius: 111px;
+    background-color: #83c252;
+    border: 8px solid #fff;
+    box-sizing: border-box;
+    height: 66px;
+
+    font-size: 20px;
+    letter-spacing: 0.11em;
+    line-height: 94.5%;
+    font-weight: 600;
+    font-family: Lato, serif;
+    color: #fff;
+    text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+#btn-menu{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    position: relative;
+    top:21px;
+    left:100px;
+}
+
+#nb-logo,#nb-1,#nb-2, #nb-3, #arbol1, #arbol2, #arbol3,#arbusto1,#piedra4,#arbusto4,#piedra3,#piedra2,#piedra1,
+#arbusto3,#arbusto2{
+    position: absolute;
+}
+
+#sec1 #nb-logo{
+    left:360px;
+    top:55px;
+
+}
+
+#sec1 #nb-1{
+    left:411px;
+    top:500px;
+}
+
+#sec1 #nb-2{
+    left: 536px;
+    top: 403px;
+}
+
+#sec1 #nb-3{
+    left: 694px;
+    top: 338px;
+}
+
+#arbol1{
+    left: 1081px;
+    top: 279px;
+}
+
+#arbol2{
+    left: 881px;
+    top: 108px;
+}
+
+#arbol3{
+    right: 871px;
+    bottom:92px;
+}
+
+#arbusto1{
+    left:197px;
+    top:823px;
+}
+
+#piedra4{
+    left: 129px;
+    top: 794px;
+}
+
+#arbusto4{
+    left: 161px;
+    top: 719px;
+}
+
+#piedra3{
+    bottom: 147px;
+    right:92px;
+}
+
+#piedra2{
+    right:177px;
+    bottom:165px;
+}
+
+#piedra1{
+    bottom:137px;
+    right:177px;
+}
+
+#arbusto3{
+    left: 1081px;
+    bottom: 189px;
+}
+
+#arbusto2{
+    right:59px;
+    bottom:265px;
+}
+
+#sec2 {
+    height: 1852px;
+}
+
+#sec2 .bg1 {
+    background-image: url(../svg/numberblocks/bg-sec2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1280px;
+    height: 894px;
+    position: absolute;
+}
+
+#sec2-blue-rect {
+    height: 1259px;
+    width: 572px;
+    position: absolute;
+    top: -87px;
+    right: -79px;
+}
+
+#sec2-txt1 {
+    width: 508px;
+    position: absolute;
+    font-size: 47px;
+    line-height: 94.5%;
+    font-weight: 600;
+    font-family: Lato;
+    color: #1b428f;
+    text-align: left;
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+#sec2-txt2 {
+    width: 704px;
+    position: absolute;
+    font-size: 20px;
+    font-family: Lato;
+    color: #1b428f;
+    text-align: left;
+    display: inline-block;
+    height: 154px;
+    top: 214px;
+    left: 100px;
+}
+
+#sec2-tv {
+    height: 324.35px;
+    width: 576.38px;
+    position: absolute;
+    top: 336px;
+    left: 236px;
+}
+
+#sec2-green-square {
+    width: 601.64px;
+    height: 603px;
+    position: absolute;
+    top: 537px;
+    left: 48px;
+}
+
+.sec2-tv-channels {
+    width: 332.96px;
+    height: 302.69px;
+    bottom: 329.31px;
+    position: absolute;
+}
+
+.sec2-tv-channels-txt {
+    color: #000;
+    position: absolute;
+    font-size: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+#sec2-tv1 {
+    left: 100px;
+}
+
+#sec2-tv1-txt {
+    width: 333px;
+    height: 218px;
+    bottom: 88px;
+    left: 100px;
+}
+
+#sec2-tv2 {
+    left: 473.52px;
+}
+
+#sec2-tv2-txt {
+    bottom: 89px;
+    left: 474px;
+    width: 332px;
+    height: 217px;
+}
+
+#sec2-tv3 {
+    right: 100px;
+}
+
+#sec2-tv3-txt {
+    right: 100px;
+    bottom: 117px;
+    width: 333px;
+    height: 189px;
+}
+
+.bg-violeta{
+    margin:auto;
+    width:1280px;
+    height:1157px;
+    overflow-x: hidden;
+    position: relative;
+    background-image: url('../svg/numberblocks/bg-violeta-curvo.svg');
+}
+
+#bg3-chars,#btn-descarga{
+    position: absolute;
+}
+
+#bg3-chars{
+
+    z-index: 5;
+    bottom:0;
+}
+
+#btn-descarga{
+    z-index:3;
+    width:556px;
+    height: 82px;
+    box-shadow: 4px 5px 0px #02187e;
+    border-radius: 111px;
+    background-color: #83c252;
+    border: 8px solid #fff;
+
+    font-size: 31.14px;
+    line-height: 110%;
+    font-family: Lato;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+
+    left: 50%;
+    transform: translateX(-50%);
+    top:390px;
+}
+
+#sec3-text{
+    position: absolute;
+    width:950px;
+    height:153px;
+    z-index: 8;
+    top:175px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 61px;
+    line-height: 110%;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-family: Lato;
+    font-weight: 600;
+}
+
+#matematicas{
+    font-weight: 700;
+    font-style: italic;
+}
+
+#sec4-grid {
+    width: 1080px;
+    display: grid;
+    grid-template-columns: calc(1080px - 467px) 467px;
+    grid-template-rows: max-content auto;
+    grid-template-areas: 
+    "titulo titulo"
+    "img txt";
+    margin: auto;
+}
+
+#sec4-grid h1 {
+    grid-area: titulo;
+    height: fit-content;
+    font-size: 60px;
+    line-height: 94.5%;
+    font-weight: 600;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+    margin-top: 174px;
+    margin-bottom: 159px;
+}
+
+#sec4-grid #sec4-txt h2 {
+    font-size: 40px;
+    line-height: 94.5%;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+}
+
+#sec4-grid #sec4-txt h2 + p {
+    margin-top: 15px;
+    margin-bottom: 267px;
+}
+
+#sec4-grid #sec4-txt h2 + p:last-of-type {
+    /*margin-bottom: 147.17px; /* Elimina el margen en el último <p> */
+    margin-bottom: 147.17px;
+}
+
+#sec4-txt {
+    width: 100%;
+    height: 4884px + 147.17px;  /*Tamaño ocupado por todos los textos + el margen de abajo*/
+    grid-area: txt;
+}
+
+#sec4-txt p {
+    font-size: 20px;
+    line-height: 94.5%;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+}
+
+
+#sec5{
+    position: relative;
+    height: 1443px;
+    background-color: #ffffff;
+}
+
+.bg-amarillo, #three-crown , #sec5-video, #sec5-text{
+    position: absolute;
+}
+
+.bg-amarillo{
+    background-image: url('../svg/numberblocks/bg-amarillo-curvo.svg');
+    width: 1429px;
+    height: inherit;
+    overflow-x: hidden;
+    left: -83px;
+}
+
+#three-crown{
+    bottom: 103px;
+    /*right:89px;*/
+    left: 731px;
+}
+
+#sec5-video{
+    left: 100px;
+    bottom: 466px;
+}
+
+#sec5-text{
+    width: 802px;
+    height: 171px;
+    top: 309px;
+    left: 100px;
+
+
+    font-size: 60px;
+    line-height: 94.5%;
+    font-weight: 600;
+    font-family: Lato;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+}
+
+#sec6 {
+    width: 1080px;
+    height: 1033px;
+}
+
+#sec6 img {
+    height: 973px;
+    width: 667px;
+    position: absolute;
+    right: -86px;
+    bottom: 54px;
+}
+
+#sec6 h1 {
+    width: 746px;
+    position: absolute;
+    font-size: 60px;
+    line-height: 94.5%;
+    font-weight: 600;
+    color: #9d2121;
+    text-align: left;
+    display: inline-block;
+    top: 220px;
+    left: 0px;
+}
+
+#sec6 p {
+    width: 467px;
+    position: absolute;
+    font-size: 20px;
+    line-height: 94.5%;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+    left: 0px;
+    bottom: 296px;
+}
