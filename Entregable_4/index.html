@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>GOC GAMES</title>
+  </head>
+  <body class="pageContainer">
+    <div class="contenedorLoader" id="loader">
+      <div class="spinner"></div>
+      <div class="progreso" id="progreso">0%</div>
+    </div>
+    <div class="paginaGral" id="paginaGral">
+      <header>
+        <div>
+          <img
+            class="btn"
+            src="images/menu.png"
+            alt="menu"
+            onclick="desplegarMenu()"
+          />
+          <a href="index.html"
+            ><img class="logo" src="images/Logo.png" alt="logo"
+          /></a>
+        </div>
+        <nav class="ocultar" id="menu">
+          <ul>
+            <li><a href="#">perfil</a></li>
+            <li><a href="#">carrito</a></li>
+            <li><a href="#">notificaciones</a></li>
+            <li><a href="#">Amigos</a></li>
+            <li><a href="#">Accion</a></li>
+            <li><a href="#">Aventura</a></li>
+            <li><a href="#">Carreras</a></li>
+            <li><a href="#">Cartas</a></li>
+            <li><a href="#">Clasicos</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Juegos de mesa</a></li>
+            <li><a href="#">Multijugador</a></li>
+            <li><a href="#">Terror</a></li>
+            <div class="nuestrasRedes">
+              <p>Nuestras redes</p>
+              <div class="imgRedes">
+                <a href=""
+                  ><img src="images/face_oscuro.png" alt="Facebook"
+                /></a>
+                <a href=""
+                  ><img src="images/ig_oscuro.png" alt="Instagram"
+                /></a>
+                <a href=""><img src="images/x_oscuro.png" alt="X" /></a>
+              </div>
+            </div>
+          </ul>
+        </nav>
+
+        <div class="searchBar">
+          <img src="images/lupa.png" alt="buscar" />
+          <input type="text" placeholder="Buscar" class="inputSearchBar" />
+        </div>
+
+        <div class="botonesUsuario">
+          <img class="btn" src="images/notificacion.png" alt="notificacion" />
+          <img class="btn" src="images/Cart.png" alt="carrito" />
+          <img class="btn" src="images/amigos.png" alt="amigos" />
+          <img
+            class="btn"
+            src="images/user.png"
+            alt="usuario"
+            onclick="desplegarOpcionesUsuario()"
+          />
+        </div>
+        <div class="opcionesPerfil">
+          <div class="ocultar" id="userOptions">
+            <div class="infoUsuario">
+              <img src="images/user.png" alt="usuario" />
+              <div>
+                <h3>USER</h3>
+                <p>user@gmail.com</p>
+              </div>
+            </div>
+            <div class="opcionesUsuario">
+              <p>Editar perfil</p>
+              <p>Configurar cuenta</p>
+              <a href="login.html">Cerrar sesión</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="carruselContainer">
+          <img class="flecha izquierda"src="images/leftButton.png" alt=""> <!-- Flecha izquierda -->
+          <div class="carrusel">
+              <div class="cards">
+                  <div class="bigCard">
+                    <img
+                      class="ribbonBig"
+                      src="images/ribbonJuegosDeMesa.png"
+                      alt="categoria"
+                    />
+                    <img class="imgBig" src="images/4EnLinea.jpeg" />
+                    <h1>4 en linea</h1>
+    
+                    <div class="btn-jugar">
+                      <a href="ejecucion.html">Jugar</a>
+                    </div>
+                  </div>
+    
+                  <div class="bigCard">
+                    <img class="ribbonBig" src="images/ribbonArcade.png" alt="" />
+                    <img class="imgBig" src="images/lightCrusader.png" />
+                    <h1>Light Crusader</h1>
+                    <img
+                      class="priceTagBig"
+                      src="images/priceTagBig.png"
+                      alt="precio"
+                    />
+                    <div class="btn-comprar">Comprar</div>
+                  </div>
+                  <div class="bigCard">
+                    <img class="ribbonBig" src="images/ribbonCartas.png" alt="" />
+                    <img class="imgBig" src="images/governorOfPoker.png" />
+                    <h1>Governor Of Poker</h1>
+    
+                    <div class="btn-carrito">Carrito</div>
+                  </div>
+    
+                  <div class="bigCard">
+                    <img class="ribbonBig" src="images/ribbonAccion.png" alt="" />
+                    <img class="imgBig" src="images/roadRush.png" />
+                    <h1>Road Rash</h1>
+    
+                    <div class="btn-jugar">Jugar</div>
+                  </div>
+              </div>
+          </div>
+          <img class="flecha derecha"src="images/rightButton.png" alt=""> <!-- Flecha derecha -->
+      </div>
+
+        <div class="carruselComun">
+          <div class="carruselMini">
+            <!-- inicio de carrusel comun-->
+            <h1>Recientemente Agregados</h1>
+            <div class="cards_mini">
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniFireBoy.png"
+                  alt="FIreBoy and WaterGirl"
+                />
+                <h4>Fireboy and Watergirl</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonDeportesTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniBasketStras.png"
+                  alt="basketStars"
+                />
+                <h4>Basketball Stars</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniCuphead.png"
+                  alt="cuphead"
+                />
+                <h4>Cuphead</h4>
+
+                <div class="btn-carrito">Carrito</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img class="imgMini" src="images/MiniCommander Keen.png"
+                alt="commanderKeen"" />
+                <h4>Commander Keen</h4>
+
+                <div class="btn-carrito">Carrito</div>
+              </div>
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonDeportesTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/head-soccer-2022_xl.jpg"
+                  alt="head head-soccer-2022_xl"
+                />
+                <h4>Head Soccer</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniPvsZ.png"
+                  alt="plantvsZombies"
+                />
+                <h4>Plants vs Zombies</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+            </div>
+          </div>
+          <div class="displayBotonesCarrusel">
+            <div class="prev-mini">
+              <img src="images/leftButton.png" alt="botonizq" />
+            </div>
+            <div class="sig-mini">
+              <img src="images/rightButton.png" alt="botonder" />
+            </div>
+          </div>
+        </div>
+        <!-- fin de carrusel chiquito-->
+
+        <div class="carruselComun">
+          <div class="carruselMini">
+            <!-- inicio de carrusel chiqquito-->
+            <h1>Clasicos</h1>
+            <div class="cards_mini">
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonClasicosTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniSupermario.png"
+                  alt="SuperMario"
+                />
+                <h4>Super Mario 64</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonClasicosTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniDonkeykong.png"
+                  alt=" DonkeyKong"
+                />
+                <h4>Donkey Kong</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonClasicosTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniCircus.png"
+                  alt="CircusCharlie"
+                />
+                <h4>Circus Charlie</h4>
+
+                <div class="btn-carrito">Carrito</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonClasicosTagMini.png"
+                  alt="categoria"
+                />
+                <img class="imgMini" src="images/MiniPong.png" alt="pong" />
+                <h4>Pong</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonClasicosTagMini.png"
+                  alt="categoria"
+                />
+                <img class="imgMini" src="images/MiniTetris.png" alt="Tetris" />
+                <h4>Tetris</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonClasicosTagMini.png"
+                  alt="categoria"
+                />
+                <img class="imgMini" src="images/MiniZelda.png" alt="zelda" />
+                <h4>Zelda</h4>
+                <div class="btn-jugar">Jugar</div>
+              </div>
+            </div>
+          </div>
+          <div class="displayBotonesCarrusel">
+            <div class="prev-mini">
+              <img src="images/leftButton.png" alt="botonizq" />
+            </div>
+            <div class="sig-mini">
+              <img src="images/rightButton.png" alt="botonder" />
+            </div>
+          </div>
+        </div>
+        <!-- fin de carrusel chiquito-->
+
+        <div class="carruselComun">
+          <div class="carruselMini">
+            <!-- inicio de carrusel chiqquito-->
+            <h1>Arcade</h1>
+            <div class="cards_mini">
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniSunsetrides.png"
+                  alt="sunsetRides"
+                />
+                <h4>Sunset Riders</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniJungle.png"
+                  alt="JungleStrikes"
+                />
+                <h4>Jungle Strike</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniCommander Keen.png"
+                  alt="commanderKeen"
+                />
+                <h4>Commander Keen</h4>
+
+                <div class="btn-carrito">Carrito</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniStreetFighter.png"
+                  alt="streetFighter"
+                />
+                <h4>Street Fighter</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniStreetFighter2.png"
+                  alt="streetFighter 2"
+                />
+                <h4>Street Fighter 2</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonArcadeTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniMortalKombat.png"
+                  alt="MortalKombat"
+                />
+                <h4>Mortal Kombat</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+            </div>
+          </div>
+          <div class="displayBotonesCarrusel">
+            <div class="prev-mini">
+              <img src="images/leftButton.png" alt="botonizq" />
+            </div>
+            <div class="sig-mini">
+              <img src="images/rightButton.png" alt="botonder" />
+            </div>
+          </div>
+        </div>
+        <!-- fin de carrusel chiquito-->
+
+        <div class="carruselComun">
+          <!-- inicio de carrusel chiquito-->
+          <div class="carruselMini">
+            <h1>Terror</h1>
+            <div class="cards_mini">
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonTerrorTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniFriday 13.png"
+                  alt="manHunt"
+                />
+                <h4>Man hunt</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonTerrorTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniSilentHill.png"
+                  alt="manHunt2"
+                />
+                <h4>Man Hunt 2</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonTerrorTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/minisplatter.png"
+                  alt="splatterHouse"
+                />
+                <h4>Splatter house</h4>
+
+                <div class="btn-carrito">Carrito</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonTerrorTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniSplaterhouse2.png"
+                  alt="splatterHouse 2"
+                />
+                <h4>Splatter House 2</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonTerrorTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniSplatterhouse3.png"
+                  alt="splatterHouse 3"
+                />
+                <h4>Splatter House 3</h4>
+                <img
+                  class="priceTagMini"
+                  src="images/priceTagMini.png"
+                  alt="precio"
+                />
+                <div class="btn-comprar">Comprar</div>
+              </div>
+
+              <div class="card_chiquita">
+                <img
+                  class="ribbonMini"
+                  src="images/ribbonTerrorTagMini.png"
+                  alt="categoria"
+                />
+                <img
+                  class="imgMini"
+                  src="images/MiniFreedyFastBear.png"
+                  alt="fivenightsatfreedy"
+                />
+                <h4>Five nights at Freddy</h4>
+
+                <div class="btn-jugar">Jugar</div>
+              </div>
+            </div>
+          </div>
+          <div class="displayBotonesCarrusel">
+            <div class="prev-mini">
+              <img src="images/leftButton.png" alt="botonizq" />
+            </div>
+            <div class="sig-mini">
+              <img src="images/rightButton.png" alt="botonder" />
+            </div>
+          </div>
+        </div>
+        <!-- fin de carrusel chiquito-->
+      </main>
+      <footer>
+        <ul class="footer-list">
+          <li>
+            <ul>
+              <li class="tituloFooter">Categorias mas relevantes</li>
+              <li>Multijugador</li>
+              <li>Futbol</li>
+              <li>Juegos.io</li>
+              <li>Arcade</li>
+            </ul>
+          </li>
+
+          <li>
+            <ul>
+              <li class="tituloFooter">Sobre nosotros</li>
+              <li>Contactanos</li>
+              <li>Equipo</li>
+              <li>Historia</li>
+            </ul>
+          </li>
+
+          <li>
+            <ul>
+              <li class="tituloFooter">Terminos y condiciones</li>
+              <li>Politica de privacidad</li>
+            </ul>
+          </li>
+
+          <li>
+            <ul>
+              <li class="tituloFooter">Nuestros sponsors</li>
+              <li>Unicen</li>
+              <li>YPF</li>
+              <li>Toyota</li>
+            </ul>
+          </li>
+
+          <li>
+            <ul>
+              <li class="tituloFooter">Nuestras redes</li>
+              <li>
+                <div class="containerRedes">
+                  <a href=""
+                    ><img src="images/Facebook.png" alt="Facebook"
+                  /></a>
+                  <a href=""
+                    ><img src="images/Instagram.png" alt="Instagram"
+                  /></a>
+                  <a href=""><img src="images/X.png" alt="X" /></a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p id="copyright">© 2024 GOC Games. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
