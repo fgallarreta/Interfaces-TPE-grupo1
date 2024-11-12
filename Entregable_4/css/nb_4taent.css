@@ -18,7 +18,7 @@ section {
     width: 1280px;
     min-height:4300px;
     height:fit-content;
-    background-color: #3effa2;
+   
     margin: auto;
     overflow-x: hidden;
 }
@@ -378,6 +378,85 @@ header {
     color: #000;
     text-align: left;
     display: inline-block;
+}
+
+.pj_scroll{
+    align-items: center;
+    justify-content: center;
+    margin-top: -45px;
+  margin-left: 35px;
+    margin-bottom: 147.17px;
+        opacity: 0;
+        transition: all 0.5s;
+}
+.pj_scroll :nth-child(1){
+    width: 191px;
+}
+.pj_scroll :nth-child(2){
+    width: 279px;
+}
+.pj_scroll :nth-child(3){
+    width: 166px;
+}
+.pj_scroll :nth-child(4){
+    width: 147px;
+}
+.pj_scroll :nth-child(5){
+    width: 305px;
+    
+}
+.pj_scroll :nth-child(6){
+    width: 181px;
+}
+.pj_scroll :nth-child(7){
+    width: 238px;
+}
+.pj_scroll :nth-child(8){
+    width: 104px;
+}
+.pj_scroll :nth-child(9){
+    width: 297px;
+}
+.pj_scroll :nth-child(10){
+    width: 335px;
+}
+.pj_scroll :nth-child(11){
+    width: 359px;
+}
+
+.pj_scroll_left {
+    animation: animation_left 1s;
+}
+.pj_scroll_right {
+    animation: animation_right 1s;
+}
+.pj_scroll_grow {
+    animation: animation_grow 1s;
+}
+
+@keyframes animation_left{
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes animation_right{
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes animation_grow{
+    0% {
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 
