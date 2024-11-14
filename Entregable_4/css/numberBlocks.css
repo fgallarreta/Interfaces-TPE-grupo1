@@ -226,3 +226,46 @@ header img {
   left: 747px;
   bottom: 329px;
 }
+/*Seccion 3*/
+.section3 {
+  position: relative;
+  z-index: -10;
+  background-image: url(../imagesNB/fondoNBs3.svg);
+  height: 1157px;
+}
+.section3 h1 {
+  position: absolute;
+  top: 175px;
+  left: 165px;
+  font-size: 61px;
+  color: #ffffff;
+  width: 950px;
+  height: 153px;
+  line-height: 110%;
+  font-weight: 600;
+  text-align: center;
+}
+.section3 h1 span {
+  font-weight: bold;
+  font-style: italic;
+}
+.section3 button {
+  position: absolute;
+  top: 390px;
+  left: 370px;
+  width: 540px;
+  height: 66px;
+  line-height: 110%;
+  font-size: 31px;
+  background-color: #83c252;
+  border: solid #ffffff 8px;
+  border-radius: 111px;
+  box-shadow: 4px 5px #02187e;
+  -webkit-text-stroke: 1px;
+  color: #ffffff;
+}
+.section3 img {
+  position: absolute;
+  top: 390px;
+  z-index: -1;
+}
