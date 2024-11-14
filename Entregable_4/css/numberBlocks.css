@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  max-width: 1280px;
+  font-family: "Lato";
+}
+
+header {
+  position: absolute;
+  width: 1200px;
+  height: 103px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+}
+.menuHambNB {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+.menuHambNB div {
+  width: 34px;
+  height: 4px;
+  border: solid;
+  border-radius: 111px;
+  border-color: white;
+  background-color: #f39e46;
+  box-shadow: 4px 5px #02187e;
+}
+.btn-comprarNB {
+  padding: 16px 43px 15px 43px;
+  border: solid;
+  border-width: 8px;
+  border-radius: 111px;
+  border-color: white;
+  background-color: #83c252;
+  box-shadow: 4px 5px #02187e;
+  color: white;
+
+  font-weight: 900;
+  font-size: 20px;
+  -webkit-text-stroke: 1px;
+  letter-spacing: 2px;
+  line-height: 94.5%;
+}
+header img {
+  position: absolute;
+  width: 560px;
+  height: 320px;
+  left: 360px;
+}
+.section1 {
+  background-image: url(../imagesNB/fondoNB.svg);
+  height: 959px;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+}
+#arbol1 {
+  margin-top: 0.69px;
+  margin-left: -150px;
+}
+#arbol2 {
+  position: absolute;
+  left: 881px;
+  bottom: 179px;
+}
+#arbol3 {
+  position: absolute;
+  bottom: 249px;
+  left: 1081px;
+  z-index: -2;
+}
+#arbusto1 {
+  position: absolute;
+  top: 719px;
+  left: 161px;
+  z-index: -1;
+}
+#arbusto2 {
+  position: absolute;
+  bottom: 39px;
+  left: 197px;
+  z-index: 2;
+}
+#arbusto3 {
+  position: absolute;
+  bottom: 189px;
+  right: -33px;
+  z-index: -1;
+}
+#arbusto4 {
+  position: absolute;
+  z-index: -3;
+  bottom: 265px;
+  right: 59px;
+}
+#piedra1 {
+  position: absolute;
+  top: 793px;
+  left: 129px;
+  z-index: 1;
+}
+#piedra2 {
+  position: absolute;
+  right: 177px;
+  bottom: 164px;
+}
+#piedra3 {
+  position: absolute;
+  right: 92px;
+  bottom: 147px;
+  z-index: 1;
+}
+#piedra4 {
+  position: absolute;
+  right: 177px;
+  bottom: 137px;
+  z-index: 2;
+}
+#pj2 {
+  position: absolute;
+  left: 536px;
+  bottom: 259px;
+  z-index: -1;
+}
+#pj3 {
+  position: absolute;
+  right: 355px;
+  bottom: 215px;
+  z-index: -2;
+}
+/*Seccion 2*/
+.section2 {
+  background-image: url(../imagesNB/fondoNBs2.svg);
+  background-repeat: no-repeat;
+  position: relative;
+  height: 1852px;
+  z-index: -10;
+}
+.section2 h1 {
+  position: absolute;
+  top: 55px;
+  left: 100px;
+  color: #1b428f;
+  width: 508px;
+  height: 132px;
+  font-weight: 600;
+  font-size: 47px;
+}
+.section2 p {
+  margin-top: 22px;
+  position: absolute;
+  top: 214px;
+  left: 100px;
+  color: #1b428f;
+  width: 700px;
+  height: 154px;
+  font-size: 20px;
+}
+#pj4 {
+  position: absolute;
+  top: 566px;
+  left: 48px;
+}
+#pj5 {
+  position: absolute;
+  top: -87px;
+  left: 787px;
+}
+.section2 #carruselFotos {
+  margin-top: 26px;
+  position: absolute;
+  width: 518px;
+  height: 266px;
+  left: 230px;
+  top: 331px;
+  z-index: -1;
+  border: solid 29px #1b5f99;
+  border-radius: 77px;
+  overflow: hidden;
+}
+
+.section2 div img {
+  width: 516px;
+  height: 290px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 332px;
+  height: 302px;
+}
+.card p {
+  margin-top: 93px;
+  width: 333px;
+  height: 218px;
+  color: black;
+}
+#card1 {
+  position: absolute;
+  bottom: 329px;
+}
+
+#card2 {
+  position: absolute;
+  left: 373px;
+  bottom: 329px;
+}
+
+#card3 {
+  position: absolute;
+  left: 747px;
+  bottom: 329px;
+}
