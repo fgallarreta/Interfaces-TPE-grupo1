@@ -142,6 +142,10 @@ header img {
   bottom: 215px;
   z-index: -2;
 }
+
+
+
+
 /*Seccion 2*/
 .section2 {
   background-image: url(../imagesNB/fondoNBs2.svg);
@@ -174,11 +178,56 @@ header img {
   position: absolute;
   top: 566px;
   left: 48px;
+  animation: llegada ease-in;
+  animation-timeline: view();
+  animation-range: entry 0;
+  animation-fill-mode: both;
+  animation-delay: 50ms;
+
 }
+@keyframes llegada{
+  0%{
+          transform: translateX(-500px)
+         scale(25%);
+          opacity: 0%;}
+  70%{
+      transform: translateX(55px);
+     
+      opacity: 1; }
+  100%{
+      transform: translateX(0px)
+        scale(100%);}}
 #pj5 {
   position: absolute;
   top: -87px;
   left: 787px;
+
+
+  animation: rebote ease-in;
+  animation-timeline: view();
+  animation-range: entry 0;
+  animation-fill-mode: both;
+}
+
+@keyframes rebote{
+  0%{
+      transform: translateX(500px)
+     scaleY(25%);
+      opacity: 0%;
+  
+
+}
+60%{
+  transform: translateX(-95px)
+ scaleY(160%);
+  opacity: 1;
+  
+}
+100%{
+  transform: translateX(0px)
+    scaleY(100%);
+
+}
 }
 .section2 #carruselFotos {
   margin-top: 26px;
@@ -203,6 +252,30 @@ header img {
   flex-direction: column;
   width: 332px;
   height: 302px;
+
+
+  animation: showY ease;
+  animation-timeline: view();
+  
+  animation-fill-mode: both;
+}
+
+
+@keyframes showY{
+  0%{
+    transform: translateY(100px);
+    opacity: 0%;
+
+}
+
+100%{
+
+transform:translateY(0px);
+opacity: 1;
+}
+
+
+
 }
 .card p {
   margin-top: 93px;
@@ -213,18 +286,22 @@ header img {
 #card1 {
   position: absolute;
   bottom: 329px;
+  animation-range: entry 60%;
 }
 
 #card2 {
   position: absolute;
   left: 373px;
   bottom: 329px;
+  animation-range: entry 30%;
 }
 
 #card3 {
   position: absolute;
   left: 747px;
   bottom: 329px;
+  animation-range: entry 60%;
+ 
 }
 /*Seccion 3*/
 .section3 {
