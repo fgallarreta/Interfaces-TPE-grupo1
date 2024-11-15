@@ -161,13 +161,41 @@ header {
     position: absolute;
 }
 
-#sec2-blue-rect {
+.sec2-blue-rect {
     height: 1259px;
     width: 572px;
     position: absolute;
     top: -87px;
     right: -79px;
+
+
+    animation: veloz ease-in;
+    animation-timeline: view();
+    animation-range: entry 0;
+    animation-fill-mode: both;
+
 }
+
+
+@keyframes veloz{
+    0%{
+        transform: translateX(-200px)
+       scaleY(25%);
+        opacity: 0%;
+    
+
+}
+70%{
+    transform: translateX(55px)
+   scaleY(180%);
+    opacity: 1;
+    
+}
+100%{
+    transform: translateX(0px)
+      scaleY(100%);
+
+}}
 
 #sec2-txt1 {
     width: 508px;
@@ -380,14 +408,23 @@ header {
     display: inline-block;
 }
 
+div .pj_scroll{
+    justify-content: center;
+    align-items: center;
+}
 .pj_scroll{
     align-items: center;
     justify-content: center;
     margin-top: -45px;
-  margin-left: 35px;
+    margin-left: auto;
     margin-bottom: 147.17px;
-        opacity: 0;
-        transition: all 0.5s;
+        
+        
+
+        animation: show ease-in;
+        animation-timeline: view();
+        animation-range: entry 0;
+        animation-fill-mode: both;
 }
 .pj_scroll :nth-child(1){
     width: 191px;
@@ -424,40 +461,19 @@ header {
     width: 359px;
 }
 
-.pj_scroll_left {
-    animation: animation_left 1s;
-}
-.pj_scroll_right {
-    animation: animation_right 1s;
-}
-.pj_scroll_grow {
-    animation: animation_grow 1s;
+
+
+@keyframes show{
+    0% {
+        transform: scale(25%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(100%);
+        opacity: 1;
+    }
 }
 
-@keyframes animation_left{
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-@keyframes animation_right{
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-@keyframes animation_grow{
-    0% {
-        transform: scale(0.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 
 
 #sec5{
@@ -560,7 +576,7 @@ header {
     "one    two     three   four    five"
     "six    seven   eight   nine    ten";
     gap: 30px;
-    /*background: 
+    background: 
         linear-gradient(to right, #af1b1b, #d58530, #b8a40d, #39af01, #1aa3ad),
         linear-gradient(to right, #462192, #00f5c9, #ae1e73, #6c6764, white);
         background-blend-mode: screen; /* Mezcla los gradientes en modo 'screen' para combinar colores */
@@ -582,6 +598,10 @@ header {
 #fig-one {
     grid-area: one;
     background: radial-gradient(#af1b1b, #870c0e);
+}
+#sec7 :hover  {
+   
+    box-shadow: 0 0 30px  inset white;
 }
 
 #fig-one img {
