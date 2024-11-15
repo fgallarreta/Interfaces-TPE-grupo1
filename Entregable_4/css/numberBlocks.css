@@ -269,3 +269,48 @@ header img {
   top: 390px;
   z-index: -1;
 }
+/* Seccion 4*/
+.section4 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.section4 h1 {
+  position: absolute;
+  top: 174px;
+  left: 100px;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 94.5%;
+}
+.imagenesScroll,
+.textoScroll {
+  position: absolute;
+  width: 467px;
+  display: flex;
+  flex-direction: column;
+}
+.imagenesScroll {
+  top: 299px;
+  left: 243px;
+}
+.imagenesScroll img {
+  align-self: start; /* Evita que las imágenes se estiren */
+  width: auto; /* Mantiene el ancho natural de la imagen */
+  height: auto; /* Mantiene la altura natural de la imagen */
+}
+
+.textoScroll {
+  top: 390px;
+  right: 100px;
+}
+.textoScroll div {
+  margin-bottom: 269px;
+}
+.textoScroll h3 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.textoScroll p {
+  font-size: 20px;
+}
