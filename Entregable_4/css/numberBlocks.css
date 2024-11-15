@@ -252,6 +252,30 @@ header img {
   flex-direction: column;
   width: 332px;
   height: 302px;
+
+
+  animation: showY ease;
+  animation-timeline: view();
+  
+  animation-fill-mode: both;
+}
+
+
+@keyframes showY{
+  0%{
+    transform: translateY(100px);
+    opacity: 0%;
+
+}
+
+100%{
+
+transform:translateY(0px);
+opacity: 1;
+}
+
+
+
 }
 .card p {
   margin-top: 93px;
@@ -262,18 +286,22 @@ header img {
 #card1 {
   position: absolute;
   bottom: 329px;
+  animation-range: entry 60%;
 }
 
 #card2 {
   position: absolute;
   left: 373px;
   bottom: 329px;
+  animation-range: entry 30%;
 }
 
 #card3 {
   position: absolute;
   left: 747px;
   bottom: 329px;
+  animation-range: entry 60%;
+ 
 }
 /*Seccion 3*/
 .section3 {
