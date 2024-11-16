@@ -207,6 +207,7 @@ header img {
   animation-timeline: view();
   animation-range: entry 0;
   animation-fill-mode: both;
+  transition: transform 0.1s ease-out;
 }
 
 @keyframes rebote{
@@ -256,7 +257,7 @@ header img {
 
   animation: showY ease;
   animation-timeline: view();
-  
+  transition: transform 0.1s ease-out;
   animation-fill-mode: both;
 }
 
@@ -310,6 +311,8 @@ opacity: 1;
   z-index: -10;
   background-image: url(../imagesNB/fondoNBs3.svg);
   height: 1157px;
+
+ 
 }
 .section3 h1 {
   position: absolute;
@@ -343,10 +346,15 @@ opacity: 1;
   color: #ffffff;
 }
 .section3 img {
-  position: absolute;
+ position: absolute;
   top: 390px;
   z-index: -1;
 }
+
+
+
+
+
 /* Seccion 4*/
 .section4 {
   position: relative;
@@ -397,15 +405,16 @@ opacity: 1;
 
 .pj_scroll{
 
-  animation: sec3 ease-in;
+  animation: sec4 ease-in;
   animation-timeline: view();
   animation-range: entry 0;
   animation-fill-mode: both;
 
+
 }
 
 
-@keyframes sec3 {
+@keyframes sec4 {
 0%{
       transform: translateX(-200px);
       opacity: 0;
