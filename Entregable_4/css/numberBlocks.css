@@ -286,21 +286,22 @@ opacity: 1;
 #card1 {
   position: absolute;
   bottom: 329px;
-  animation-range: entry 60%;
+ 
 }
 
 #card2 {
   position: absolute;
   left: 373px;
   bottom: 329px;
-  animation-range: entry 30%;
+  animation-range: entry 10%   ;
+ 
 }
 
 #card3 {
   position: absolute;
   left: 747px;
   bottom: 329px;
-  animation-range: entry 60%;
+  
  
 }
 /*Seccion 3*/
@@ -375,6 +376,8 @@ opacity: 1;
   align-self: start; /* Evita que las imágenes se estiren */
   width: auto; /* Mantiene el ancho natural de la imagen */
   height: auto; /* Mantiene la altura natural de la imagen */
+
+
 }
 
 .textoScroll {
@@ -391,3 +394,35 @@ opacity: 1;
 .textoScroll p {
   font-size: 20px;
 }
+
+.pj_scroll{
+
+  animation: sec3 ease-in;
+  animation-timeline: view();
+  animation-range: entry 0;
+  animation-fill-mode: both;
+
+}
+
+
+@keyframes sec3 {
+0%{
+      transform: translateX(-200px);
+      opacity: 0;
+}
+
+60%{
+    transform: translateX(0px) rotate(30deg);
+    opacity: 1;
+}
+80%{
+transform: rotate(-20deg);
+
+}
+100%{ transform: rotate(0);
+
+
+}
+
+}
+
