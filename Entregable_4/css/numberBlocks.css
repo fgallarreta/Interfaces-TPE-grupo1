@@ -67,7 +67,13 @@ header img {
   overflow: hidden;
   position: relative;
   z-index: -10;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 #arbol1 {
   margin-top: 0.69px;
   margin-left: -150px;
@@ -88,6 +94,7 @@ header img {
   top: 719px;
   left: 161px;
   z-index: -1;
+  animation: llegada ease-out;
 }
 #arbusto2 {
   position: absolute;
@@ -143,7 +150,18 @@ header img {
   z-index: -2;
 }
 
+@keyframes salida{
+  0%{transform: translateX(0px)
+    scale(100%);}
 
+  50%{transform: translateX(55px);
+     
+    opacity: 1; }
+
+  100%{transform: translateX(-500px)
+    scale(25%);
+     opacity: 0%;}
+}
 
 
 /*Seccion 2*/
