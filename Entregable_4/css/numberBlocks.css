@@ -150,19 +150,22 @@ header img {
   z-index: -2;
 }
 
-@keyframes salida{
-  0%{transform: translateX(0px)
-    scale(100%);}
+@keyframes salida {
+  0% {
+    transform: translateX(0px) scale(100%);
+  }
 
-  50%{transform: translateX(55px);
-     
-    opacity: 1; }
+  50% {
+    transform: translateX(55px);
 
-  100%{transform: translateX(-500px)
-    scale(25%);
-     opacity: 0%;}
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-500px) scale(25%);
+    opacity: 0%;
+  }
 }
-
 
 /*Seccion 2*/
 .section2 {
@@ -201,25 +204,25 @@ header img {
   animation-range: entry 0;
   animation-fill-mode: both;
   animation-delay: 50ms;
-
 }
-@keyframes llegada{
-  0%{
-          transform: translateX(-500px)
-         scale(25%);
-          opacity: 0%;}
-  70%{
-      transform: translateX(55px);
-     
-      opacity: 1; }
-  100%{
-      transform: translateX(0px)
-        scale(100%);}}
+@keyframes llegada {
+  0% {
+    transform: translateX(-500px) scale(25%);
+    opacity: 0%;
+  }
+  70% {
+    transform: translateX(55px);
+
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px) scale(100%);
+  }
+}
 #pj5 {
   position: absolute;
   top: -87px;
   left: 787px;
-
 
   animation: rebote ease-in;
   animation-timeline: view();
@@ -227,25 +230,18 @@ header img {
   animation-fill-mode: both;
 }
 
-@keyframes rebote{
-  0%{
-      transform: translateX(500px)
-     scaleY(25%);
-      opacity: 0%;
-  
-
-}
-60%{
-  transform: translateX(-95px)
- scaleY(160%);
-  opacity: 1;
-  
-}
-100%{
-  transform: translateX(0px)
-    scaleY(100%);
-
-}
+@keyframes rebote {
+  0% {
+    transform: translateX(500px) scaleY(25%);
+    opacity: 0%;
+  }
+  60% {
+    transform: translateX(-95px) scaleY(160%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px) scaleY(100%);
+  }
 }
 .section2 #carruselFotos {
   margin-top: 26px;
@@ -271,29 +267,22 @@ header img {
   width: 332px;
   height: 302px;
 
-
   animation: showY ease;
   animation-timeline: view();
-  
+
   animation-fill-mode: both;
 }
 
-
-@keyframes showY{
-  0%{
+@keyframes showY {
+  0% {
     transform: translateY(100px);
     opacity: 0%;
+  }
 
-}
-
-100%{
-
-transform:translateY(0px);
-opacity: 1;
-}
-
-
-
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 .card p {
   margin-top: 93px;
@@ -304,23 +293,19 @@ opacity: 1;
 #card1 {
   position: absolute;
   bottom: 329px;
- 
 }
 
 #card2 {
   position: absolute;
   left: 373px;
   bottom: 329px;
-  animation-range: entry 10%   ;
- 
+  animation-range: entry 10%;
 }
 
 #card3 {
   position: absolute;
   left: 747px;
   bottom: 329px;
-  
- 
 }
 /*Seccion 3*/
 .section3 {
@@ -365,11 +350,29 @@ opacity: 1;
   top: 390px;
   z-index: -1;
 }
+@keyframes sec3 {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateX(0px) rotate(30deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 /* Seccion 4*/
 .section4 {
   position: relative;
   display: flex;
   justify-content: space-between;
+  height: 5421px;
 }
 .section4 h1 {
   position: absolute;
@@ -394,8 +397,6 @@ opacity: 1;
   align-self: start; /* Evita que las imágenes se estiren */
   width: auto; /* Mantiene el ancho natural de la imagen */
   height: auto; /* Mantiene la altura natural de la imagen */
-
-
 }
 
 .textoScroll {
@@ -413,34 +414,47 @@ opacity: 1;
   font-size: 20px;
 }
 
-.pj_scroll{
-
+.pj_scroll {
   animation: sec3 ease-in;
   animation-timeline: view();
   animation-range: entry 0;
   animation-fill-mode: both;
-
 }
-
-
-@keyframes sec3 {
-0%{
-      transform: translateX(-200px);
-      opacity: 0;
+/* Seccion 5*/
+.section5 {
+  background-image: url(../imagesNB/fondoNBs5.svg);
+  position: relative;
+  height: 1443px;
 }
-
-60%{
-    transform: translateX(0px) rotate(30deg);
-    opacity: 1;
+.section5 h1 {
+  position: absolute;
+  top: 308px;
+  left: 100px;
+  color: white;
+  font-size: 60px;
+  font-weight: 600;
+  width: 802px;
 }
-80%{
-transform: rotate(-20deg);
-
+.section5 img {
+  position: absolute;
+  top: 351px;
+  bottom: 103px;
+  left: 731px;
+  z-index: 2;
 }
-100%{ transform: rotate(0);
-
-
+.section5 div {
+  width: 746px;
+  height: 365px;
+  margin-top: 43px;
+  position: absolute;
+  top: 525px;
+  left: 100px;
+  border: solid 29px white;
+  border-radius: 45px;
+  z-index: 1;
 }
-
+.section5 iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 }
-
