@@ -484,3 +484,26 @@ header img {
   top: 7px;
   right: 14px;
 }
+/*Seccion 7*/
+.section7 {
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    #ae191b,
+    #1aa3ad,
+    #d58530,
+    #361681,
+    #b8a40d,
+    #38ae00,
+    #ac1e71,
+    #635f5b,
+    #ffffff
+  );
+  height: 729px;
+  width: 1280px;
+}
+.section7 img {
+  margin: 5px;
+  width: 243px;
+  height: 350px;
+}
