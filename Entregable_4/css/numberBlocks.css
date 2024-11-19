@@ -507,3 +507,30 @@ header img {
   width: 243px;
   height: 350px;
 }
+/* Seccion 8*/
+.section8 {
+  position: relative;
+}
+.section8 h1 {
+  width: 816px;
+  position: absolute;
+  left: 100px;
+  top: 190px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.section8 div {
+  position: absolute;
+  top: 433px;
+  left: 100px;
+}
+.section8 div input {
+  width: 562px;
+  height: 100px;
+}
+.section8 div button {
+  width: 218px;
+  height: 100px;
+  background-color: #83c252;
+}
