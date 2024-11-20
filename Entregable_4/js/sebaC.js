@@ -13,40 +13,20 @@ const threshold = 10;
 let cambioEnProgreso = false; // Bandera para evitar superposiciones
 
 window.addEventListener('scroll', () => {
-    let inicioScrollSeccion4 = seccion4.offsetTop - 1000;
-    let scrollY = window.scrollY;
+    if (y >= 4103 && y < 10144) {
+        let n = Math.floor((y - 3783) / 600)
 
-    if (scrollY >= inicioScrollSeccion4) {
-        let nuevaImagenIndex = imagenActual;
+       
 
-        parrafos.forEach((parrafo, index) => {
-            const rect = parrafo.getBoundingClientRect();
-
-            // Ajuste con el umbral
-            const visibleTop = rect.top + threshold;
-            const visibleBottom = rect.bottom - threshold;
-
-            // Detectar si el párrafo está dentro del rango con el umbral
-            if (visibleTop >= 0 && visibleBottom <= window.innerHeight) {
-                nuevaImagenIndex = index; // Índice del párrafo visible
+        for (let index = 0; index < images.length; index++) {
+            if (index != n) {
+                images[index].classList.remove("oculto")
+            } else {
+                images[index].classList.add("oculto")
+              
             }
-        });
-
-        if (imagenActual !== nuevaImagenIndex && !cambioEnProgreso) {
-            cambioEnProgreso = true; // Indica que hay un cambio en proceso
-
-            images[imagenActual].classList.remove('oculto'); // Oculta la imagen actual
-            setTimeout(() => {
-                imagenActual = nuevaImagenIndex; // Actualiza el índice actual
-
-        // Muestra la nueva imagen con animación
-        images[nuevaImagenIndex].classList.add('pj_croll');
-
-                cambioEnProgreso = false; // Libera la bandera después de completar el cambio
-            }, 400); // Sincroniza con la animación de transición
         }
-    }
-});
+    }})
 
 
 
