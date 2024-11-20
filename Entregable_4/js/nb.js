@@ -42,4 +42,7 @@ window.onscroll = function () {
 };
 
 
+const pj_scroll = document.getElementsByClassName("imagenesScroll")
+
+
 

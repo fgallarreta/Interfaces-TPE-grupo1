@@ -10,6 +10,8 @@
   max-width: 1280px;
   font-family: "Lato";
 }
+.oculto{
+  display: none;}
 a {
   text-decoration: underline;
   color: #ffffff;
@@ -211,7 +213,7 @@ header img {
 }
 @keyframes llegada {
   0% {
-    transform: translateX(-500px) scale(25%);
+    transform: translateX(-200px) scale(0);
     opacity: 0%;
   }
   70% {
@@ -220,7 +222,7 @@ header img {
     opacity: 1;
   }
   100% {
-    transform: translateX(0px) scale(100%);
+    transform: translateX(0px) scale(1);
   }
 }
 #pj5 {
@@ -236,15 +238,19 @@ header img {
 
 @keyframes rebote {
   0% {
-    transform: translateX(500px) scaleY(25%);
-    opacity: 0%;
+    transform: translateX(200px);
+    opacity: 0;
   }
+
   60% {
-    transform: translateX(-95px) scaleY(160%);
+    transform: translateX(0px) rotate(30deg);
     opacity: 1;
   }
+  90% {
+    transform: rotate(-20deg);
+  }
   100% {
-    transform: translateX(0px) scaleY(100%);
+    transform: rotate(0);
   }
 }
 .section2 #carruselFotos {
@@ -394,6 +400,7 @@ header img {
   flex-direction: column;
 }
 .imagenesScroll {
+  position: sticky;
   top: 299px;
   left: 243px;
 }
@@ -462,6 +469,52 @@ header img {
   height: 100%;
   border-radius: 16px;
 }
+
+.pj_sec5{
+  animation: sec5 ease-in;
+  animation-timeline: view();
+  animation-range: entry 0;
+  animation-fill-mode: both;
+
+
+}
+.video_yt{
+  animation: showY ease-in;
+  animation-timeline: view();
+  animation-range: entry 0;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+
+}
+
+.section5 h1{
+  animation: llegada ease-in;
+  animation-timeline: view();
+  animation-range: entry 40% ;
+  animation-fill-mode: both;
+
+
+
+}
+@keyframes sec5 {
+  0%{
+      transform: translateY(-300px);
+      opacity: 10%;
+  }
+  80%{
+      transform: translateY(50px);
+      opacity: 90%;
+
+  }
+  100%{
+    transform:translateY(0px);
+    opacity: 100%;
+
+  }
+
+}
+
+
 /*Seccion 6*/
 .section6 {
   position: relative;
@@ -525,6 +578,11 @@ header img {
   font-weight: 600;
 }
 
+.section8 div {
+  position: absolute;
+  top: 433px;
+  left: 100px;
+}
 .section8 #suscribirse {
   position: absolute;
   top: 433px;
@@ -535,12 +593,6 @@ header img {
 .section8 div input {
   width: 562px;
   height: 100px;
-  padding-left: 52px;
-  background-color: #ececec;
-  border-left: solid 9px white;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  font-size: 20px;
 }
 .section8 div button {
   width: 218px;
