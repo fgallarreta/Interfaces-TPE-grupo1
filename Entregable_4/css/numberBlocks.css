@@ -11,7 +11,10 @@
   font-family: "Lato";
 }
 .oculto{
-  display: none;
+  display: none;}
+a {
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 header {
@@ -564,6 +567,7 @@ header img {
 /* Seccion 8*/
 .section8 {
   position: relative;
+  height: 1572px;
 }
 .section8 h1 {
   width: 816px;
@@ -579,6 +583,13 @@ header img {
   top: 433px;
   left: 100px;
 }
+.section8 #suscribirse {
+  position: absolute;
+  top: 433px;
+  left: 100px;
+  border-radius: 50px;
+  box-shadow: 4px 5px #02187e;
+}
 .section8 div input {
   width: 562px;
   height: 100px;
@@ -587,4 +598,92 @@ header img {
   width: 218px;
   height: 100px;
   background-color: #83c252;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: solid 9px white;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 11%;
+}
+.section8 p {
+  position: absolute;
+  top: 589px;
+  left: 100px;
+  width: 578px;
+  height: 95px;
+  font-size: 20px;
+}
+.section8 p span {
+  text-decoration: underline;
+}
+.section8 img {
+  position: absolute;
+  top: 700px;
+  left: 100px;
+}
+#nubeAlta {
+  left: 794px;
+  top: 547px;
+  z-index: 1;
+}
+#nubeMedia {
+  left: 962px;
+  top: 600px;
+}
+#nubeBaja {
+  top: 844px;
+  right: 949px;
+}
+.section8 #gifs {
+  height: 389px;
+  background-image: url(../imagesNB/fondoNBs8.svg);
+  background-repeat: no-repeat;
+  position: relative;
+  top: 1181px;
+}
+#gift1 {
+  position: absolute;
+  bottom: 42px;
+  left: 65px;
+}
+#gift2 {
+  position: absolute;
+  bottom: 42px;
+  left: 407px;
+}
+#gift3 {
+  position: absolute;
+  bottom: -40px;
+  left: 756px;
+}
+/*FOOTER*/
+footer #plataformas {
+  margin-top: -2px;
+  position: relative;
+  background-color: #242424;
+  height: 80px;
+}
+footer #plataformas img {
+  position: absolute;
+  left: 100px;
+}
+footer #copyright {
+  position: relative;
+  height: 515px;
+  background-color: #5e5e5d;
+}
+footer #copyright p {
+  width: 820px;
+  height: 361px;
+  font-size: 20px;
+  position: absolute;
+  left: 100px;
+  top: 35px;
+  color: #ffffff;
+}
+footer #copyright img {
+  position: absolute;
+  bottom: 35px;
+  left: 100px;
 }
