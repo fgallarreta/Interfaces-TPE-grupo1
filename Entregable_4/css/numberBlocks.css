@@ -62,6 +62,14 @@ header > div {
   letter-spacing: 2px;
   line-height: 94.5%;
 }
+
+.btn-comprarNB:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+  box-shadow: 0 0 50px white;
+  background-color:#ceb812;
+
+}
 header img {
   position: absolute;
   width: 560px;
@@ -356,28 +364,13 @@ header img {
   -webkit-text-stroke: 1px;
   color: #ffffff;
 }
+
 .section3 img {
   position: absolute;
   top: 390px;
   z-index: -1;
 }
-@keyframes sec3 {
-  0% {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
 
-  60% {
-    transform: translateX(0px) rotate(30deg);
-    opacity: 1;
-  }
-  80% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 /* Seccion 4*/
 .section4 {
   position: relative;
@@ -439,12 +432,28 @@ header img {
 .pj_scroll {
   margin-right: 50px ;
   margin-top: -30px;
-  animation: sec3 ease-in;
+  animation: sec4 ease-in;
   animation-timeline: view();
   animation-range: entry 0;
   animation-fill-mode: both;
 }
+@keyframes sec4 {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
 
+  60% {
+    transform: translateX(0px) rotate(30deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 
 /* Seccion 5*/
 .section5 {
@@ -712,4 +721,39 @@ footer #copyright img {
   position: absolute;
   bottom: 35px;
   left: 100px;
+}
+
+#sprite-footer1{
+  width: 230px; 
+  height: 230px; 
+  position: relative;
+  top: -215px;
+  left: 1050px;
+  background: url(../imagesNB/spritesheet/sprite-footer1.png)repeat-x;
+  animation:sprite1 3.5s steps(75) infinite;
+}
+
+@keyframes sprite1 {
+  /* Partimos de la primera viñeta del sprite sheet */
+  0% { background-position:0 }
+  /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+  100% { background-position:-17250px}
+}
+
+#sprite-footer2{
+  width: 200px; 
+  height: 178px; 
+  position: relative;
+  top: -415px;
+  left: 650px;
+  background: url(../imagesNB/spritesheet/sprite-footer2.png)repeat-x;
+  animation:sprite2 0.8s steps(15) infinite;
+}
+
+
+@keyframes sprite2 {
+  /* Partimos de la primera viñeta del sprite sheet */
+  0% { background-position:0 }
+  /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+  100% { background-position:-3000px}
 }
