@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <title>Number Blocks</title>
     <link rel="stylesheet" href="css/numberBlocks.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -90,17 +94,17 @@
     <section class="section4">
       <h1>Más amigos, más diversión!</h1>
       <div class="imagenesScroll">
-        <img class="pj_scroll"  src="imagesNB/pjScroll0.svg" alt="pjScroll0" />
-        <img class="pj_scroll"  src="imagesNB/pjScroll1.svg" alt="pjScroll1" />
-        <img class="pj_scroll"  src="imagesNB/pjScroll2.svg" alt="pjScroll2" />
-        <img class="pj_scroll"  src="imagesNB/pjScroll3.svg" alt="pjScroll3" />
-        <img class="pj_scroll"  src="imagesNB/pjScroll4.svg" alt="pjScroll4" />
-        <img class="pj_scroll"  src="imagesNB/pjScroll5.svg" alt="pjScroll5" />
-        <img  class="pj_scroll" src="imagesNB/pjScroll6.svg" alt="pjScroll6" />
-        <img class="pj_scroll"  src="imagesNB/pjScroll7.svg" alt="pjScroll7" />
-        <img class="pj_scroll"  src="imagesNB/pjScroll8.svg" alt="pjScroll8" />
-        <img class="pj_scroll"  src="imagesNB/pjScroll9.svg" alt="pjScroll9" />
-        <img  class="pj_scroll" src="imagesNB/pjScroll10.svg" alt="pjScroll10" />
+        <img class="pj_scroll" src="imagesNB/pjScroll0.svg" alt="pjScroll0" />
+        <img class="oculto" src="imagesNB/pjScroll1.svg" alt="pjScroll1" />
+        <img class="oculto" src="imagesNB/pjScroll2.svg" alt="pjScroll2" />
+        <img class="oculto" src="imagesNB/pjScroll3.svg" alt="pjScroll3" />
+        <img class="oculto" src="imagesNB/pjScroll4.svg" alt="pjScroll4" />
+        <img class="oculto" src="imagesNB/pjScroll5.svg" alt="pjScroll5" />
+        <img class="oculto" src="imagesNB/pjScroll6.svg" alt="pjScroll6" />
+        <img class="oculto" src="imagesNB/pjScroll7.svg" alt="pjScroll7" />
+        <img class="oculto" src="imagesNB/pjScroll8.svg" alt="pjScroll8" />
+        <img class="oculto" src="imagesNB/pjScroll9.svg" alt="pjScroll9" />
+        <img class="oculto" src="imagesNB/pjScroll10.svg" alt="pjScroll10" />
       </div>
       <div class="textoScroll">
         <div>
@@ -203,8 +207,68 @@
         </div>
       </div>
     </section>
-
-    <script src="/js/nb.js"></script>
+    <section class="section5">
+      <h1>
+        Mira el video y descubre el sorprendente mundo de los NumberBlocks!
+      </h1>
+      <img class="pj_sec5" src="imagesNB/pj3S5.svg" alt="pj3" />
+      <div class="contenedorVideo">
+        <iframe class="video_yt"
+          src="https://www.youtube.com/embed/0YKa9DQYdRg"
+          title="Meet numberBlocks"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </section>
+    <section class="section6">
+      <h1>
+        ¡Experimenta Efectos 3D Asombrosos en NumberBlocks: Una Aventura
+        Matemática Inmersiva!
+      </h1>
+      <p>
+        En NumberBlocks, la aventura no solo está en el aprendizaje, ¡sino
+        también en la experiencia visual! Disfruta de efectos 3D asombrosos que
+        dan vida a cada número y desafío, haciendo que las matemáticas cobren
+        una nueva dimensión. A medida que los niños interactúan con los
+        personajes y los bloques, verán cómo sus acciones tienen un impacto real
+        en el entorno, creando un aprendizaje dinámico y emocionante. ¡Cada
+        sesión de juego se convierte en una experiencia inolvidable llena de
+        color y diversión
+      </p>
+      <model-viewer
+        id="pj13D"
+        loading="eager"
+        camera-controls
+        touch-action="pan-y"
+        auto-rotate
+        tone-mapping="aces"
+        src="3Dmodel/one.glb"
+        shadow-intensity="1"
+        style="width: 667px; height: 973px"
+        alt="A 3D model of a shishkebab"
+      ></model-viewer>
+    </section>
+    <section class="section7">
+      <img src="imagesNB/pj1s7.jpg" alt="pj1s7" />
+      <img src="imagesNB/pj2s7.jpg" alt="pj2s7" />
+      <img src="imagesNB/pj3s7.png" alt="pj3s7" />
+      <img src="imagesNB/pj4s7.png" alt="pj4s7" />
+      <img src="imagesNB/pj5s7.png" alt="pj5s7" />
+      <img src="imagesNB/pj6s7.png" alt="pj6s7" />
+      <img src="imagesNB/pj7s7.png" alt="pj7s7" />
+      <img src="imagesNB/pj8s7.png" alt="pj8s7" />
+      <img src="imagesNB/pj9s7.png" alt="pj9s7" />
+      <img src="imagesNB/pj10s7.png" alt="pj10s7" />
+    </section>
+    <section class="section8">
+      <h1>¿Quieres ser el primero en enterarse de todas las novedades?</h1>
+      <div>
+        <input type="text" placeholder="Ingresa aquí tu correo" />
+        <button>suscribirse</button>
+      </div>
+    </section>
   </body>
   <script src="js/nb.js"></script>
 </html>

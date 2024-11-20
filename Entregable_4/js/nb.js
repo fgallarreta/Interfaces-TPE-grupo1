@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const section1 = document.getElementById("section1");
 const arbol1 = document.getElementById("arbol1");
 const arbol2 = document.getElementById("arbol2");
@@ -44,5 +42,7 @@ window.onscroll = function () {
 };
 
 
+const pj_scroll = document.getElementsByClassName("imagenesScroll")
 
->>>>>>> 48ec5d20a4b2e003f6ed473ec02820a3117a6ec4
+
+
