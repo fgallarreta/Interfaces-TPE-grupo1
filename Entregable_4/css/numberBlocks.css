@@ -403,11 +403,16 @@ header img {
   position: sticky;
   top: 299px;
   left: 243px;
+  background-color: #1aa3ad;
+  
 }
 .imagenesScroll img {
   align-self: start; /* Evita que las imágenes se estiren */
   width: auto; /* Mantiene el ancho natural de la imagen */
   height: auto; /* Mantiene la altura natural de la imagen */
+  margin-top: 300px;
+  
+
 }
 
 .textoScroll {
@@ -426,6 +431,7 @@ header img {
 }
 
 .pj_scroll {
+  
   animation: sec3 ease-in;
   animation-timeline: view();
   animation-range: entry 0;
@@ -563,6 +569,17 @@ header img {
   margin: 5px;
   width: 243px;
   height: 350px;
+}
+
+.section7 img:hover{
+ 
+  transition: 0.5s ease-in-out;
+  transform: scale(1.25);
+  box-shadow: 0 0 150px whitesmoke;
+  
+ 
+
+
 }
 /* Seccion 8*/
 .section8 {
