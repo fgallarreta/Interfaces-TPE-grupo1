@@ -21,25 +21,27 @@ const arbusto4 = document.getElementById("arbusto4");
 window.onscroll = function () {
   const y = window.scrollY;
     
-  arbol1.style.transform = `translateY(${y * -0.2}px)`;
-  arbol2.style.transform = `translateY(${y * -0.2}px)`;
-  arbol3.style.transform = `translateY(${y * -1.2}px)`;
+  arbol1.style.transform = `translateX(${y * -0.2}px)`;
+  arbol2.style.transform = `translateX(${y * 0.5}px)`;
+  arbol3.style.transform = `translateX(${y * 1}px)`;
   
   pj1.style.transform = `translateY(${y * -0.6}px)`;
   pj2.style.transform = `translateY(${y * -0.8}px)`;
   pj3.style.transform = `translateY(${y * -1}px)`;
 
-  piedra1.style.transform = `translateY(${y * -0.6}px)`;
-  piedra2.style.transform = `translateY(${y * -0.6}px)`;
-  piedra3.style.transform = `translateY(${y * -0.5}px)`;
-  piedra4.style.transform = `translateY(${y * -0.4}px)`;
+  piedra1.style.transform = `translateX(${y * -0.6}px)`;
+  piedra2.style.transform = `translateX(${y * 0.6}px)`;
+  piedra3.style.transform = `translateX(${y * 0.5}px)`;
+  piedra4.style.transform = `translateX(${y * 0.4}px)`;
 
-  arbusto1.style.transform = `translateY(${y * -1}px)`;
-  arbusto2.style.transform = `translateY(${y * -0.4}px)`;
-  arbusto3.style.transform = `translateY(${y * -1}px)`;
-  arbusto4.style.transform = `translateY(${y * -1.5}px)`;
+  arbusto1.style.transform = `translateX(${y * -1}px)`;
+  arbusto2.style.transform = `translateX(${y * -0.4}px)`;
+  arbusto3.style.transform = `translateX(${y * 0.5}px)`;
+  arbusto4.style.transform = `translateX(${y * 1}px)`;
 
 };
+
+
 
 
 
