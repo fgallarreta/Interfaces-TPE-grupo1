@@ -71,6 +71,32 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(changeImage, 3000); //Invoco a changeImage cada 3 segundos
 });
 
+//Esta parte maneja el parallax (mouse moving) de la seccion 3
+
+document.addEventListener("mousemove", (parallaxMouseMoving)) 
+  
+  function parallaxMouseMoving(event){
+  const image = document.querySelector("#parallaxMouseMoving img");
+
+  //Calculo la posición del cursor relativa al centro de la ventana
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+
+  //Obtengo la posicion (x,y) relativa al centro de la pantalla (centeX,centerY)
+  const x = (event.clientX - centerX) / centerX;
+  const y = (event.clientY - centerY) / centerY;
+
+  //Ajusto la velocidad/intensidad con la que se mueve la imagen
+  const moveX = x * -20;
+  const moveY = y * -20;
+
+  //Aplico la transformación a la imagen segun lo indicado anteriormente
+  //Le doy un escalado leve a la imagen para que no se vean los bordes de esta
+  image.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+
+
+};
+
 
 
 
