@@ -757,3 +757,22 @@ footer #copyright img {
   /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
   100% { background-position:-3000px}
 }
+#sprite_footer3 {
+  width: calc(69027px/173);
+ 
+  background: url(../imagesNB/spritesheet/sprite-footer3.png);
+  z-index: 4;
+  position: relative;
+  right: 0px;
+    top: 20px;
+    
+  animation: sprite3 3s steps(173) infinite;
+}
+
+
+@keyframes sprite3 {
+  /* Partimos de la primera viñeta del sprite sheet */
+  0% { background-position:0 }
+  /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+  100% { background-position:-69027px}
+}
