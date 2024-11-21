@@ -39,7 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
 
-      }
+      } else {
+            // Si la sección no está visible, ocultar todas las imágenes
+            imageElements.forEach((img) => {
+                img.style.opacity = 0;
+            });
+        }
     };
   
     //Ejecuto la funcion al detectarse scroll en la pagina

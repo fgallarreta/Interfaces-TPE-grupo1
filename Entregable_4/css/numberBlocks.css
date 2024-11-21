@@ -503,6 +503,7 @@ header img {
   display: flex;
   justify-content: space-between;
   height: 5421px;
+  overflow: hidden;
 }
 .section4 h1 {
   position: absolute;
