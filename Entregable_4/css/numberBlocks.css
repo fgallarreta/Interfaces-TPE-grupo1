@@ -500,7 +500,7 @@ header img {
   display: block;
   top: 299px;
   left: 243px;
-  background-color: #1aa3ad;
+
   
 }
 .imagenesScroll img {
@@ -513,8 +513,7 @@ header img {
 }
 .container_pj{
  position: sticky;
- background-color: #b8a40d;
- 
+
  margin-top: -50px;
 }
 .textoScroll {
@@ -861,21 +860,26 @@ footer #copyright img {
   100% { background-position:-3000px}
 }
 #sprite_footer3 {
-  width: calc(69027px/173);
- 
-  background: url(../imagesNB/spritesheet/sprite-footer3.png);
-  z-index: 4;
   position: relative;
-  right: 0px;
-    top: 20px;
-    
-  animation: sprite3 3s steps(173) infinite;
-}
+  top:-590px;
+  left : 80px;
+  width: 480px; /* Ancho del frame individual */
+  height: 270px; /* Alto del frame individual */
+  animation: sprite3 1.8s steps(40)infinite; /* Duración ajustada a 40 frames */
+  background-image: url(../imagesNB/spritesheet/pj8.png)repeat-x;
 
+}
 
 @keyframes sprite3 {
-  /* Partimos de la primera viñeta del sprite sheet */
-  0% { background-position:0 }
-  /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-  100% { background-position:-69027px}
+  0%{
+      background-position: 0;
+  }
+  100%{
+      background-position: -19200px;
+  }
 }
+
+
+
+
+
