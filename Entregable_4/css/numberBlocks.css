@@ -45,7 +45,104 @@ header > div {
   border-color: white;
   background-color: #f39e46;
   box-shadow: 4px 5px #02187e;
+  animation-fill-mode: forwards; /* Asegura que se mantenga el estado final */
 }
+
+/* Animaciones específicas para cada línea */
+
+#lineaSuperior, #lineaMedia, #lineaInferior {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menuHambNB:not(.active) div {
+  animation-duration: 0.3s; /* Más rápido al volver */
+  animation-timing-function: ease-in-out; /* Diferente curva */
+}
+
+
+
+
+.menuHambNB.abierto #lineaSuperior {
+  animation-name: lineaSuperiorActive;
+}
+
+.menuHambNB.abierto #lineaMedia {
+  animation-name: lineaMediaActive;
+}
+
+.menuHambNB.abierto #lineaInferior {
+  animation-name: lineaInferiorActive;
+}
+
+@keyframes lineaSuperiorActive {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(10px) rotate(45deg);
+    box-shadow: none;
+  }
+}
+
+@keyframes lineaMediaActive {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes lineaInferiorActive {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-45deg);
+    box-shadow: none;
+  }
+}
+
+.menuHambNB.abierto #lineaSuperior {
+  animation-name: lineaSuperiorActive;
+}
+
+.menuHambNB.abierto #lineaMedia {
+  animation-name: lineaMediaActive;
+}
+
+.menuHambNB.abierto #lineaInferior {
+  animation-name: lineaInferiorActive;
+}
+
+@keyframes lineaSuperiorInactive {
+  0% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes lineaMediaInactive {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lineaInferiorInactive {
+  0% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
 .btn-comprarNB {
   padding: 16px 43px 15px 43px;
   border: solid;
@@ -165,24 +262,30 @@ header img {
   z-index: -2;
 }
 
-@keyframes salida {
-  0% {
-    transform: translateX(0px) scale(100%);
-  }
+/*Seccion 2*/
 
-  50% {
-    transform: translateX(55px);
-
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateX(-500px) scale(25%);
-    opacity: 0%;
-  }
+#carruselFotos {
+  position: relative;
+  width: 100%; /* Ajusta según el tamaño deseado */
+  height: auto;
+  overflow: hidden;
 }
 
-/*Seccion 2*/
+#carruselFotos img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ajusta según el tamaño deseado */
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#carruselFotos img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
 .section2 {
   background-image: url(../imagesNB/fondoNBs2.svg);
   background-repeat: no-repeat;
