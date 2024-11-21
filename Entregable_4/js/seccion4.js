@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const containerPj = document.querySelector('.container_pj');
   
     const handleScroll = () => {
-      // Obtener la posición de la sección en relación con el viewport
+      //Obtengo la posición de la sección en relación con el viewport
       const sectionTop = section4.getBoundingClientRect().top;
       const sectionBottom = section4.getBoundingClientRect().bottom;
       
-      // Verificar si la sección está visible en la ventana del navegador
+      //Verifico si la sección 4 está visible en la ventana del navegador
       if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
-        // Calcular la posición del scroll dentro de la sección
+        //Calculo la posición del scroll dentro de la sección
         const scrollPosition = window.scrollY - section4.offsetTop;
         const sectionHeight = section4.offsetHeight;
   
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //Calculo el index del arreglo de imagenes dependiendo la posicion en la que estoy
         const frecCambio = 1.1;
         const imageIndex = Math.min(Math.round((scrollPosition / sectionHeight) * totalImages * frecCambio), totalImages - 1);
-
+        // scrollPosition / sectionHeight me da un porcentaje de la altura de la seccion a la que me encuentro
   
         //Segun el index calculado, cambio la imagen que se muestra segun la posicion del scroll, ocultando todas las otras
         imageElements.forEach((img, index) => {
