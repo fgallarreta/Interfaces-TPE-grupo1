@@ -31,7 +31,6 @@ header {
   position: sticky;
   height: 103px;
   top: 0px;
-  background-color: transparent;
   background: linear-gradient(
     180deg,
     rgba(0, 209, 213, 1) 16%,
@@ -448,7 +447,6 @@ header img {
   left: 747px;
   bottom: 329px;
 }
-
 
 /*Seccion 3*/
 .section3 {
