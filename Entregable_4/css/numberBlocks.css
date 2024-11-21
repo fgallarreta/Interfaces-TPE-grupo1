@@ -191,6 +191,47 @@ header img {
   height: 320px;
   left: 360px;
 }
+
+/*Clases para la animacion de los items del menu hamburguesa*/
+
+header nav ul {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+header nav ul.visible {
+  opacity: 1;
+}
+
+header nav ul li {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards ease-in;
+}
+
+header nav ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+header nav ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+header nav ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .section1 {
   background-image: url(../imagesNB/fondoNB.svg);
   height: 959px;
