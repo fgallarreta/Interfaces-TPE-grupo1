@@ -10,9 +10,10 @@
   max-width: 1280px;
   font-family: "Lato";
 }
+.oculto {
+  display: none;
+}
 
-.oculto{
-  display: none;}
 a {
   text-decoration: underline;
   color: #ffffff;
@@ -20,22 +21,61 @@ a {
 
 header {
   position: absolute;
-  width: 1200px;
-  height: 103px;
-  margin-top: 20px;
+  width: 1280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
 }
+.stickyHeader {
+  position: sticky;
+  height: 103px;
+  top: 0px;
+  background-color: transparent;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 209, 213, 1) 16%,
+    rgba(0, 209, 213, 0.12) 88%,
+    rgba(1, 208, 213, 0) 100%
+  );
+}
+.stickyHeader img {
+  position: absolute;
+  top: 6px;
+  left: 565px;
+  width: 150px;
+  height: 86px;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
 header > div {
   display: flex;
   justify-content: space-between;
 }
+header nav {
+  position: absolute;
+  top: 70px;
+  left: 100px;
+}
+header li {
+  border: solid 2px white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 4px;
+  background-color: #83c252;
+  box-shadow: 4px 5px #02187e;
+  padding: 4px;
+}
+header a {
+  text-decoration: none;
+  font-weight: 600;
+}
 .menuHambNB {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  left: 100px;
+  top: 20px;
 }
 .menuHambNB div {
   width: 34px;
@@ -45,105 +85,85 @@ header > div {
   border-color: white;
   background-color: #f39e46;
   box-shadow: 4px 5px #02187e;
-  animation-fill-mode: forwards; /* Asegura que se mantenga el estado final */
+  cursor: pointer;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-/* Animaciones específicas para cada línea */
-
-#lineaSuperior, #lineaMedia, #lineaInferior {
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.menuHambNB.open .barra1 {
+  animation-name: barra1-animado;
 }
-
-.menuHambNB:not(.active) div {
-  animation-duration: 0.3s; /* Más rápido al volver */
-  animation-timing-function: ease-in-out; /* Diferente curva */
+.menuHambNB.open .barra2 {
+  animation-name: barra2-animado;
 }
-
-
-
-
-.menuHambNB.abierto #lineaSuperior {
-  animation-name: lineaSuperiorActive;
+.menuHambNB.open .barra3 {
+  animation-name: barra3-animado;
 }
-
-.menuHambNB.abierto #lineaMedia {
-  animation-name: lineaMediaActive;
+.menuHambNB .barra1 {
+  animation-name: barra1-animado-cerrar;
 }
-
-.menuHambNB.abierto #lineaInferior {
-  animation-name: lineaInferiorActive;
+.menuHambNB .barra2 {
+  animation-name: barra2-animado-cerrar;
 }
-
-@keyframes lineaSuperiorActive {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
+.menuHambNB .barra3 {
+  animation-name: barra3-animado-cerrar;
+}
+@keyframes barra1-animado {
+  50%,
   100% {
-    transform: translateY(10px) rotate(45deg);
+    transform: translateY(12px) rotate(-45deg);
     box-shadow: none;
   }
 }
-
-@keyframes lineaMediaActive {
-  0% {
-    opacity: 1;
-  }
+@keyframes barra2-animado {
+  20%,
   100% {
+    width: 0;
     opacity: 0;
   }
 }
-
-@keyframes lineaInferiorActive {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
+@keyframes barra3-animado {
+  50%,
   100% {
-    transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-7px) rotate(45deg);
     box-shadow: none;
   }
 }
-
-.menuHambNB.abierto #lineaSuperior {
-  animation-name: lineaSuperiorActive;
-}
-
-.menuHambNB.abierto #lineaMedia {
-  animation-name: lineaMediaActive;
-}
-
-.menuHambNB.abierto #lineaInferior {
-  animation-name: lineaInferiorActive;
-}
-
-@keyframes lineaSuperiorInactive {
+@keyframes barra1-animado-cerrar {
   0% {
-    transform: translateY(10px) rotate(45deg);
+    transform: translateY(12px) rotate(-45deg);
+    box-shadow: none;
   }
+  50%,
   100% {
-    transform: translateY(0) rotate(0);
+    transform: translateY(0px) rotate(0deg);
   }
 }
-
-@keyframes lineaMediaInactive {
+@keyframes barra2-animado-cerrar {
   0% {
+    width: 0;
     opacity: 0;
   }
+  50%,
   100% {
+    width: 34px;
     opacity: 1;
   }
 }
-
-@keyframes lineaInferiorInactive {
+@keyframes barra3-animado-cerrar {
   0% {
-    transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-7px) rotate(45deg);
+    box-shadow: none;
   }
+  50%,
   100% {
-    transform: translateY(0) rotate(0);
+    transform: translateY(0px) rotate(0deg);
   }
 }
-
 .btn-comprarNB {
+  position: absolute;
+  right: 100px;
+  top: 20px;
   padding: 16px 43px 15px 43px;
   border: solid;
   border-width: 8px;
@@ -164,8 +184,7 @@ header > div {
   transition: 0.5s;
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
-  background-color:#ceb812;
-
+  background-color: #ceb812;
 }
 header img {
   position: absolute;
@@ -500,21 +519,16 @@ header img {
   display: block;
   top: 299px;
   left: 243px;
-
-  
 }
 .imagenesScroll img {
   align-self: start; /* Evita que las imágenes se estiren */
   width: auto; /* Mantiene el ancho natural de la imagen */
   height: auto; /* Mantiene la altura natural de la imagen */
-  
-  
-
 }
-.container_pj{
- position: sticky;
+.container_pj {
+  position: sticky;
 
- margin-top: -50px;
+  margin-top: -50px;
 }
 .textoScroll {
   top: 390px;
@@ -532,7 +546,7 @@ header img {
 }
 
 .pj_scroll {
-  margin-right: 50px ;
+  margin-right: 50px;
   margin-top: -30px;
   animation: sec4 ease-in;
   animation-timeline: view();
@@ -596,50 +610,40 @@ header img {
   border-radius: 16px;
 }
 
-.pj_sec5{
+.pj_sec5 {
   animation: sec5 ease-in;
   animation-timeline: view();
   animation-range: entry 0;
   animation-fill-mode: both;
-
-
 }
-.video_yt{
+.video_yt {
   animation: showY ease-in;
   animation-timeline: view();
   animation-range: entry 0;
   animation-fill-mode: both;
   animation-delay: 3s;
-
 }
 
-.section5 h1{
+.section5 h1 {
   animation: llegada ease-in;
   animation-timeline: view();
-  animation-range: entry 40% ;
+  animation-range: entry 40%;
   animation-fill-mode: both;
-
-
-
 }
 @keyframes sec5 {
-  0%{
-      transform: translateY(-300px);
-      opacity: 10%;
+  0% {
+    transform: translateY(-300px);
+    opacity: 10%;
   }
-  80%{
-      transform: translateY(50px);
-      opacity: 90%;
-
+  80% {
+    transform: translateY(50px);
+    opacity: 90%;
   }
-  100%{
-    transform:translateY(0px);
+  100% {
+    transform: translateY(0px);
     opacity: 100%;
-
   }
-
 }
-
 
 /*Seccion 6*/
 .section6 {
@@ -691,15 +695,10 @@ header img {
   height: 350px;
 }
 
-.section7 img:hover{
- 
+.section7 img:hover {
   transition: 0.5s ease-in-out;
   transform: scale(1.25);
   box-shadow: 0 0 150px whitesmoke;
-  
- 
-
-
 }
 /* Seccion 8*/
 .section8 {
@@ -730,6 +729,8 @@ header img {
 .section8 div input {
   width: 562px;
   height: 100px;
+  padding-left: 52px;
+  font-size: 20px;
 }
 .section8 div button {
   width: 218px;
@@ -763,27 +764,14 @@ header img {
   left: 794px;
   top: 547px;
   z-index: 1;
-  animation: moverNube 12s linear forwards infinite;
 }
 #nubeMedia {
   left: 962px;
   top: 600px;
-  animation: moverNube 14s linear forwards infinite;
 }
 #nubeBaja {
   top: 844px;
   right: 949px;
-  animation: moverNube 10s linear forwards infinite;
-}
-
-@keyframes moverNube {
-  0% {
-      translate: 400px 0;
-  }
-
-  100% {
-      translate: -1500px 0;
-  }
 }
 .section8 #gifs {
   height: 389px;
@@ -791,6 +779,7 @@ header img {
   background-repeat: no-repeat;
   position: relative;
   top: 1181px;
+  left: 0px;
 }
 #gift1 {
   position: absolute;
@@ -838,66 +827,68 @@ footer #copyright img {
   left: 100px;
 }
 
-#sprite-footer1{
-  width: 230px; 
-  height: 230px; 
+#sprite-footer1 {
+  width: 230px;
+  height: 230px;
   position: relative;
   top: -215px;
   left: 1050px;
-  background: url(../imagesNB/spritesheet/sprite-footer1.png)repeat-x;
-  animation:sprite1 3.5s steps(75) infinite;
+  background: url(../imagesNB/spritesheet/sprite-footer1.png) repeat-x;
+  animation: sprite1 3.5s steps(75) infinite;
 }
 
 @keyframes sprite1 {
   /* Partimos de la primera viñeta del sprite sheet */
-  0% { background-position:0 }
+  0% {
+    background-position: 0;
+  }
   /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-  100% { background-position:-17250px}
+  100% {
+    background-position: -17250px;
+  }
 }
 
-#sprite-footer2{
-  width: 200px; 
-  height: 178px; 
+#sprite-footer2 {
+  width: 200px;
+  height: 178px;
   position: relative;
   top: -415px;
   left: 650px;
-  background: url(../imagesNB/spritesheet/sprite-footer2.png)repeat-x;
-  animation:sprite2 0.8s steps(15) infinite;
+  background: url(../imagesNB/spritesheet/sprite-footer2.png) repeat-x;
+  animation: sprite2 0.8s steps(15) infinite;
 }
-
 
 @keyframes sprite2 {
   /* Partimos de la primera viñeta del sprite sheet */
-  0% { background-position:0 }
+  0% {
+    background-position: 0;
+  }
   /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-  100% { background-position:-3000px}
+  100% {
+    background-position: -3000px;
+  }
 }
 
+#sprite-footer4 {
+  background: url(../imagesNB/spritesheet/pj6.png) repeat-x;
+  width: 480px; /* Ancho del frame individual */
+  height: 270px; /* Alto del frame individual */
+  position: relative;
+  top: -300px;
+  left: 800px;
 
-
-#sprite-footer4{
-     background: url(../imagesNB/spritesheet/pj6.png) repeat-x;
-width: 480px; /* Ancho del frame individual */
-height: 270px; /* Alto del frame individual */
-position:  relative;
-top: -300px;
-left: 800px;
-
-z-index: 30;
-margin-top: -600px;
-animation: sprite4 1.8s steps(40)infinite; /* Duración ajustada a 40 frames */
-margin-bottom: 1%;
+  z-index: 30;
+  margin-top: -600px;
+  animation: sprite4 1.8s steps(40) infinite; /* Duración ajustada a 40 frames */
+  margin-bottom: 1%;
 }
 
 /* Animación para el sprite */
 @keyframes sprite4 {
-0% {
+  0% {
     background-position: 0px; /* Empieza en el primer frame */
-}
-100% {
+  }
+  100% {
     background-position: -20000px; /* Se mueve horizontalmente hasta el último frame */
+  }
 }
-}
-
-
-
