@@ -43,6 +43,35 @@ window.onscroll = function () {
 
 
 
+const menuHamb = document.querySelector('.menuHambNB');
+
+menuHamb.addEventListener('click', () => {
+  menuHamb.classList.toggle('abierto');
+});
+
+
+//Esta parte maneja el carrousel de la seccion 2
+
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll("#carruselFotos img"); //Armo un arreglo con las imagenes del carrousel
+  let currentIndex = 0;
+
+
+  const changeImage = () => {
+    
+    images[currentIndex].classList.remove("active");  //Le quito la clase active a la imagen actual
+
+    currentIndex = (currentIndex + 1) % images.length;  //Paso a la siguiente imagen del carrousel
+
+    images[currentIndex].classList.add("active"); //Agrego la clase active a la nueva imagen
+  };
+
+  images[currentIndex].classList.add("active"); //Le doy la clase active a la imagen actual
+
+  setInterval(changeImage, 3000); //Invoco a changeImage cada 3 segundos
+});
+
+
 
 
 
