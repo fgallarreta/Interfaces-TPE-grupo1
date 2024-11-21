@@ -872,27 +872,32 @@ footer #copyright img {
   /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
   100% { background-position:-3000px}
 }
-#sprite_footer3 {
-  position: relative;
-  top:-590px;
-  left : 80px;
-  width: 480px; 
-  height: 270px; 
-  animation: sprite3 1.8s steps(40)infinite; 
-  background-image: url(../imagesNB/spritesheet/pj8.png)repeat-x;
 
+
+
+#sprite-footer4{
+     background: url(../imagesNB/spritesheet/pj6.png) repeat-x;
+width: 480px; /* Ancho del frame individual */
+height: 270px; /* Alto del frame individual */
+position:  relative;
+top: -300px;
+left: 800px;
+
+z-index: 30;
+margin-top: -600px;
+animation: sprite4 1.8s steps(40)infinite; /* Duración ajustada a 40 frames */
+margin-bottom: 1%;
 }
 
-@keyframes sprite3 {
-  0%{
-      background-position: 0;
-  }
-  100%{
-      background-position: -19200px;
-  }
+/* Animación para el sprite */
+@keyframes sprite4 {
+0% {
+    background-position: 0px; /* Empieza en el primer frame */
 }
-
-
+100% {
+    background-position: -20000px; /* Se mueve horizontalmente hasta el último frame */
+}
+}
 
 
 
