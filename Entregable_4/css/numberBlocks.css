@@ -418,10 +418,15 @@ header img {
     transform: translateY(100px);
     opacity: 0%;
   }
-
+  30%{
+    opacity: 20%;
+  }
+80%{
+  opacity: 1;
+}
   100% {
     transform: translateY(0px);
-    opacity: 1;
+ 
   }
 }
 .card p {
@@ -439,7 +444,7 @@ header img {
   position: absolute;
   left: 373px;
   bottom: 329px;
-  animation-range: entry 10%;
+  
 }
 
 #card3 {
