@@ -179,7 +179,7 @@ header a {
   line-height: 94.5%;
 }
 
-.btn-comprarNB:hover{
+.btn-comprarNB:hover {
   transition: 0.5s;
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
@@ -459,15 +459,14 @@ header nav ul li:nth-child(3) {
     transform: translateY(100px);
     opacity: 0%;
   }
-  30%{
+  30% {
     opacity: 10%;
   }
-80%{
-  opacity: 1;
-}
+  80% {
+    opacity: 1;
+  }
   100% {
     transform: translateY(0px);
- 
   }
 }
 .card p {
@@ -485,7 +484,6 @@ header nav ul li:nth-child(3) {
   position: absolute;
   left: 373px;
   bottom: 329px;
-  
 }
 
 #card3 {
@@ -498,7 +496,8 @@ header nav ul li:nth-child(3) {
 .section3 {
   position: relative;
   z-index: -10;
-  background-image: url(../imagesNB/fondoNBs3.svg);
+  background-color: #5829bf;
+  clip-path: path("M0 0C499.868 48.2939 780.13 47.017 1280 0V1157H0V0Z");
   height: 1157px;
   overflow: hidden;
 }
@@ -534,13 +533,11 @@ header nav ul li:nth-child(3) {
   -webkit-text-stroke: 1px;
   color: #ffffff;
 }
-.btn_sec3:hover{
+.btn_sec3:hover {
   transition: 0.5s;
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
   background-color: #ceb812;
-
-
 }
 
 .section3 img {
@@ -590,7 +587,7 @@ header nav ul li:nth-child(3) {
 .container_pj {
   position: fixed;
   top: 299px;
-  left: 243px; 
+  left: 243px;
   margin-top: -50px;
 }
 
@@ -610,13 +607,12 @@ header nav ul li:nth-child(3) {
 }
 
 .hidden {
-  position:absolute;
+  position: absolute;
   width: 100%;
   height: auto;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-
 
 /* Seccion 5*/
 .section5 {
@@ -817,7 +813,7 @@ header nav ul li:nth-child(3) {
 #nubeMedia {
   left: 962px;
   top: 600px;
-  animation: NubeDerecha 50s infinite linear  ;
+  animation: NubeDerecha 50s infinite linear;
 }
 #nubeBaja {
   top: 844px;
@@ -826,40 +822,41 @@ header nav ul li:nth-child(3) {
   animation: NubeIzquierda 20s infinite linear;
 }
 
-
 @keyframes NubeIzquierda {
   0% {
-      transform: translateX(0);
-      opacity: 0.1;
+    transform: translateX(0);
+    opacity: 0.1;
   }
 
   25% {
-      opacity: 1;
+    opacity: 1;
   }
 
   75% {
-      opacity: 0.5;
-   }
-  100% { transform: translateX(700px);
-      opacity: 0;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(700px);
+    opacity: 0;
   }
 }
 
 @keyframes NubeDerecha {
   0% {
-      transform: translateX(0);
-      opacity: 0.10;
+    transform: translateX(0);
+    opacity: 0.1;
   }
 
   25% {
-      opacity: 1;
+    opacity: 1;
   }
 
   75% {
-      opacity: 0.5;
-   }
-  100% { transform: translateX(-700px);
-      opacity: 0;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-700px);
+    opacity: 0;
   }
 }
 .section8 #gifs {
