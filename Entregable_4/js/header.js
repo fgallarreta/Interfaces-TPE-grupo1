@@ -12,9 +12,10 @@ menu.addEventListener("click", (e) => {
 let prevY = window.scrollY;
 let header = document.querySelector("header");
 window.addEventListener("scroll", function () {
-  if (prevY < window.scrollY) {
+  console.log(this.window.scrollY);
+  if (prevY < window.scrollY && prevY > 10) {
     header.classList.add("stickyHeader");
-  } else if (window.scrollY == 0) {
+  } else if (prevY < 103) {
     header.classList.remove("stickyHeader");
   }
   prevY = window.scrollY;
