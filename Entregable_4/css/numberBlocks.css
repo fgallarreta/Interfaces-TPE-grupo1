@@ -872,6 +872,7 @@ header nav ul li:nth-child(3) {
   left: 0px;
 }
 #gift1 {
+  background-image: url(../imagesNB/gifs/muñeco2.gif);
   position: absolute;
   bottom: 42px;
   left: 65px;
@@ -879,6 +880,7 @@ header nav ul li:nth-child(3) {
   height: 480px;
 }
 #gift2 {
+  background-image: url(../imagesNB/gifs/muñeco3.gif);
   position: absolute;
   bottom: 42px;
   left: 407px;
@@ -886,12 +888,18 @@ header nav ul li:nth-child(3) {
   height: 480px;
 }
 #gift3 {
+  background-image: url(../imagesNB/gifs/muñeco7.gif);
   position: absolute;
-  bottom: -400px;
-  left: 856px;
-  height: 900px;
+  bottom: -233px;
+  left: 575px;
+  height: 1412px;
   width: 900px;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+
 /*FOOTER*/
 footer #plataformas {
   margin-top: -2px;
