@@ -497,7 +497,7 @@ header nav ul li:nth-child(3) {
 /*Seccion 3*/
 .section3 {
   position: relative;
-  z-index: -10;
+  z-index: 1;
   background-color: #5829bf;
   clip-path: path("M0 0C499.868 48.2939 780.13 47.017 1280 0V1157H0V0Z");
   height: 1157px;
@@ -534,6 +534,7 @@ header nav ul li:nth-child(3) {
   box-shadow: 4px 5px #02187e;
   -webkit-text-stroke: 1px;
   color: #ffffff;
+  transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
 }
 .btn_sec3:hover {
   transition: 0.5s;
