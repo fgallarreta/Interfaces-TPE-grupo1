@@ -179,7 +179,7 @@ header a {
   line-height: 94.5%;
 }
 
-.btn-comprarNB:hover {
+.btn-comprarNB:hover{
   transition: 0.5s;
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
@@ -460,7 +460,7 @@ header nav ul li:nth-child(3) {
     opacity: 0%;
   }
   30%{
-    opacity: 20%;
+    opacity: 10%;
   }
 80%{
   opacity: 1;
@@ -518,7 +518,8 @@ header nav ul li:nth-child(3) {
   font-weight: bold;
   font-style: italic;
 }
-.section3 button {
+.btn_sec3 {
+  z-index: 3;
   position: absolute;
   top: 390px;
   left: 370px;
@@ -532,6 +533,14 @@ header nav ul li:nth-child(3) {
   box-shadow: 4px 5px #02187e;
   -webkit-text-stroke: 1px;
   color: #ffffff;
+}
+.btn_sec3:hover{
+  transition: 0.5s;
+  transform: scale(1.1);
+  box-shadow: 0 0 50px white;
+  background-color: #ceb812;
+
+
 }
 
 .section3 img {
@@ -742,6 +751,7 @@ header nav ul li:nth-child(3) {
 .section8 {
   position: relative;
   height: 1572px;
+  background-color: #c7eaec;
 }
 .section8 h1 {
   width: 816px;
@@ -802,14 +812,55 @@ header nav ul li:nth-child(3) {
   left: 794px;
   top: 547px;
   z-index: 1;
+  animation: NubeDerecha 40s infinite linear;
 }
 #nubeMedia {
   left: 962px;
   top: 600px;
+  animation: NubeDerecha 50s infinite linear  ;
 }
 #nubeBaja {
   top: 844px;
   right: 949px;
+
+  animation: NubeIzquierda 20s infinite linear;
+}
+
+
+@keyframes NubeIzquierda {
+  0% {
+      transform: translateX(0);
+      opacity: 0.1;
+  }
+
+  25% {
+      opacity: 1;
+  }
+
+  75% {
+      opacity: 0.5;
+   }
+  100% { transform: translateX(700px);
+      opacity: 0;
+  }
+}
+
+@keyframes NubeDerecha {
+  0% {
+      transform: translateX(0);
+      opacity: 0.10;
+  }
+
+  25% {
+      opacity: 1;
+  }
+
+  75% {
+      opacity: 0.5;
+   }
+  100% { transform: translateX(-700px);
+      opacity: 0;
+  }
 }
 .section8 #gifs {
   height: 389px;
@@ -823,16 +874,22 @@ header nav ul li:nth-child(3) {
   position: absolute;
   bottom: 42px;
   left: 65px;
+  width: 480px;
+  height: 480px;
 }
 #gift2 {
   position: absolute;
   bottom: 42px;
   left: 407px;
+  width: 480px;
+  height: 480px;
 }
 #gift3 {
   position: absolute;
-  bottom: -40px;
-  left: 756px;
+  bottom: -400px;
+  left: 856px;
+  height: 900px;
+  width: 900px;
 }
 /*FOOTER*/
 footer #plataformas {
