@@ -20,11 +20,11 @@ const arbusto4 = document.getElementById("arbusto4");
 //Funcion usada en el parallax del HERO
 window.onscroll = function () {
   const y = window.scrollY;
-    
+
   arbol1.style.transform = `translateX(${y * -0.2}px)`;
   arbol2.style.transform = `translateX(${y * 0.5}px)`;
   arbol3.style.transform = `translateX(${y * 1}px)`;
-  
+
   pj1.style.transform = `translateY(${y * -0.6}px)`;
   pj2.style.transform = `translateY(${y * -0.8}px)`;
   pj3.style.transform = `translateY(${y * -1}px)`;
@@ -38,17 +38,7 @@ window.onscroll = function () {
   arbusto2.style.transform = `translateX(${y * -0.4}px)`;
   arbusto3.style.transform = `translateX(${y * 0.5}px)`;
   arbusto4.style.transform = `translateX(${y * 1}px)`;
-
 };
-
-
-
-const menuHamb = document.querySelector('.menuHambNB');
-
-menuHamb.addEventListener('click', () => {
-  menuHamb.classList.toggle('abierto');
-});
-
 
 //Esta parte maneja el carrousel de la seccion 2
 
@@ -56,12 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll("#carruselFotos img"); //Armo un arreglo con las imagenes del carrousel
   let currentIndex = 0;
 
-
   const changeImage = () => {
-    
-    images[currentIndex].classList.remove("active");  //Le quito la clase active a la imagen actual
+    images[currentIndex].classList.remove("active"); //Le quito la clase active a la imagen actual
 
-    currentIndex = (currentIndex + 1) % images.length;  //Paso a la siguiente imagen del carrousel
+    currentIndex = (currentIndex + 1) % images.length; //Paso a la siguiente imagen del carrousel
 
     images[currentIndex].classList.add("active"); //Agrego la clase active a la nueva imagen
   };
@@ -73,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Esta parte maneja el parallax (mouse moving) de la seccion 3
 
-document.addEventListener("mousemove", (parallaxMouseMoving)) 
-  
-  function parallaxMouseMoving(event){
+document.addEventListener("mousemove", parallaxMouseMoving);
+
+function parallaxMouseMoving(event) {
   const image = document.querySelector("#parallaxMouseMoving img");
 
   //Calculo la posición del cursor relativa al centro de la ventana
@@ -93,13 +81,4 @@ document.addEventListener("mousemove", (parallaxMouseMoving))
   //Aplico la transformación a la imagen segun lo indicado anteriormente
   //Le doy un escalado leve a la imagen para que no se vean los bordes de esta
   image.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
-
-
-};
-
-
-
-
-
-
-
+}
