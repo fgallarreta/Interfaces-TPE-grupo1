@@ -10,6 +10,7 @@
   max-width: 1280px;
   font-family: "Lato";
 }
+
 .oculto {
   display: none;
 }
@@ -107,7 +108,8 @@ a {
 }
 
 header {
-  position: absolute;
+  position: sticky;
+  top: 0px;
   width: 1280px;
   display: flex;
   flex-direction: column;
@@ -116,19 +118,22 @@ header {
 
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 2f1f0f830bd8ab63f42d9fcc34d0fd7880baa9ca
 .stickyHeader {
-  position: sticky;
-  height: 103px;
-  top: 0px;
   background: linear-gradient(
     180deg,
     rgba(0, 209, 213, 1) 16%,
     rgba(0, 209, 213, 0.12) 88%,
     rgba(1, 208, 213, 0) 100%
   );
+  height: 103px;
+  transition: all 0.5 ease;
 }
+
 .stickyHeader img {
   position: absolute;
   top: 6px;
@@ -270,7 +275,7 @@ header a {
   line-height: 94.5%;
 }
 
-.btn-comprarNB:hover{
+.btn-comprarNB:hover {
   transition: 0.5s;
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
@@ -324,13 +329,11 @@ header nav ul li:nth-child(3) {
 }
 
 .section1 {
+  position: relative;
   background-image: url(../imagesNB/fondoNB.svg);
   height: 959px;
   overflow: hidden;
-  position: relative;
   z-index: -10;
-
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -440,6 +443,7 @@ header nav ul li:nth-child(3) {
   background-image: url(../imagesNB/fondoNBs2.svg);
   background-repeat: no-repeat;
   position: relative;
+
   height: 1852px;
   z-index: -10;
 }
@@ -550,15 +554,14 @@ header nav ul li:nth-child(3) {
     transform: translateY(100px);
     opacity: 0%;
   }
-  30%{
+  30% {
     opacity: 10%;
   }
-80%{
-  opacity: 1;
-}
+  80% {
+    opacity: 1;
+  }
   100% {
     transform: translateY(0px);
- 
   }
 }
 .card p {
@@ -576,7 +579,6 @@ header nav ul li:nth-child(3) {
   position: absolute;
   left: 373px;
   bottom: 329px;
-  
 }
 
 #card3 {
@@ -588,8 +590,9 @@ header nav ul li:nth-child(3) {
 /*Seccion 3*/
 .section3 {
   position: relative;
-  z-index: -10;
-  background-image: url(../imagesNB/fondoNBs3.svg);
+  z-index: 1;
+  background-color: #5829bf;
+  clip-path: path("M0 0C499.868 48.2939 780.13 47.017 1280 0V1157H0V0Z");
   height: 1157px;
   overflow: hidden;
 }
@@ -624,6 +627,7 @@ header nav ul li:nth-child(3) {
   box-shadow: 4px 5px #02187e;
   -webkit-text-stroke: 1px;
   color: #ffffff;
+<<<<<<< HEAD
   transition: 0.5s;
   transition: background 1s ease;
 }
@@ -634,6 +638,15 @@ header nav ul li:nth-child(3) {
   background: #ceb812;
 
 
+=======
+  transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+}
+.btn_sec3:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+  box-shadow: 0 0 50px white;
+  background-color: #ceb812;
+>>>>>>> 2f1f0f830bd8ab63f42d9fcc34d0fd7880baa9ca
 }
 
 .section3 img {
@@ -683,7 +696,7 @@ header nav ul li:nth-child(3) {
 .container_pj {
   position: fixed;
   top: 299px;
-  left: 243px; 
+  left: 243px;
   margin-top: -50px;
 }
 
@@ -703,17 +716,19 @@ header nav ul li:nth-child(3) {
 }
 
 .hidden {
-  position:absolute;
+  position: absolute;
   width: 100%;
   height: auto;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-
 /* Seccion 5*/
 .section5 {
-  background-image: url(../imagesNB/fondoNBs5.svg);
+  background-color: #efb71e;
+  clip-path: path(
+    "M-83 56.0049C135 -108.5 905.5 152.502 1346 56.0049V1444C776.18 1413.21 444.167 1363.12 -83 1444V56.0049Z"
+  );
   position: relative;
   height: 1443px;
 }
@@ -855,11 +870,6 @@ header nav ul li:nth-child(3) {
   font-weight: 600;
 }
 
-.section8 div {
-  position: absolute;
-  top: 433px;
-  left: 100px;
-}
 .section8 #suscribirse {
   position: absolute;
   top: 433px;
@@ -868,10 +878,15 @@ header nav ul li:nth-child(3) {
   box-shadow: 4px 5px #02187e;
 }
 .section8 div input {
-  width: 562px;
-  height: 100px;
+  background-color: #ececec;
+  width: 553px;
+  height: 82px;
   padding-left: 52px;
   font-size: 20px;
+  margin-right: -9px;
+  border: solid white 9px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 .section8 div button {
   width: 218px;
@@ -883,7 +898,6 @@ header nav ul li:nth-child(3) {
   color: white;
   font-weight: 800;
   font-size: 20px;
-  letter-spacing: 11%;
 }
 .section8 p {
   position: absolute;
@@ -910,7 +924,7 @@ header nav ul li:nth-child(3) {
 #nubeMedia {
   left: 962px;
   top: 600px;
-  animation: NubeDerecha 50s infinite linear  ;
+  animation: NubeDerecha 50s infinite linear;
 }
 #nubeBaja {
   top: 844px;
@@ -919,40 +933,41 @@ header nav ul li:nth-child(3) {
   animation: NubeIzquierda 20s infinite linear;
 }
 
-
 @keyframes NubeIzquierda {
   0% {
-      transform: translateX(0);
-      opacity: 0.1;
+    transform: translateX(0);
+    opacity: 0.1;
   }
 
   25% {
-      opacity: 1;
+    opacity: 1;
   }
 
   75% {
-      opacity: 0.5;
-   }
-  100% { transform: translateX(700px);
-      opacity: 0;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(700px);
+    opacity: 0;
   }
 }
 
 @keyframes NubeDerecha {
   0% {
-      transform: translateX(0);
-      opacity: 0.10;
+    transform: translateX(0);
+    opacity: 0.1;
   }
 
   25% {
-      opacity: 1;
+    opacity: 1;
   }
 
   75% {
-      opacity: 0.5;
-   }
-  100% { transform: translateX(-700px);
-      opacity: 0;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-700px);
+    opacity: 0;
   }
 }
 .section8 #gifs {
@@ -964,6 +979,7 @@ header nav ul li:nth-child(3) {
   left: 0px;
 }
 #gift1 {
+  background-image: url(../imagesNB/gifs/muñeco2.gif);
   position: absolute;
   bottom: 42px;
   left: 65px;
@@ -971,6 +987,7 @@ header nav ul li:nth-child(3) {
   height: 480px;
 }
 #gift2 {
+  background-image: url(../imagesNB/gifs/muñeco3.gif);
   position: absolute;
   bottom: 42px;
   left: 407px;
@@ -978,12 +995,18 @@ header nav ul li:nth-child(3) {
   height: 480px;
 }
 #gift3 {
+  background-image: url(../imagesNB/gifs/muñeco7.gif);
   position: absolute;
-  bottom: -400px;
-  left: 856px;
-  height: 900px;
+  bottom: -233px;
+  left: 575px;
+  height: 1412px;
   width: 900px;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+
 /*FOOTER*/
 footer #plataformas {
   margin-top: -2px;
