@@ -14,6 +14,93 @@
   display: none;
 }
 
+.container_loader{
+  z-index: 400;
+  
+  position: fixed;
+  width: 100%;
+  display: none;
+  min-height: 100vh;
+  background-color: rgba(5, 5, 5, 1);
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: chau 6s linear;
+}
+
+@keyframes chau {
+  0%{opacity: 1;
+  display: block;}
+  40%{
+    opacity: 1;
+  }
+  
+  100%{
+    opacity: 0;
+    display: none;
+  }
+  
+}
+.container_loader>img {
+  position: absolute;
+  width: 200px;
+  top: 300px;
+  left: 550px;
+  opacity: 0;
+  animation: load 6s linear ;
+  }
+  @keyframes load {
+    from{
+transform: rotate(0);
+opacity: 1;    }
+
+    to{
+     transform:rotate(500deg);
+     opacity: 0;
+
+    }
+
+  }
+
+  .loader{
+    display: block;
+    position: relative;
+    height: 12px;
+    width: 80%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    top: 600px;
+    left: 130px;
+  }
+  .loader::after {
+    content: '';
+    width: 40%;
+    height: 100%;
+    background: #FF3D00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    animation: animloader 4s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      left: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      left: 100%;
+      transform: translateX(0%);
+    }
+  }
+  
+  
+  
+
 a {
   text-decoration: underline;
   color: #ffffff;
@@ -26,7 +113,11 @@ header {
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
+
 }
+
+
+
 .stickyHeader {
   position: sticky;
   height: 103px;
@@ -519,7 +610,7 @@ header nav ul li:nth-child(3) {
   font-style: italic;
 }
 .btn_sec3 {
-  z-index: 3;
+  z-index: 30;
   position: absolute;
   top: 390px;
   left: 370px;
@@ -527,18 +618,20 @@ header nav ul li:nth-child(3) {
   height: 66px;
   line-height: 110%;
   font-size: 31px;
-  background-color: #83c252;
+  background: #83c252;
   border: solid #ffffff 8px;
   border-radius: 111px;
   box-shadow: 4px 5px #02187e;
   -webkit-text-stroke: 1px;
   color: #ffffff;
+  transition: 0.5s;
+  transition: background 1s ease;
 }
 .btn_sec3:hover{
-  transition: 0.5s;
+  
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
-  background-color: #ceb812;
+  background: #ceb812;
 
 
 }
@@ -744,7 +837,7 @@ header nav ul li:nth-child(3) {
 
 .section7 img:hover {
   transition: 0.5s ease-in-out;
-  transform: scale(1.25);
+  transform: scale(1.1);
   box-shadow: 0 0 150px whitesmoke;
 }
 /* Seccion 8*/
