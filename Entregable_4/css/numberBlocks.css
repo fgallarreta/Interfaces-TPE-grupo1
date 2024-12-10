@@ -18,7 +18,7 @@
 .container_loader{
   z-index: 400;
   
-  position: fixed;
+  position: absolute;
   width: 100%;
   display: none;
   min-height: 100vh;
@@ -118,11 +118,6 @@ header {
 
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 2f1f0f830bd8ab63f42d9fcc34d0fd7880baa9ca
 .stickyHeader {
   background: linear-gradient(
     180deg,
@@ -471,24 +466,21 @@ header nav ul li:nth-child(3) {
   position: absolute;
   top: 566px;
   left: 48px;
-  animation: llegada ease-in;
-  animation-timeline: view();
-  animation-range: entry 0;
-  animation-fill-mode: both;
-  animation-delay: 50ms;
+  animation: llegada 8s infinite ease-in-out;
+ 
 }
 @keyframes llegada {
   0% {
-    transform: translateX(-200px) scale(0);
-    opacity: 0%;
+    transform: translateX(-50px) ;
+   
   }
   70% {
-    transform: translateX(55px);
+    transform: translateX(50px) rotate(10deg);
 
-    opacity: 1;
+
   }
   100% {
-    transform: translateX(0px) scale(1);
+    transform: translateX(-50px) rotate(0deg);
   }
 }
 #pj5 {
@@ -496,28 +488,25 @@ header nav ul li:nth-child(3) {
   top: -87px;
   left: 787px;
 
-  animation: rebote ease-in;
-  animation-timeline: view();
-  animation-range: entry 0;
-  animation-fill-mode: both;
+  animation: rebote 2s infinite ease-in-out;
+ 
 }
 
 @keyframes rebote {
   0% {
-    transform: translateX(200px);
-    opacity: 0;
+   
+  transform: translate(5px,10px);
   }
 
-  60% {
-    transform: translateX(0px) rotate(30deg);
-    opacity: 1;
+  50% {
+    transform:  translate(-5px,-10px);
+    
   }
-  90% {
-    transform: rotate(-20deg);
+  100%{
+transform: translate(5px, 10px);
+
   }
-  100% {
-    transform: rotate(0);
-  }
+
 }
 .section2 #carruselFotos {
   margin-top: 26px;
@@ -543,10 +532,8 @@ header nav ul li:nth-child(3) {
   width: 332px;
   height: 302px;
 
-  animation: showY ease;
-  animation-timeline: view();
-
-  animation-fill-mode: both;
+  translate: 0 600px;
+  transition: translate 1s ease;
 }
 
 @keyframes showY {
@@ -573,12 +560,14 @@ header nav ul li:nth-child(3) {
 #card1 {
   position: absolute;
   bottom: 329px;
+  
 }
 
 #card2 {
   position: absolute;
   left: 373px;
   bottom: 329px;
+  animation-delay:  1s; ;
 }
 
 #card3 {
@@ -627,18 +616,6 @@ header nav ul li:nth-child(3) {
   box-shadow: 4px 5px #02187e;
   -webkit-text-stroke: 1px;
   color: #ffffff;
-<<<<<<< HEAD
-  transition: 0.5s;
-  transition: background 1s ease;
-}
-.btn_sec3:hover{
-  
-  transform: scale(1.1);
-  box-shadow: 0 0 50px white;
-  background: #ceb812;
-
-
-=======
   transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
 }
 .btn_sec3:hover {
@@ -646,7 +623,6 @@ header nav ul li:nth-child(3) {
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
   background-color: #ceb812;
->>>>>>> 2f1f0f830bd8ab63f42d9fcc34d0fd7880baa9ca
 }
 
 .section3 img {
@@ -889,6 +865,7 @@ header nav ul li:nth-child(3) {
   border-bottom-left-radius: 50px;
 }
 .section8 div button {
+  pointer-events:all;
   width: 218px;
   height: 100px;
   background-color: #83c252;
@@ -919,7 +896,7 @@ header nav ul li:nth-child(3) {
   left: 794px;
   top: 547px;
   z-index: 1;
-  animation: NubeDerecha 40s infinite linear;
+  animation: NubeDerecha 30s infinite linear;
 }
 #nubeMedia {
   left: 962px;
@@ -977,6 +954,14 @@ header nav ul li:nth-child(3) {
   position: relative;
   top: 1181px;
   left: 0px;
+}
+
+input:focus{
+transition: 1s;
+  box-shadow: 0 0 30px inset grey;
+}
+ button{
+pointer-events: auto;
 }
 #gift1 {
   background-image: url(../imagesNB/gifs/muñeco2.gif);
