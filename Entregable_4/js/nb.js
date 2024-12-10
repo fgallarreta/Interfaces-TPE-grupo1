@@ -82,3 +82,27 @@ function parallaxMouseMoving(event) {
   //Le doy un escalado leve a la imagen para que no se vean los bordes de esta
   image.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
 }
+
+window.addEventListener('scroll', () => {
+  let value = window.scrollY;
+
+  mostrarCardsSecundarias(value)
+})
+let cards = document.querySelectorAll('.card');
+
+function mostrarCardsSecundarias(value) {
+  
+  if (value > 1700) {
+    cards.forEach((element, index) => {
+          setTimeout(() => {
+              element.classList.add('mostrar');
+          }, index * 300);
+      });
+  } else {
+    cards.forEach((element, index) => {
+          setTimeout(() => {
+              element.classList.remove('mostrar');
+          }, index * 300);
+      });
+  }
+}
