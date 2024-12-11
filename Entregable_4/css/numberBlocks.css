@@ -17,12 +17,8 @@
 
 .container_loader {
   z-index: 400;
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> 1a531e19afc844cd66c36e8fd1c7fb6a2291e644
-  position: absolute;
+  position: fixed;
   width: 100%;
   display: none;
   min-height: 100vh;
@@ -52,8 +48,8 @@
 .container_loader > img {
   position: absolute;
   width: 200px;
-  top: 300px;
-  left: 550px;
+  top: 270px;
+  left: 540px;
   opacity: 0;
   animation: load 6s linear;
 }
@@ -77,7 +73,7 @@
   border: 1px solid #fff;
   border-radius: 10px;
   overflow: hidden;
-  top: 600px;
+  top: 550px;
   left: 130px;
 }
 .loader::after {
@@ -116,11 +112,20 @@ header {
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
+  animation: hola 8s linear;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 1a531e19afc844cd66c36e8fd1c7fb6a2291e644
+@keyframes hola {
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 .stickyHeader {
   background: linear-gradient(
     180deg,

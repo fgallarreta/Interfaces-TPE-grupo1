@@ -94,7 +94,7 @@ function mostrarCardsSecundarias() {
     const rect = card.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (rect.top <= windowHeight * 0.8) { // Ajusta el porcentaje si es necesario
+    if (rect.top <= windowHeight * 0.8) { 
       setTimeout(() => {
         card.classList.add('mostrar');
       }, index * 300); // Retraso escalonado
