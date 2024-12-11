@@ -106,3 +106,14 @@ function mostrarCardsSecundarias() {
   });
 }
 
+//Controla el z-index del loader tras terminar su animacion
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.querySelector('.container_loader');
+
+  loader.addEventListener('animationend', () => {
+    loader.classList.remove('container_loader');
+    loader.classList.add('hidden_container_loader');
+  });
+});
+
+
