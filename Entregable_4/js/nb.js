@@ -84,25 +84,25 @@ function parallaxMouseMoving(event) {
 }
 
 window.addEventListener('scroll', () => {
-  let value = window.scrollY;
+  mostrarCardsSecundarias();
+});
 
-  mostrarCardsSecundarias(value)
-})
 let cards = document.querySelectorAll('.card');
 
-function mostrarCardsSecundarias(value) {
-  
-  if (value > 1700) {
-    cards.forEach((element, index) => {
-          setTimeout(() => {
-              element.classList.add('mostrar');
-          }, index * 300);
-      });
-  } else {
-    cards.forEach((element, index) => {
-          setTimeout(() => {
-              element.classList.remove('mostrar');
-          }, index * 300);
-      });
-  }
+function mostrarCardsSecundarias() {
+  cards.forEach((card, index) => {
+    const rect = card.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top <= windowHeight * 0.8) { // Ajusta el porcentaje si es necesario
+      setTimeout(() => {
+        card.classList.add('mostrar');
+      }, index * 300); // Retraso escalonado
+    } else {
+      setTimeout(() => {
+        card.classList.remove('mostrar');
+      }, index * 300);
+    }
+  });
 }
+
