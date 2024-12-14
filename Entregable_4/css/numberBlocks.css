@@ -30,6 +30,8 @@
   animation: chau 6s linear;
 }
 
+
+
 @keyframes chau {
   0% {
     opacity: 1;
@@ -445,7 +447,7 @@ header nav ul li:nth-child(3) {
   background-image: url(../imagesNB/fondoNBs2.svg);
   background-repeat: no-repeat;
   position: relative;
-
+overflow: hidden;
   height: 1852px;
   z-index: -10;
 }
@@ -468,6 +470,7 @@ header nav ul li:nth-child(3) {
   width: 700px;
   height: 154px;
   font-size: 20px;
+  
 }
 #pj4 {
   position: absolute;
@@ -494,7 +497,7 @@ header nav ul li:nth-child(3) {
   position: absolute;
   top: -87px;
   left: 787px;
-
+ 
   animation: rebote 2s infinite ease-in-out;
  
 }
@@ -502,15 +505,15 @@ header nav ul li:nth-child(3) {
 @keyframes rebote {
   0% {
    
-  transform: translate(5px,10px);
+  transform: translate(15px,10px);
   }
 
   50% {
-    transform:  translate(-5px,-10px);
+    transform:  translate(-2px,-10px);
     
   }
   100%{
-transform: translate(5px, 10px);
+transform: translate(15px, 10px);
 
   }
 
