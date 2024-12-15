@@ -83,6 +83,7 @@ function parallaxMouseMoving(event) {
   image.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
 }
 
+//Controlo la animacion del trio de cards de la seccion 2
 window.addEventListener('scroll', () => {
   mostrarCardsSecundarias();
 });
