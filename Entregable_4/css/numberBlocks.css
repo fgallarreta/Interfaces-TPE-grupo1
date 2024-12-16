@@ -62,7 +62,7 @@
 .container_loader > img {
   position: absolute;
   width: 200px;
-  top: 270px;
+  top: 170px;
   left: 540px;
   opacity: 0;
   animation: load 6s linear;
@@ -788,56 +788,26 @@ transform: translate(15px, 10px);
 
 }
 
-.section5 h1 {
-  animation: showX ease-in;
-  animation-duration: 3s;
-  animation-timeline: view();
-  animation-range: entry 40%;
-  animation-fill-mode: both;
-}
+@keyframes videoYT {
+  0%{
+transform: scale(1.05);
 
-.card {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
+  }
+  50%{transform: scale(1);
 
-.card.mostrar {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-@keyframes showX {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0%;
   }
-  30% {
-    opacity: 10%;
+
+  100%{transform: scale(1.05);
+
   }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0px);
-  }
+  
 }
 
 
-@keyframes sec5 {
-  0% {
-    transform: translateY(-300px);
-    opacity: 10%;
-  }
-  80% {
-    transform: translateY(50px);
-    opacity: 90%;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 100%;
-  }
-}
+
+
+
 
 
 
