@@ -85,8 +85,10 @@ function parallaxMouseMoving(event) {
 
 window.addEventListener('scroll', () => {
   mostrarCardsSecundarias();
+  sec5()
 });
-
+let video= document.querySelectorAll('.video_yt', 'contenedorVideo')
+let pjsec5= document.querySelectorAll('.pj_sec5')
 let cards = document.querySelectorAll('.card');
 
 function mostrarCardsSecundarias() {
@@ -104,6 +106,25 @@ function mostrarCardsSecundarias() {
       }, index * 300);
     }
   });
+}
+
+
+function sec5() {
+  const rect = pjsec5.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top <= windowHeight * 0.8) { 
+      setTimeout(() => {
+        pjsec5.classList.add('entrada')
+        video.classList.add('entrada');
+      }, index * 300); // Retraso escalonado
+    } else {
+      setTimeout(() => {
+        video.classList.remove('entrada')
+        pjsec5.classList.remove('entrada');
+      }, index * 300);
+    }
+  
 }
 
 //Controla el z-index del loader tras terminar su animacion

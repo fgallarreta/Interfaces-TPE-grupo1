@@ -489,10 +489,10 @@ overflow: hidden;
   position: absolute;
   top: 566px;
   left: 48px;
-  animation: llegada 8s infinite ease-in-out;
+  animation: saludo 8s infinite ease-in-out;
  
 }
-@keyframes llegada {
+@keyframes saludo {
   0% {
     transform: translateX(-50px) ;
    
@@ -774,39 +774,45 @@ transform: translate(15px, 10px);
 }
 
 .pj_sec5 {
-  animation: sec5 ease-in;
-  animation-timeline: view();
-  animation-range: entry 0;
-  animation-fill-mode: both;
+  animation: rebote 3s infinite ease-in-out;
+
 }
-.video_yt {
-  animation: showY ease-in;
-  animation-timeline: view();
-  animation-range: entry 0;
-  animation-fill-mode: both;
-  animation-delay: 3s;
+.contenedorVideo{
+  z-index: 10;
+}
+.video_yt{
+  z-index: 1;
+  animation: videoYT 4s infinite ease-in-out;
+  animation-direction: both ;
+
+
 }
 
-.section5 h1 {
-  animation: llegada ease-in;
-  animation-timeline: view();
-  animation-range: entry 40%;
-  animation-fill-mode: both;
+@keyframes videoYT {
+  0%{
+transform: scale(1.05);
+
+  }
+  50%{transform: scale(1);
+
+
+  }
+
+  100%{transform: scale(1.05);
+
+  }
+  
 }
-@keyframes sec5 {
-  0% {
-    transform: translateY(-300px);
-    opacity: 10%;
-  }
-  80% {
-    transform: translateY(50px);
-    opacity: 90%;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 100%;
-  }
+
+
+
+
+.entrada{
+  transform: translateX(0);
 }
+
+
+
 
 /*Seccion 6*/
 .section6 {
