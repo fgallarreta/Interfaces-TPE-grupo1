@@ -788,27 +788,55 @@ transform: translate(15px, 10px);
 
 }
 
-@keyframes videoYT {
-  0%{
-transform: scale(1.05);
+.section5 h1 {
+  animation: showX ease-in;
+  animation-duration: 3s;
+  animation-timeline: view();
+  animation-range: entry 40%;
+  animation-fill-mode: both;
+}
 
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes showX {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0%;
   }
-  50%{transform: scale(1);
-
-
+  30% {
+    opacity: 10%;
   }
-
-  100%{transform: scale(1.05);
-
+  80% {
+    opacity: 1;
   }
-  
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 
-
-
-.entrada{
-  transform: translateX(0);
+@keyframes sec5 {
+  0% {
+    transform: translateY(-300px);
+    opacity: 10%;
+  }
+  80% {
+    transform: translateY(50px);
+    opacity: 90%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
 }
 
 
@@ -882,6 +910,40 @@ transform: scale(1.05);
   top: 190px;
   font-size: 60px;
   font-weight: 600;
+}
+
+#popover_suscribirse::backdrop{
+  background-color: rgba(0,0,0,0.5);
+}
+
+#popover_suscribirse {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#popover_suscribirse button {
+  pointer-events:all;
+  width: 218px;
+  height: 100px;
+  background-color: #83c252;
+  border-radius: 50px;
+  border: solid 9px white;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 1s;
 }
 
 .section8 #suscribirse {
