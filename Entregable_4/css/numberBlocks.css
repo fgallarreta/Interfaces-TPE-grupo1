@@ -224,7 +224,7 @@ header a {
 @keyframes barra1-animado {
   50%,
   100% {
-    transform: translateY(12px) rotate(-45deg);
+    transform: translateY(9px) rotate(-45deg);
     box-shadow: none;
   }
 }
@@ -461,7 +461,7 @@ header nav ul li:nth-child(3) {
   background-image: url(../imagesNB/fondoNBs2.svg);
   background-repeat: no-repeat;
   position: relative;
-overflow: hidden;
+  overflow-x: hidden;
   height: 1852px;
   z-index: -10;
 }
@@ -490,6 +490,7 @@ overflow: hidden;
   position: absolute;
   top: 566px;
   left: 48px;
+
   animation: saludo 8s infinite ease-in-out;
  
 }
@@ -511,7 +512,7 @@ overflow: hidden;
   position: absolute;
   top: -87px;
   left: 787px;
- 
+ margin-top: 73px;
   animation: rebote 2s infinite ease-in-out;
  
 }

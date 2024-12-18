@@ -86,7 +86,7 @@ function parallaxMouseMoving(event) {
 //Controlo la animacion del trio de cards de la seccion 2
 window.addEventListener('scroll', () => {
   mostrarCardsSecundarias();
-  mostrarVideoYT();
+ 
 });
 
 let cards = document.querySelectorAll('.card');
