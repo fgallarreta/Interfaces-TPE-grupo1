@@ -11,7 +11,7 @@ class Jugador {
   inicializarFichas(cantidad) {
     for (let i = 0; i < cantidad; i++) {
       this.fichasDisponibles.push(
-        new Ficha(0, 0, this.ctx, 22, this.imagenFicha)
+        new Ficha(0, 0, this.ctx, 19, this.imagenFicha)
       );
     }
   }
@@ -39,7 +39,7 @@ class Jugador {
   // Método para mostrar las fichas del jugador en el pilón.
   mostrarFichas() {
     const pilonX = this.nombre == "Jugador 1" ? 180 : 1000; // Posición X del pilón según el jugador.
-    const pilonY = 80; // Posición Y inicial del pilón.
+    const pilonY = 50; // Posición Y inicial del pilón.
     const espacioEntreFichas = 20; // Espaciado entre las fichas.
 
     this.fichasDisponibles.forEach((ficha, index) => {

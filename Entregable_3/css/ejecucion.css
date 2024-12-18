@@ -6,6 +6,7 @@
   border: none;
   outline: none;
 }
+
 html,
 body {
   height: 100%;
@@ -28,10 +29,12 @@ header {
   width: auto;
   height: auto;
 }
+
 a {
   text-decoration: none;
   color: #a9d9ff;
 }
+
 header .btn {
   cursor: pointer;
   margin-top: 5px;
@@ -46,6 +49,7 @@ header .btn {
   border-bottom-right-radius: 10px;
   z-index: 2;
 }
+
 nav a {
   color: #124f80;
 }
@@ -53,15 +57,18 @@ nav a {
 header ul {
   height: 384px;
 }
+
 header li {
   cursor: pointer;
   box-shadow: inset 0 0 0 0 #a9d9ff;
   transition: ease-out 0.7s;
 }
+
 header li:hover {
   box-shadow: inset 400px 0 0 0 black;
 }
-header li > a:hover {
+
+header li>a:hover {
   color: white;
 }
 
@@ -76,16 +83,19 @@ header li,
   height: 2rem;
   background-color: #a9d9ff;
 }
+
 .nuestrasRedes {
   height: 4rem;
   color: #124f80;
   border-bottom-right-radius: 10px;
   padding-bottom: 10px;
 }
+
 .imgRedes {
   display: flex;
   justify-content: space-between;
 }
+
 .searchBar {
   display: flex;
   background-color: #a9d9ff;
@@ -105,6 +115,7 @@ header li,
   margin-top: 0.5rem;
   margin-left: 0.5rem;
 }
+
 .mostrarOpciones {
   background-color: #124f80;
   width: 178px;
@@ -119,14 +130,17 @@ header li,
   border-bottom-left-radius: 20px;
   z-index: 2;
 }
+
 .botonesUsuario {
   margin-left: auto;
 }
+
 .opcionesPerfil,
 .infoUsuario {
   display: flex;
   justify-content: flex-end;
 }
+
 .opcionesUsuario {
   display: flex;
   flex-direction: column;
@@ -152,19 +166,23 @@ header li,
   align-items: center;
   transition: 0.5s;
 }
+
 .btn-comprar {
   background-color: #ffef99;
   color: #421c15;
 }
+
 .btn-jugar {
   background-color: #a9d9ff;
   font-size: 18px;
   color: #124f80;
 }
+
 .btn-carrito {
   background-color: #ffb3ad;
   color: #421c15;
 }
+
 .card_chiquita div {
   font-family: "Baloo 2";
   font-weight: bold;
@@ -258,7 +276,8 @@ footer {
 
 #copyright {
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 20px; /* Espacio entre el contenido y el copyright */
+  margin-top: 20px;
+  /* Espacio entre el contenido y el copyright */
   text-align: center;
   font-size: 14px;
   color: #a9d9ff;
@@ -275,8 +294,8 @@ h3 {
 
 #breadcrumbs {
   margin-top: 1%;
-  margin-bottom: 1.5%;
-  margin-left: 5%;
+  margin-left: 8%;
+  font-size: 18px;
 }
 
 #breadcrumbs a {
@@ -284,9 +303,9 @@ h3 {
 }
 
 #titulo_juego {
-  margin-top: 1.5%;
-  margin-bottom: 1%;
-  margin-left: 5%;
+  margin-top: 10px;
+  font-size: 22px;
+  margin-left: 8%;
 }
 
 .preview {
@@ -295,6 +314,7 @@ h3 {
   margin-top: 1%;
   margin-left: 5%;
   margin-right: 5%;
+
 }
 
 .preview img {
@@ -556,39 +576,97 @@ h3 {
 }
 
 #game-container {
+  width: 1200px;
+
   position: relative;
+  left: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url(../images/preview.png);
   background-size: cover;
   background-position: center;
+  border: #124f80 solid 2px;
+
+
 }
 
 #configPanel {
-  background-color: #B34A34;
-  color: #a9d9ff;
   display: flex;
+  color: black;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 600px;
+  width: 400px;
+
   margin-bottom: 20px;
 }
-#configPanel h2 {
-  color: #a9d9ff;
+
+.selectFichas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
+
+.selectFichas h3,
+#lineaTipo h3 {
+  font-size: 18px;
+}
+
+.ficha-seleccion {
+  cursor: pointer;
+  margin-left: 100px;
+
+}
+
+#lineaTipo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+}
+
+#configPanel button {
+  margin-top: 10px;
+  margin-left: 140px;
+}
+
+.seleccionada {
+  border: 4px solid red;
+  border-radius: 150px;
+  cursor: pointer;
+
+}
+
+
+
+.selectFichas img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  margin: 4%;
+}
+
+
+#configPanel h2,
+#configPanel h3 {
+  color: black;
+}
+
+
 
 #timer {
   font-size: 30px;
-  margin-bottom: 10px; /* Espacio debajo del temporizador */
+  margin-bottom: 10px;
+  /* Espacio debajo del temporizador */
 }
+
 #miCanvas {
   border: 2px solid #333;
-  display: none; /* Oculto hasta que inicie el juego */
+  display: none;
+  /* Oculto hasta que inicie el juego */
 }
 
 .popup {
@@ -614,6 +692,7 @@ h3 {
 .ocultar {
   display: none;
 }
+
 /*---------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 768px) {

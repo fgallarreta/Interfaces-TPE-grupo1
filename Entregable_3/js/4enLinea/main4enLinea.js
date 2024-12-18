@@ -3,9 +3,75 @@ const canvas = document.getElementById("miCanvas");
 const ctx = canvas.getContext("2d");
 const timerElement = document.getElementById("timerValue");
 const startGameButton = document.getElementById("startGame");
-let fichaTipoJ1 = document.getElementById("fichaTipoJ1");
-let fichaTipoJ2 = document.getElementById("fichaTipoJ2");
-let lineaTipo = document.getElementById("lineaTipo");
+let fichasJ1 = document.querySelectorAll(".seleccionable");
+let fichasJ2 = document.querySelectorAll(".seleccionable2");
+let lineaTipo = document.querySelectorAll('input[name="tipoJuego"]');
+
+lineaTipo.forEach(valor => {
+  valor.addEventListener('change', (event) => {
+
+    lineaTipo = parseInt(event.target.value, 10);
+  });
+});
+fichasJ1.forEach(ficha => {
+  ficha.addEventListener('click', () => {
+    console.log(ficha.src);
+    let partes = ficha.src.split('Entregable_3/');
+    let tipoSeleccionado = partes[1];
+    console.log(tipoSeleccionado);
+
+    // Remover la clase 'seleccionada' de todas las fichas
+    fichasJ1.forEach(f => f.classList.remove('seleccionada'));
+
+    if (fichaTipoJ1 !== tipoSeleccionado) {
+      // Seleccionar la nueva ficha
+      ficha.classList.add('seleccionada');
+      fichaTipoJ1 = tipoSeleccionado;
+    } else {
+      // Si ya estaba seleccionada, desmarcarla
+      fichaTipoJ1 = null;
+    }
+  });
+});
+
+fichasJ2.forEach(ficha => {
+  ficha.addEventListener('click', () => {
+    let partes = ficha.src.split('Entregable_3/');
+    let tipoSeleccionado = partes[1];
+
+    // Remover la clase 'seleccionada' de todas las fichas
+    fichasJ2.forEach(f => f.classList.remove('seleccionada'));
+
+    if (fichaTipoJ2 !== tipoSeleccionado) {
+      // Seleccionar la nueva ficha
+      ficha.classList.add('seleccionada');
+      fichaTipoJ2 = tipoSeleccionado;
+    } else {
+      // Si ya estaba seleccionada, desmarcarla
+      fichaTipoJ2 = null;
+    }
+  });
+});
+startGameButton.addEventListener('click', function (event) {
+  // Verificar que el jugador 1 haya seleccionado una ficha
+  const fichaJ1Seleccionada = document.querySelector('#fichaTipoJ1 .seleccionable.seleccionada');
+  // Verificar que el jugador 2 haya seleccionado una ficha
+  const fichaJ2Seleccionada = document.querySelector('#fichaTipoJ2 .seleccionable2.seleccionada');
+  // Verificar que se haya seleccionado un tipo de juego
+  const tipoJuegoSeleccionado = document.querySelector('input[name="tipoJuego"]:checked');
+
+  // Validar que todas las configuraciones estén completas
+  if (!fichaJ1Seleccionada || !fichaJ2Seleccionada || !tipoJuegoSeleccionado) {
+    event.preventDefault(); // Evitar que el juego inicie
+    mostrarPopup('Faltan completar los campos de configuracion');
+    return;
+  }
+
+  // Si todo está seleccionado
+  document.getElementById("configPanel").style.display = "none"; // Oculta el panel de configuración
+  canvas.style.display = "block"; // Muestra el canvas
+  iniciarJuego(); // Llama a la función de inicio del juego
+});
 
 // Variables del temporizador
 let timer;
@@ -36,42 +102,43 @@ function updateTimer() {
 let tablero, jugador1, jugador2, juego;
 
 function iniciarJuego() {
-  // Configuración de fichas y tipo de juego
-  const tipoFichaJ1 = fichaTipoJ1.value;
-  const tipoFichaJ2 = fichaTipoJ2.value;
-  const tipoLinea = parseInt(lineaTipo.value, 10);
 
-  switch (tipoLinea) {
+  // Configuración de fichas y tipo de juego
+  const tipoFichaJ1 = fichaTipoJ1;
+  const tipoFichaJ2 = fichaTipoJ2;
+
+
+  switch (lineaTipo) {
     case 4:
       tablero = new Tablero(
-        418,
-        98,
+        442,
+        45,
         ctx,
         6,
         7,
-        tipoLinea,
+        lineaTipo,
         "images/Casillero 72x72.png"
       );
       break;
     case 5:
       tablero = new Tablero(
-        366,
-        68,
+        398,
+        45,
         ctx,
         7,
         9,
-        tipoLinea,
+        lineaTipo,
         "images/Casillero 72x72.png"
       );
       break;
     case 6:
       tablero = new Tablero(
-        342,
-        62,
+        379,
+        45,
         ctx,
         7,
         10,
-        tipoLinea,
+        lineaTipo,
         "images/Casillero 72x72.png"
       );
       break;
@@ -114,23 +181,28 @@ canvas.addEventListener("mousedown", (e) => {
   let mouseY = e.clientY - rect.top;
   const jugadorActual = jugador1.getTurno() ? jugador1 : jugador2;
 
+
+
   jugadorActual.fichasDisponibles.forEach((ficha) => {
+
     if (ficha.estaClickeado(mouseX, mouseY)) {
       fichaSeleccionada = ficha;
       offsetX = mouseX - ficha.x;
       offsetY = mouseY - ficha.y;
       ficha.setSeMueve(true);
+
     }
   });
 });
 
 canvas.addEventListener("mousemove", (e) => {
   if (fichaSeleccionada && fichaSeleccionada.seEstaMoviendo()) {
+
     let rect = canvas.getBoundingClientRect();
     let mouseX = e.clientX - rect.left;
     let mouseY = e.clientY - rect.top;
     fichaSeleccionada.mover(mouseX - offsetX, mouseY - offsetY);
-    
+    tablero.mostrarFlechas = true;
   }
 });
 
@@ -154,23 +226,22 @@ canvas.addEventListener("mouseup", (e) => {
     }
 
     fichaSeleccionada.setSeMueve(false);
+    tablero.mostrarFlechas = false;
     fichaSeleccionada = null;
-   
+
   }
 });
 
-// Iniciar el juego al hacer clic en el botón de inicio
-startGameButton.addEventListener("click", () => {
-  document.getElementById("configPanel").style.display = "none"; // Oculta el panel de configuración
-  canvas.style.display = "block"; // Muestra el canvas
-  iniciarJuego(); // Llama a la función de inicio del juego
-});
+
 
 const popup = document.getElementById("popup");
 const popupMensaje = document.getElementById("popupMensaje");
 
 // Función para mostrar el popup con un mensaje personalizado
 function mostrarPopup(mensaje) {
-  popupMensaje.textContent = mensaje; // Cambia el contenido del mensaje
-  popup.classList.remove("ocultar"); // Muestra el popup
+  setTimeout(() => {
+    popupMensaje.textContent = mensaje; // Cambia el contenido del mensaje
+    popup.classList.remove("ocultar"); // Muestra el popup
+  }, 1000);
 }
+

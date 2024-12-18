@@ -6,6 +6,7 @@ class Ficha extends ElementoDeJuego {
     this.seMueve = false; //indica si la ficha está en movimiento.
     this.imagenString = imagen; // Ruta de la imagen de la ficha.
     this.imagen = new Image(); // Crea un nuevo objeto de imagen.
+
     this.imagen.src = this.imagenString; // Asigna la ruta de la imagen.
 
     // Cuando la imagen esté cargada, se dibuja automáticamente.
