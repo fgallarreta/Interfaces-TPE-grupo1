@@ -778,17 +778,17 @@ transform: translate(15px, 10px);
 
 .pj_sec5 {
 
-transition: 2s ease-out;
+transition: 2s 90000000000000s ease-out;
 transform: translate(1000px);
 }
 
 .contenedorVideo{
-  transition: 2s ease-out;
+  transition: 2s 90000000000000s ease-out;
 transform: translate(-1000px);
 }
 
 .video_yt{
-  transition: 2s ease-out;
+  transition: 2s 90000000000000s ease-out;
   transform: translate(-1000px);
 }
 
@@ -797,21 +797,26 @@ transform: translate(-1000px);
 }
 
 .section5:hover .pj_sec5{
-
+transition: 2s;
 transform: translate(0px);
 }
 
 
 
 .section5:hover .contenedorVideo{
-
+  transition: 2s;
   transform: translate(0px);
+ 
    
   }
 .section5:hover .video_yt{
-
+  transition: 2s;
   transform: translate(0px);
    
+  }
+
+  .video_yt::after .pj_sec5::after  .contenedorVideo::after{
+    transform: translate(0px);
   }
 
 
