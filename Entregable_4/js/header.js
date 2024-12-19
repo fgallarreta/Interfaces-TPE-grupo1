@@ -1,6 +1,6 @@
 "use strict";
 let menu = document.querySelector(".menuHambNB");
-let options = document.querySelector(".oculto");
+let options = document.querySelector("nav.oculto");
 let menuItems = document.querySelector("nav ul");
 
 menu.addEventListener("click", (e) => {
@@ -12,7 +12,7 @@ menu.addEventListener("click", (e) => {
 let prevY = window.scrollY;
 let header = document.querySelector("header");
 window.addEventListener("scroll", function () {
-  console.log(this.window.scrollY);
+
   if (prevY < window.scrollY && prevY > 10) {
     header.classList.add("stickyHeader");
   } else if (prevY < 103) {

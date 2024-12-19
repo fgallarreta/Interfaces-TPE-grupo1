@@ -86,7 +86,7 @@ function parallaxMouseMoving(event) {
 //Controlo la animacion del trio de cards de la seccion 2
 window.addEventListener('scroll', () => {
   mostrarCardsSecundarias();
- 
+
 });
 
 let cards = document.querySelectorAll('.card');
@@ -96,7 +96,7 @@ function mostrarCardsSecundarias() {
     const rect = card.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (rect.top <= windowHeight * 0.8) { 
+    if (rect.top <= windowHeight * 0.8) {
       setTimeout(() => {
         card.classList.add('mostrar');
       }, index * 300); // Retraso escalonado
@@ -111,17 +111,48 @@ function mostrarCardsSecundarias() {
 
 
 
+const videoYT = document.querySelector('.contenedorVideo');
+const pjS5 = document.querySelector('.pj_sec5');
+const section5 = document.querySelector('.section5');
+
+function activarS5() {
+  const sectionTop = section5.getBoundingClientRect().top;
+  const sectionBottom = section5.getBoundingClientRect().bottom;
+
+  // Si la sección no está cerca del viewport, sal de la función
+  if (sectionTop > window.innerHeight || sectionBottom < 0) {
+    return;
+  }
+
+
+
+  // Aplica las transformaciones cuando esté en el viewport
+  videoYT.style.transform = `translate(0px)`;
+  pjS5.style.transform = `translate(0px)`;
+}
+
+
+
+window.addEventListener('scroll', activarS5);
 
 
 
 
-//Controla el z-index del loader tras terminar su animacion
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector('.container_loader');
+  const pagina = document.querySelector('.paginaGral');
 
   loader.addEventListener('animationend', () => {
     loader.classList.remove('container_loader');
-    loader.classList.add('hidden_container_loader');
+    loader.classList.add('oculto');
+    pagina.classList.remove('oculto');
+
   });
 });
 

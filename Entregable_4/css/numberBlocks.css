@@ -29,37 +29,25 @@
   animation: chau 6s linear;
 }
 
-.hidden_container_loader {
-  z-index: -400;
-  position: fixed;
-  width: 100%;
-  display: none;
-  min-height: 100vh;
-  background-color: rgba(5, 5, 5, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  animation: chau 6s linear;
-}
-
 
 
 @keyframes chau {
   0% {
     opacity: 1;
-    display: block;
+
   }
+
   40% {
     opacity: 1;
   }
 
   100% {
     opacity: 0;
-    display: none;
+
   }
 }
-.container_loader > img {
+
+.container_loader>img {
   position: absolute;
   width: 200px;
   top: 170px;
@@ -67,6 +55,7 @@
   opacity: 0;
   animation: load 6s linear;
 }
+
 @keyframes load {
   from {
     transform: rotate(0);
@@ -90,6 +79,7 @@
   top: 550px;
   left: 130px;
 }
+
 .loader::after {
   content: "";
   width: 40%;
@@ -107,6 +97,7 @@
     left: 0;
     transform: translateX(-100%);
   }
+
   100% {
     left: 100%;
     transform: translateX(0%);
@@ -126,29 +117,30 @@ header {
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
-  animation: hola 8s linear;
+  animation: hola 2s linear;
 }
 
 @keyframes hola {
-  0%{
+  0% {
     opacity: 0;
   }
-  30%{
+
+  30% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
 }
+
 .stickyHeader {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 209, 213, 1) 16%,
-    rgba(0, 209, 213, 0.12) 88%,
-    rgba(1, 208, 213, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 209, 213, 1) 16%,
+      rgba(0, 209, 213, 0.12) 88%,
+      rgba(1, 208, 213, 0) 100%);
   height: 103px;
-  transition: all 0.5 ease;
+
 }
 
 .stickyHeader img {
@@ -159,17 +151,20 @@ header {
   height: 86px;
   transform: translateY(-10px);
   transition: all 0.5s ease;
-  
+
 }
-header > div {
+
+header>div {
   display: flex;
   justify-content: space-between;
 }
+
 header nav {
   position: absolute;
   top: 70px;
   left: 100px;
 }
+
 header li {
   border: solid 2px white;
   border-radius: 10px;
@@ -179,10 +174,12 @@ header li {
   box-shadow: 4px 5px #02187e;
   padding: 4px;
 }
+
 header a {
   text-decoration: none;
   font-weight: 600;
 }
+
 .menuHambNB {
   position: absolute;
   display: flex;
@@ -190,6 +187,7 @@ header a {
   left: 100px;
   top: 20px;
 }
+
 .menuHambNB div {
   width: 34px;
   height: 4px;
@@ -206,73 +204,91 @@ header a {
 .menuHambNB.open .barra1 {
   animation-name: barra1-animado;
 }
+
 .menuHambNB.open .barra2 {
   animation-name: barra2-animado;
 }
+
 .menuHambNB.open .barra3 {
   animation-name: barra3-animado;
 }
+
 .menuHambNB .barra1 {
   animation-name: barra1-animado-cerrar;
 }
+
 .menuHambNB .barra2 {
   animation-name: barra2-animado-cerrar;
 }
+
 .menuHambNB .barra3 {
   animation-name: barra3-animado-cerrar;
 }
+
 @keyframes barra1-animado {
+
   50%,
   100% {
-    transform: translateY(9px) rotate(-45deg);
+    transform: translateY(12px) rotate(-45deg);
     box-shadow: none;
   }
 }
+
 @keyframes barra2-animado {
+
   20%,
   100% {
     width: 0;
     opacity: 0;
   }
 }
+
 @keyframes barra3-animado {
+
   50%,
   100% {
     transform: translateY(-7px) rotate(45deg);
     box-shadow: none;
   }
 }
+
 @keyframes barra1-animado-cerrar {
   0% {
     transform: translateY(12px) rotate(-45deg);
     box-shadow: none;
   }
+
   50%,
   100% {
     transform: translateY(0px) rotate(0deg);
   }
 }
+
 @keyframes barra2-animado-cerrar {
   0% {
     width: 0;
     opacity: 0;
   }
+
   50%,
   100% {
     width: 34px;
     opacity: 1;
   }
 }
+
 @keyframes barra3-animado-cerrar {
   0% {
     transform: translateY(-7px) rotate(45deg);
     box-shadow: none;
   }
+
   50%,
   100% {
     transform: translateY(0px) rotate(0deg);
   }
 }
+
 .btn-comprarNB {
   position: absolute;
   right: 100px;
@@ -299,6 +315,7 @@ header a {
   box-shadow: 0 0 50px white;
   background-color: #ceb812;
 }
+
 header img {
   position: absolute;
   width: 560px;
@@ -340,6 +357,7 @@ header nav ul li:nth-child(3) {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -361,17 +379,20 @@ header nav ul li:nth-child(3) {
   margin-top: 0.69px;
   margin-left: -150px;
 }
+
 #arbol2 {
   position: absolute;
   left: 881px;
   bottom: 179px;
 }
+
 #arbol3 {
   position: absolute;
   bottom: 249px;
   left: 1081px;
   z-index: -2;
 }
+
 #arbusto1 {
   position: absolute;
   top: 719px;
@@ -379,53 +400,62 @@ header nav ul li:nth-child(3) {
   z-index: -1;
   animation: llegada ease-out;
 }
+
 #arbusto2 {
   position: absolute;
   bottom: 39px;
   left: 197px;
   z-index: 2;
 }
+
 #arbusto3 {
   position: absolute;
   bottom: 189px;
   right: -33px;
   z-index: -1;
 }
+
 #arbusto4 {
   position: absolute;
   z-index: -3;
   bottom: 265px;
   right: 59px;
 }
+
 #piedra1 {
   position: absolute;
   top: 793px;
   left: 129px;
   z-index: 1;
 }
+
 #piedra2 {
   position: absolute;
   right: 177px;
   bottom: 164px;
 }
+
 #piedra3 {
   position: absolute;
   right: 92px;
   bottom: 147px;
   z-index: 1;
 }
+
 #piedra4 {
   position: absolute;
   right: 177px;
   bottom: 137px;
   z-index: 2;
 }
+
 #pj2 {
   position: absolute;
   left: 536px;
   bottom: 259px;
   z-index: -1;
 }
+
 #pj3 {
   position: absolute;
   right: 355px;
@@ -437,7 +467,8 @@ header nav ul li:nth-child(3) {
 
 #carruselFotos {
   position: relative;
-  width: 100%; /* Ajusta según el tamaño deseado */
+  width: 100%;
+  /* Ajusta según el tamaño deseado */
   height: auto;
   overflow: hidden;
 }
@@ -446,7 +477,8 @@ header nav ul li:nth-child(3) {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Ajusta según el tamaño deseado */
+  width: 100%;
+  /* Ajusta según el tamaño deseado */
   height: auto;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -465,6 +497,7 @@ header nav ul li:nth-child(3) {
   height: 1852px;
   z-index: -10;
 }
+
 .section2 h1 {
   position: absolute;
   top: 55px;
@@ -475,6 +508,7 @@ header nav ul li:nth-child(3) {
   font-weight: 600;
   font-size: 47px;
 }
+
 .section2 p {
   margin-top: 22px;
   position: absolute;
@@ -484,55 +518,62 @@ header nav ul li:nth-child(3) {
   width: 700px;
   height: 154px;
   font-size: 20px;
-  
+
 }
+
 #pj4 {
   position: absolute;
   top: 566px;
   left: 48px;
 
   animation: saludo 8s infinite ease-in-out;
- 
+
 }
+
 @keyframes saludo {
   0% {
-    transform: translateX(-50px) ;
-   
+    transform: translateX(-50px);
+
   }
+
   70% {
     transform: translateX(50px) rotate(10deg);
 
 
   }
+
   100% {
     transform: translateX(-50px) rotate(0deg);
   }
 }
+
 #pj5 {
   position: absolute;
   top: -87px;
   left: 787px;
- margin-top: 73px;
+  margin-top: 73px;
   animation: rebote 2s infinite ease-in-out;
- 
+
 }
 
 @keyframes rebote {
   0% {
-   
-  transform: translate(15px,10px);
+
+    transform: translate(15px, 10px);
   }
 
   50% {
-    transform:  translate(-2px,-10px);
-    
+    transform: translate(-2px, -10px);
+
   }
-  100%{
-transform: translate(15px, 10px);
+
+  100% {
+    transform: translate(15px, 10px);
 
   }
 
 }
+
 .section2 #carruselFotos {
   margin-top: 26px;
   position: absolute;
@@ -567,33 +608,39 @@ transform: translate(15px, 10px);
     transform: translateY(100px);
     opacity: 0%;
   }
+
   30% {
     opacity: 10%;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(0px);
   }
 }
+
 .card p {
   margin-top: 93px;
   width: 333px;
   height: 218px;
   color: black;
 }
+
 #card1 {
   position: absolute;
   bottom: 329px;
-  
+
 }
 
 #card2 {
   position: absolute;
   left: 373px;
   bottom: 329px;
-  animation-delay:  1s; ;
+  animation-delay: 1s;
+  ;
 }
 
 #card3 {
@@ -611,6 +658,7 @@ transform: translate(15px, 10px);
   height: 1157px;
   overflow: hidden;
 }
+
 .section3 h1 {
   position: absolute;
   top: 175px;
@@ -623,10 +671,12 @@ transform: translate(15px, 10px);
   font-weight: 600;
   text-align: center;
 }
+
 .section3 h1 span {
   font-weight: bold;
   font-style: italic;
 }
+
 .btn_sec3 {
   z-index: 30;
   position: absolute;
@@ -646,12 +696,14 @@ transform: translate(15px, 10px);
   transition: 0.5s;
   transition: background 1s ease;
 }
+
 .btn_sec3:hover {
   transform: scale(1.1);
   box-shadow: 0 0 50px white;
   background: #ceb812;
   transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
 }
+
 .btn_sec3:hover {
   transition: 0.5s;
   transform: scale(1.1);
@@ -676,6 +728,7 @@ transform: translate(15px, 10px);
   height: 5421px;
   overflow: hidden;
 }
+
 .section4 h1 {
   position: absolute;
   top: 174px;
@@ -684,6 +737,7 @@ transform: translate(15px, 10px);
   font-weight: 600;
   line-height: 94.5%;
 }
+
 .imagenesScroll,
 .textoScroll {
   position: absolute;
@@ -691,6 +745,7 @@ transform: translate(15px, 10px);
   display: flex;
   flex-direction: column;
 }
+
 .imagenesScroll {
   display: block;
   top: 450px;
@@ -698,11 +753,16 @@ transform: translate(15px, 10px);
   flex-direction: column;
   align-items: center;
 }
+
 .imagenesScroll img {
-  align-self: start; /* Evita que las imágenes se estiren */
-  width: auto; /* Mantiene el ancho natural de la imagen */
-  height: auto; /* Mantiene la altura natural de la imagen */
+  align-self: start;
+  /* Evita que las imágenes se estiren */
+  width: auto;
+  /* Mantiene el ancho natural de la imagen */
+  height: auto;
+  /* Mantiene la altura natural de la imagen */
 }
+
 .container_pj {
   position: fixed;
   top: 299px;
@@ -714,13 +774,16 @@ transform: translate(15px, 10px);
   top: 390px;
   right: 100px;
 }
+
 .textoScroll div {
   margin-bottom: 269px;
 }
+
 .textoScroll h3 {
   font-size: 40px;
   margin-bottom: 15px;
 }
+
 .textoScroll p {
   font-size: 20px;
 }
@@ -736,13 +799,13 @@ transform: translate(15px, 10px);
 /* Seccion 5*/
 .section5 {
   background-color: #efb71e;
-  clip-path: path(
-    "M-83 56.0049C135 -108.5 905.5 152.502 1346 56.0049V1444C776.18 1413.21 444.167 1363.12 -83 1444V56.0049Z"
-  );
+  clip-path: path("M-83 56.0049C135 -108.5 905.5 152.502 1346 56.0049V1444C776.18 1413.21 444.167 1363.12 -83 1444V56.0049Z"
+    );
   position: relative;
   height: 1443px;
   overflow: hidden;
 }
+
 .section5 h1 {
   position: absolute;
   top: 308px;
@@ -752,6 +815,7 @@ transform: translate(15px, 10px);
   font-weight: 600;
   width: 802px;
 }
+
 .section5 img {
   position: absolute;
   top: 351px;
@@ -759,6 +823,7 @@ transform: translate(15px, 10px);
   left: 731px;
   z-index: 2;
 }
+
 .section5 div {
   width: 746px;
   height: 365px;
@@ -770,6 +835,7 @@ transform: translate(15px, 10px);
   border-radius: 45px;
   z-index: 1;
 }
+
 .section5 iframe {
   width: 100%;
   height: 100%;
@@ -777,47 +843,21 @@ transform: translate(15px, 10px);
 }
 
 .pj_sec5 {
-
-transition: 2s 90000000000000s ease-out;
-transform: translate(1000px);
+  transform: translate(1000px);
 }
 
-.contenedorVideo{
-  transition: 2s 90000000000000s ease-out;
-transform: translate(-1000px);
-}
-
-.video_yt{
-  transition: 2s 90000000000000s ease-out;
+.contenedorVideo {
   transform: translate(-1000px);
 }
 
-.mostrar{
-  transform: translate(0px);
-}
-
-.section5:hover .pj_sec5{
-transition: 2s;
-transform: translate(0px);
+.contenedorVideo,
+.pj_sec5 {
+  transition: transform 1.5s ease-in-out;
+  /* Cambia transform con una duración de 0.5s y una curva de suavizado */
 }
 
 
 
-.section5:hover .contenedorVideo{
-  transition: 2s;
-  transform: translate(0px);
- 
-   
-  }
-.section5:hover .video_yt{
-  transition: 2s;
-  transform: translate(0px);
-   
-  }
-
-  .video_yt::after .pj_sec5::after  .contenedorVideo::after{
-    transform: translate(0px);
-  }
 
 
 /*Seccion 6*/
@@ -825,6 +865,7 @@ transform: translate(0px);
   position: relative;
   height: 1034px;
 }
+
 .section6 h1 {
   position: absolute;
   top: 220px;
@@ -834,6 +875,7 @@ transform: translate(0px);
   font-size: 60px;
   font-weight: 600;
 }
+
 .section6 p {
   position: absolute;
   top: 591px;
@@ -841,29 +883,30 @@ transform: translate(0px);
   width: 467px;
   font-size: 20px;
 }
+
 .section6 #pj13D {
   position: absolute;
   top: 7px;
   right: 14px;
 }
+
 /*Seccion 7*/
 .section7 {
   position: relative;
-  background: linear-gradient(
-    45deg,
-    #ae191b,
-    #1aa3ad,
-    #d58530,
-    #361681,
-    #b8a40d,
-    #38ae00,
-    #ac1e71,
-    #635f5b,
-    #ffffff
-  );
+  background: linear-gradient(45deg,
+      #ae191b,
+      #1aa3ad,
+      #d58530,
+      #361681,
+      #b8a40d,
+      #38ae00,
+      #ac1e71,
+      #635f5b,
+      #ffffff);
   height: 729px;
   width: 1280px;
 }
+
 .section7 img {
   margin: 5px;
   width: 243px;
@@ -875,12 +918,14 @@ transform: translate(0px);
   transform: scale(1.1);
   box-shadow: 0 0 150px whitesmoke;
 }
+
 /* Seccion 8*/
 .section8 {
   position: relative;
   height: 1572px;
   background-color: #c7eaec;
 }
+
 .section8 h1 {
   width: 816px;
   position: absolute;
@@ -890,8 +935,8 @@ transform: translate(0px);
   font-weight: 600;
 }
 
-#popover_suscribirse::backdrop{
-  background-color: rgba(0,0,0,0.5);
+#popover_suscribirse::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #popover_suscribirse {
@@ -908,11 +953,11 @@ transform: translate(0px);
   text-align: center;
   overflow: hidden;
   border-radius: 8px;
-animation: hola 0.5s linear;
+  animation: hola 0.5s linear;
 }
 
 #popover_suscribirse button {
-  pointer-events:all;
+  pointer-events: all;
   width: 218px;
   height: 100px;
   background-color: #83c252;
@@ -933,6 +978,7 @@ animation: hola 0.5s linear;
   box-shadow: 4px 5px #02187e;
   z-index: 2;
 }
+
 .section8 div input {
   background-color: #ececec;
   width: 553px;
@@ -944,8 +990,9 @@ animation: hola 0.5s linear;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
+
 .section8 div button {
-  pointer-events:all;
+  pointer-events: all;
   width: 218px;
   height: 100px;
   background-color: #83c252;
@@ -971,25 +1018,30 @@ animation: hola 0.5s linear;
   height: 95px;
   font-size: 20px;
 }
+
 .section8 p span {
   text-decoration: underline;
 }
+
 .section8 img {
   position: absolute;
   top: 700px;
   left: 100px;
 }
+
 #nubeAlta {
   left: 794px;
   top: 547px;
   z-index: 1;
   animation: NubeDerecha 30s infinite linear;
 }
+
 #nubeMedia {
   left: 962px;
   top: 600px;
   animation: NubeDerecha 50s infinite linear;
 }
+
 #nubeBaja {
   top: 844px;
   right: 949px;
@@ -1010,6 +1062,7 @@ animation: hola 0.5s linear;
   75% {
     opacity: 0.5;
   }
+
   100% {
     transform: translateX(700px);
     opacity: 0;
@@ -1029,11 +1082,13 @@ animation: hola 0.5s linear;
   75% {
     opacity: 0.5;
   }
+
   100% {
     transform: translateX(-700px);
     opacity: 0;
   }
 }
+
 .section8 #gifs {
   height: 389px;
   background-image: url(../imagesNB/fondoNBs8.svg);
@@ -1043,13 +1098,15 @@ animation: hola 0.5s linear;
   left: 0px;
 }
 
-input:focus{
-transition: 1s;
+input:focus {
+  transition: 1s;
   box-shadow: 0 0 30px inset grey;
 }
- button{
-pointer-events: auto;
+
+button {
+  pointer-events: auto;
 }
+
 #gift1 {
   background-image: url(../imagesNB/gifs/muñeco2.gif);
   position: absolute;
@@ -1058,6 +1115,7 @@ pointer-events: auto;
   width: 480px;
   height: 480px;
 }
+
 #gift2 {
   background-image: url(../imagesNB/gifs/muñeco3.gif);
   position: absolute;
@@ -1066,6 +1124,7 @@ pointer-events: auto;
   width: 480px;
   height: 480px;
 }
+
 #gift3 {
   background-image: url(../imagesNB/gifs/muñeco7.gif);
   position: absolute;
@@ -1085,15 +1144,18 @@ footer #plataformas {
   background-color: #242424;
   height: 80px;
 }
+
 footer #plataformas img {
   position: absolute;
   left: 100px;
 }
+
 footer #copyright {
   position: relative;
   height: 515px;
   background-color: #5e5e5d;
 }
+
 footer #copyright p {
   width: 820px;
   height: 361px;
@@ -1103,6 +1165,7 @@ footer #copyright p {
   top: 35px;
   color: #ffffff;
 }
+
 footer #copyright img {
   position: absolute;
   bottom: 35px;
@@ -1120,10 +1183,12 @@ footer #copyright img {
 }
 
 @keyframes sprite1 {
+
   /* Partimos de la primera viñeta del sprite sheet */
   0% {
     background-position: 0;
   }
+
   /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
   100% {
     background-position: -17250px;
@@ -1141,10 +1206,12 @@ footer #copyright img {
 }
 
 @keyframes sprite2 {
+
   /* Partimos de la primera viñeta del sprite sheet */
   0% {
     background-position: 0;
   }
+
   /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
   100% {
     background-position: -3000px;
@@ -1153,24 +1220,30 @@ footer #copyright img {
 
 #sprite-footer4 {
   background: url(../imagesNB/spritesheet/pj6.png) repeat-x;
-  width: 480px; /* Ancho del frame individual */
-  height: 270px; /* Alto del frame individual */
+  width: 480px;
+  /* Ancho del frame individual */
+  height: 270px;
+  /* Alto del frame individual */
   position: relative;
   top: -300px;
   left: 800px;
 
   z-index: 30;
   margin-top: -600px;
-  animation: sprite4 1.8s steps(40) infinite; /* Duración ajustada a 40 frames */
+  animation: sprite4 1.8s steps(40) infinite;
+  /* Duración ajustada a 40 frames */
   margin-bottom: 1%;
 }
 
 /* Animación para el sprite */
 @keyframes sprite4 {
   0% {
-    background-position: 0px; /* Empieza en el primer frame */
+    background-position: 0px;
+    /* Empieza en el primer frame */
   }
+
   100% {
-    background-position: -20000px; /* Se mueve horizontalmente hasta el último frame */
+    background-position: -20000px;
+    /* Se mueve horizontalmente hasta el último frame */
   }
 }
