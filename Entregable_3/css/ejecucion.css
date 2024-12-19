@@ -586,7 +586,7 @@ h3 {
   background-image: url(../images/preview.png);
   background-size: cover;
   background-position: center;
-  border: #124f80 solid 2px;
+  border: #124f80 solid 6px;
 
 
 }
@@ -597,11 +597,13 @@ h3 {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  border: 6px solid #124f80;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 400px;
-
+  background-color: #ffef99;
   margin-bottom: 20px;
+}
 }
 
 .selectFichas {
